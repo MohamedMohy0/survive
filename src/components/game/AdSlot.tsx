@@ -1,4 +1,5 @@
 import { adsConfig, isAdEnabled, type AdPlacement } from "@/game/ads";
+import { AdBanner } from "./AdBanner";
 
 interface AdSlotProps {
   placement: AdPlacement;
@@ -24,6 +25,7 @@ export function AdSlot({ placement, className = "", compact = false }: AdSlotPro
       >
         <span className="text-[0.6rem] tracking-[0.3em] text-muted-foreground">ADVERTISEMENT</span>
         <span className="text-[0.7rem] text-muted-foreground/70">{slot.label}</span>
+        <AdBanner />
       </aside>
     );
   }
@@ -36,6 +38,7 @@ export function AdSlot({ placement, className = "", compact = false }: AdSlotPro
     >
       <p className="text-xs tracking-[0.35em] text-muted-foreground">ADVERTISEMENT</p>
       <p className="mt-1.5 text-sm text-muted-foreground/70">{slot.label}</p>
+      <AdBanner />
     </aside>
   );
 }
