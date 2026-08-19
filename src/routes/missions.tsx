@@ -35,7 +35,7 @@ function MissionsPage() {
   useEffect(() => setSave(loadSave()), []);
 
   return (
-    <Scene location="lobby">
+    <Scene location="missions">
       <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-12">
         <Link to="/" className="text-xs text-muted-foreground hover:text-foreground">
           ← القائمة الرئيسية
