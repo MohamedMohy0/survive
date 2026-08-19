@@ -1,4 +1,5 @@
 import { adsConfig, isAdEnabled, type AdPlacement } from "@/game/ads";
+import { AdBanner } from "./AdBanner";
 
 interface AdSlotProps {
   placement: AdPlacement;
