@@ -5,9 +5,11 @@ import hallway from "@/assets/scene-hallway.jpg";
 import room from "@/assets/scene-room.jpg";
 import basement from "@/assets/scene-basement.jpg";
 import menu from "@/assets/scene-menu.jpg";
+import missionsImg from "@/assets/scene-missions.jpg";
 
 const imageByLocation: Record<string, string> = {
   menu: menu,
+  missions: missionsImg,
   hotel_exterior: hotel,
   street: hotel,
   parking: hotel,
@@ -29,6 +31,7 @@ const imageByLocation: Record<string, string> = {
 
 const moodByLocation: Record<string, string> = {
   menu: "from-[oklch(0.26_0.03_245)] to-[oklch(0.15_0.02_255)]",
+  missions: "from-[oklch(0.28_0.035_72)] to-[oklch(0.16_0.02_255)]",
   hotel_exterior: "from-[oklch(0.24_0.03_250)] to-[oklch(0.18_0.02_255)]",
   lobby: "from-[oklch(0.3_0.035_70)] to-[oklch(0.2_0.02_250)]",
   stairs: "from-[oklch(0.25_0.02_250)] to-[oklch(0.17_0.02_255)]",
