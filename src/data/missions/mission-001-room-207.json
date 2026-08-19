@@ -1,0 +1,4621 @@
+{
+  "id": "mission-001-room-207",
+  "index": 1,
+  "code": "01",
+  "title": "غرفة 207",
+  "subtitle": "بعض الأبواب لا يجب أن تُفتح.",
+  "preview": "رسالة مجهولة. فندق قديم. غرفة يقول الجميع إنها غير موجودة.",
+  "loadingLine": "جاري فتح الملف...",
+  "unlockAfter": null,
+  "acts": [
+    {
+      "id": "act1",
+      "name": "الفصل الأول — الوصول"
+    },
+    {
+      "id": "act2",
+      "name": "الفصل الثاني — الغرفة 207"
+    },
+    {
+      "id": "act3",
+      "name": "الفصل الثالث — الفندق"
+    },
+    {
+      "id": "act4",
+      "name": "الفصل الرابع — السر"
+    },
+    {
+      "id": "act5",
+      "name": "الفصل الخامس — المواجهة"
+    },
+    {
+      "id": "act6",
+      "name": "الفصل السادس — النهاية"
+    }
+  ],
+  "start": "n_arrival",
+  "initialStats": {
+    "health": 100,
+    "fear": 20,
+    "trust": 0,
+    "suspicion": 0
+  },
+  "items": [
+    {
+      "id": "phone",
+      "name": "هاتف",
+      "description": "بطاريته 41%. الرسالة ما زالت مفتوحة."
+    },
+    {
+      "id": "letter",
+      "name": "رسالة",
+      "description": "ورقة مطوية: «الغرفة 207. قبل الثانية عشرة.»"
+    },
+    {
+      "id": "hotel_map",
+      "name": "خريطة الفندق",
+      "description": "مخطط قديم للطوابق. الطابق الثاني ينتهي عند 206."
+    },
+    {
+      "id": "flashlight",
+      "name": "مصباح",
+      "description": "ضوء أصفر ضعيف، لكنه يكفي."
+    },
+    {
+      "id": "rusty_key",
+      "name": "مفتاح صدئ",
+      "description": "بلا رقم. حوافه مبرودة كأن أحدهم أزال الرقم عمدًا."
+    },
+    {
+      "id": "staff_badge",
+      "name": "بطاقة موظف",
+      "description": "اسم ممحو. الصورة لامرأة تنظر بعيدًا عن الكاميرا."
+    },
+    {
+      "id": "old_photo",
+      "name": "صورة قديمة",
+      "description": "موظفو الفندق أمام المدخل. أحدهم مشطوب بالحبر."
+    },
+    {
+      "id": "tape",
+      "name": "شريط تسجيل",
+      "description": "شريط صغير مكتوب عليه: 207 — الليلة الأخيرة."
+    },
+    {
+      "id": "metal_token",
+      "name": "قطعة معدنية",
+      "description": "قرص نحاسي عليه رمز: دائرة يقطعها خط."
+    },
+    {
+      "id": "notebook",
+      "name": "دفتر",
+      "description": "دفتر نوبات. صفحات مقتلعة من منتصفه."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_message",
+      "name": "الرسالة",
+      "description": "رقم مجهول أرسل لك رقم غرفة ووقتًا."
+    },
+    {
+      "id": "clue_no_207",
+      "name": "الطابق ينتهي عند 206",
+      "description": "خريطة الفندق لا تعرف غرفة اسمها 207."
+    },
+    {
+      "id": "clue_sealed",
+      "name": "غرفة مغلقة",
+      "description": "207 أُغلقت رسميًا منذ سنوات."
+    },
+    {
+      "id": "clue_1997",
+      "name": "تاريخ",
+      "description": "كل الأوراق تتوقف عند سنة واحدة."
+    },
+    {
+      "id": "clue_hala",
+      "name": "اسم",
+      "description": "هالة. موظفة استقبال لم تُسجَّل استقالتها."
+    },
+    {
+      "id": "clue_symbol",
+      "name": "رمز",
+      "description": "دائرة يقطعها خط. محفورة في أماكن لا يجب أن تلتقي."
+    },
+    {
+      "id": "clue_voice",
+      "name": "صوت",
+      "description": "صوت خلف الباب يكرر جملة واحدة بنفس النبرة تمامًا."
+    },
+    {
+      "id": "clue_guard_lie",
+      "name": "كذبة الحارس",
+      "description": "قال إنه لم يصعد الليلة. حذاؤه مبلل بماء الطابق السفلي."
+    },
+    {
+      "id": "clue_footage",
+      "name": "تسجيل الكاميرا",
+      "description": "الممر فارغ في الشريط. لكنك كنت هناك."
+    },
+    {
+      "id": "clue_missing_floor",
+      "name": "طابق ناقص",
+      "description": "المصعد يعد الطوابق مرتين قبل أن يفتح."
+    },
+    {
+      "id": "clue_ledger",
+      "name": "سجل النزلاء",
+      "description": "اسمك مكتوب في السجل قبل وصولك بيوم."
+    },
+    {
+      "id": "clue_true_name",
+      "name": "الاسم الأخير",
+      "description": "الغرفة لم تكن رقمًا. كانت وصفًا لشخص."
+    }
+  ],
+  "locations": [
+    {
+      "id": "hotel_exterior",
+      "name": "أمام الفندق"
+    },
+    {
+      "id": "lobby",
+      "name": "استقبال الفندق"
+    },
+    {
+      "id": "stairs",
+      "name": "السلم"
+    },
+    {
+      "id": "elevator",
+      "name": "المصعد"
+    },
+    {
+      "id": "hallway2",
+      "name": "الممر — الطابق الثاني"
+    },
+    {
+      "id": "room207",
+      "name": "غرفة 207"
+    },
+    {
+      "id": "room208",
+      "name": "غرفة 208"
+    },
+    {
+      "id": "back_corridor",
+      "name": "الممر الخلفي"
+    },
+    {
+      "id": "kitchen",
+      "name": "المطبخ"
+    },
+    {
+      "id": "basement",
+      "name": "الطابق السفلي"
+    },
+    {
+      "id": "manager_office",
+      "name": "مكتب المدير"
+    },
+    {
+      "id": "security_room",
+      "name": "غرفة الأمن"
+    },
+    {
+      "id": "archive",
+      "name": "الأرشيف"
+    },
+    {
+      "id": "roof",
+      "name": "السطح"
+    },
+    {
+      "id": "parking",
+      "name": "موقف السيارات"
+    },
+    {
+      "id": "street",
+      "name": "الشارع"
+    },
+    {
+      "id": "hidden_room",
+      "name": "غرفة مخفية"
+    }
+  ],
+  "characters": [
+    {
+      "id": "receptionist",
+      "name": "موظفة الاستقبال",
+      "description": "تعرف شيئًا، لكنها تعدّ الكلمات قبل أن تقولها."
+    },
+    {
+      "id": "guard",
+      "name": "حارس الفندق",
+      "description": "يبتسم كثيرًا. لا ينظر إلى الطابق الثاني أبدًا."
+    },
+    {
+      "id": "woman",
+      "name": "المرأة في 207",
+      "description": "تتحدث كأنها تعرفك من قبل."
+    },
+    {
+      "id": "manager",
+      "name": "مدير الفندق",
+      "description": "رجل متعب يحمل مفاتيح أكثر مما يحتاج فندق."
+    },
+    {
+      "id": "stranger",
+      "name": "الرجل الغريب",
+      "description": "يظهر حين تكون وحدك، ويختفي حين تنظر مرتين."
+    }
+  ],
+  "endings": [
+    {
+      "id": "e_survivor",
+      "index": 1,
+      "name": "الناجي",
+      "tagline": "خرجت من الفندق قبل أن تعرف الحقيقة.",
+      "description": "لم تفتح الباب. لم تسأل. عدت إلى بيتك ونمت جيدًا لأسبوع. ثم بدأت الرسائل تصل مرة أخرى.",
+      "kind": "normal",
+      "mood": "calm"
+    },
+    {
+      "id": "e_room_never",
+      "index": 2,
+      "name": "الغرفة التي لم تكن موجودة",
+      "tagline": "فتحت الباب الخطأ.",
+      "description": "دخلت غرفة ليست في أي مخطط، وأغلقت خلفك بابًا لم يعد له مكان في الجدار. في الصباح، عدّ الفندق غرفه: مئة وأربع. كما كان دائمًا.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_witness",
+      "index": 3,
+      "name": "الشاهد",
+      "tagline": "عرفت الحقيقة... لكن شخصًا آخر عرف أنك عرفت.",
+      "description": "خرجت ومعك ما يكفي لإسقاط الفندق كله. وفي الشارع، ابتسم لك أحدهم وقال اسمك كاملًا.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_trust_no_one",
+      "index": 4,
+      "name": "لا تثق بأحد",
+      "tagline": "اخترت الشخص الخطأ.",
+      "description": "من ساعدك طوال الليل كان يقودك إلى مكان محدد، في وقت محدد. وقد وصلت في الموعد تمامًا.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_return",
+      "index": 5,
+      "name": "العودة",
+      "tagline": "خرجت من الفندق، لكنك لم تغادره حقًا.",
+      "description": "الشارع نفسه. التاكسي نفسه. وحين نزلت أمام بيتك، كان باب المدخل يحمل رقمًا نحاسيًا صغيرًا: 207.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_no_exit",
+      "index": 6,
+      "name": "لا مخرج",
+      "tagline": "الخوف اتخذ القرار بدلًا منك.",
+      "description": "ركضت في اتجاه لم تفكر فيه، ونزلت درجًا لا ينتهي. مصباحك انطفأ عند الدرجة الأربعين.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_last_name",
+      "index": 7,
+      "name": "الاسم الأخير",
+      "tagline": "كان السجل ينتظر توقيعك.",
+      "description": "وقّعت في السجل القديم لأنهم طلبوا منك ذلك بلطف. الاسم الذي فوق اسمك كان مشطوبًا أيضًا، بنفس الحبر.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_secret_207",
+      "index": 8,
+      "name": "النهاية السرية — 207",
+      "tagline": "أنت لم تكن الشخص الذي كان يبحثون عنه.",
+      "description": "الرسالة لم تُرسل إليك. رقمك يشبه رقمًا آخر بخانة واحدة. وحين وصلت، كان على أحدهم أن يدخل الغرفة… فدخلتَ أنت بدلًا منه.",
+      "kind": "secret",
+      "mood": "dark"
+    },
+    {
+      "id": "e_truth",
+      "index": 9,
+      "name": "النهاية الحقيقية — الحقيقة",
+      "tagline": "كل ما حدث منذ البداية كان جزءًا من شيء أكبر.",
+      "description": "الفندق لا يخفي غرفة. الفندق هو ما بُني حول الغرفة. هالة لم تختفِ؛ هي التي ظلت تُرسل الرسائل لأربعة وعشرين عامًا، تنتظر شخصًا واحدًا يجمع ما يكفي ليصدّق. وقد فعلت. وحين فتحتما الباب معًا، عدّ المصعد الطوابق مرة واحدة فقط.",
+      "kind": "true",
+      "mood": "warm"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_arrival",
+      "act": "act1",
+      "location": "hotel_exterior",
+      "onEnter": {
+        "addItems": [
+          "phone",
+          "letter"
+        ],
+        "addClues": [
+          "clue_message"
+        ]
+      },
+      "lines": [
+        "المطر توقف قبل نصف ساعة، لكن الشارع ما زال يلمع.",
+        "أمامك فندق بواجهة رمادية ولافتة نصف مضاءة.",
+        "هاتفك يهتز في جيبك للمرة الثالثة.",
+        "«الغرفة 207. قبل الثانية عشرة. لا تخبر أحدًا أنك جئت.»"
+      ],
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل الفندق.",
+          "next": "n_lobby"
+        },
+        {
+          "id": "reply",
+          "text": "أجب على الرسالة أولًا.",
+          "next": "n_reply",
+          "effects": {
+            "stats": {
+              "suspicion": 5
+            }
+          }
+        },
+        {
+          "id": "walkaway",
+          "text": "استدر وغادر. هذا ليس شأنك.",
+          "next": "n_walk_away",
+          "effects": {
+            "stats": {
+              "fear": -5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_reply",
+      "act": "act1",
+      "location": "hotel_exterior",
+      "lines": [
+        "تكتب: «من أنت؟»",
+        "الرد يصل قبل أن ترفع إصبعك عن الشاشة.",
+        "«لست أنا من عليه أن يشرح.»",
+        "ثم رسالة ثانية: «أنت تقف تحت اللافتة. أراك.»"
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 8
+        },
+        "setFlags": [
+          "replied_message"
+        ]
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل بسرعة.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 4
+            }
+          }
+        },
+        {
+          "id": "look",
+          "text": "ارفع رأسك وابحث عن نافذة مضاءة.",
+          "next": "n_window"
+        }
+      ]
+    },
+    {
+      "id": "n_window",
+      "act": "act1",
+      "location": "hotel_exterior",
+      "lines": [
+        "الطابق الثاني مظلم بالكامل.",
+        "إلا نافذة واحدة، الرابعة من اليسار، فيها ضوء أصفر ثابت.",
+        "تعدّ النوافذ مرة أخرى: 203، 204، 205، 206…",
+        "النافذة المضاءة تأتي بعد آخر نافذة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_no_207"
+        ],
+        "stats": {
+          "fear": 6
+        }
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل الفندق.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_walk_away",
+      "act": "act1",
+      "location": "street",
+      "lines": [
+        "تمشي في الاتجاه المعاكس.",
+        "خطوة، خطوتان، عشر.",
+        "خلفك، صوت باب الفندق يُفتح… ولا أحد يخرج.",
+        "هاتفك يهتز: «لا بأس. سنبدأ من عندك إذًا.»"
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 12
+        },
+        "setFlags": [
+          "left_early"
+        ]
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "عد. الأفضل أن ترى بعينك.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "suspicion": 8
+            }
+          }
+        },
+        {
+          "id": "keep",
+          "text": "تابع المشي ولا تلتفت.",
+          "next": "n_street_follow"
+        }
+      ]
+    },
+    {
+      "id": "n_lobby",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "الاستقبال دافئ أكثر مما يجب.",
+        "ساعة حائط تتأخر عن هاتفك بأربع دقائق.",
+        "خلف الكاونتر امرأة تكتب شيئًا بخط صغير جدًا."
+      ],
+      "choices": [
+        {
+          "id": "rec",
+          "text": "تحدث إلى موظفة الاستقبال.",
+          "next": "n_rec_1",
+          "hiddenUnless": {
+            "notFlags": [
+              "met_rec"
+            ]
+          }
+        },
+        {
+          "id": "rec2",
+          "text": "عد إلى موظفة الاستقبال.",
+          "next": "n_rec_2",
+          "hiddenUnless": {
+            "flags": [
+              "met_rec"
+            ]
+          }
+        },
+        {
+          "id": "desk",
+          "text": "افحص رف الكتيبات عند المدخل.",
+          "next": "n_lobby_desk",
+          "hiddenUnless": {
+            "notFlags": [
+              "saw_desk"
+            ]
+          }
+        },
+        {
+          "id": "stairs",
+          "text": "اصعد على السلم.",
+          "next": "n_stairs"
+        },
+        {
+          "id": "elev",
+          "text": "خذ المصعد.",
+          "next": "n_elevator"
+        },
+        {
+          "id": "manager",
+          "text": "اسأل عن مدير الفندق.",
+          "next": "n_ask_manager",
+          "hiddenUnless": {
+            "notFlags": [
+              "asked_manager"
+            ]
+          }
+        },
+        {
+          "id": "office",
+          "text": "اتجه إلى مكتب المدير.",
+          "next": "n_office_door",
+          "hiddenUnless": {
+            "flags": [
+              "asked_manager"
+            ]
+          }
+        },
+        {
+          "id": "leave",
+          "text": "اخرج من الفندق.",
+          "next": "n_street"
+        }
+      ]
+    },
+    {
+      "id": "n_lobby_desk",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "كتيبات قديمة، وخريطة مطوية للفندق تحت الرف.",
+        "تفتحها. الطابق الأول: عشر غرف. الطابق الثاني: ست.",
+        "201 إلى 206.",
+        "لا شيء بعدها. الممر ينتهي بجدار."
+      ],
+      "onEnter": {
+        "addItems": [
+          "hotel_map"
+        ],
+        "addClues": [
+          "clue_no_207"
+        ],
+        "setFlags": [
+          "saw_desk"
+        ]
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "اطوِ الخريطة وضعها في جيبك.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_1",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "ترفع رأسها ببطء. «غرفة أم استفسار؟»",
+        "تلاحظ أنها لم تسأل عن اسمك.",
+        "خلفها، لوحة مفاتيح: كل الخطافات ممتلئة إلا واحدًا."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "met_rec"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask207",
+          "text": "«أبحث عن الغرفة 207.»",
+          "next": "n_rec_207",
+          "effects": {
+            "stats": {
+              "suspicion": 6
+            },
+            "rel": {
+              "receptionist": {
+                "fear": 15
+              }
+            }
+          }
+        },
+        {
+          "id": "polite",
+          "text": "اسألها عن الفندق بلطف، ولا تذكر الرقم.",
+          "next": "n_rec_soft",
+          "effects": {
+            "rel": {
+              "receptionist": {
+                "trust": 20
+              }
+            }
+          }
+        },
+        {
+          "id": "showletter",
+          "text": "ضع الرسالة على الكاونتر دون كلام.",
+          "next": "n_rec_letter",
+          "required": {
+            "items": [
+              "letter"
+            ]
+          },
+          "effects": {
+            "rel": {
+              "receptionist": {
+                "trust": 10,
+                "fear": 10
+              }
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "اكتفِ بالنظر وابتعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_2",
+      "act": "act3",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "ترفع عينيها قبل أن تصل إلى الكاونتر.",
+        "«ما زلت هنا.»",
+        "تنظر إلى الساعة خلفها، ثم إلى الباب.",
+        "«بقي وقت قليل.»"
+      ],
+      "choices": [
+        {
+          "id": "hala",
+          "text": "اسألها عن هالة.",
+          "next": "n_rec_hala",
+          "required": {
+            "rel": {
+              "receptionist": {
+                "trust": {
+                  "min": 25
+                }
+              }
+            }
+          },
+          "lockedText": "لن تخبرك بهذا."
+        },
+        {
+          "id": "kitchen",
+          "text": "«قلتِ المطبخ.»",
+          "next": "n_kitchen",
+          "hiddenUnless": {
+            "flags": [
+              "kitchen_meet"
+            ],
+            "notFlags": [
+              "kitchen_done"
+            ]
+          }
+        },
+        {
+          "id": "letter",
+          "text": "أرِها الرسالة.",
+          "next": "n_rec_letter",
+          "required": {
+            "items": [
+              "letter"
+            ]
+          },
+          "hiddenUnless": {
+            "notFlags": [
+              "saw_letter_rec"
+            ]
+          },
+          "effects": {
+            "setFlags": [
+              "saw_letter_rec"
+            ]
+          }
+        },
+        {
+          "id": "key",
+          "text": "اسأل عن الخطاف الفارغ.",
+          "next": "n_rec_key",
+          "hiddenUnless": {
+            "notItems": [
+              "rusty_key"
+            ]
+          }
+        },
+        {
+          "id": "warn",
+          "text": "أخبرها بما رأيته في الأعلى.",
+          "next": "n_rec_warn",
+          "hiddenUnless": {
+            "flags": [
+              "met_woman"
+            ]
+          }
+        },
+        {
+          "id": "back",
+          "text": "ابتعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_warn",
+      "act": "act3",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "تسمعك حتى النهاية دون أن تقاطع.",
+        "ثم تسأل سؤالًا واحدًا: «هل قالت لك اسمها؟»",
+        "«نعم.»",
+        "تغلق الدفتر أمامها ببطء.",
+        "«إذًا لم يعد بيدي شيء. انزل إلى المطبخ. الآن.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_hala"
+        ],
+        "setFlags": [
+          "kitchen_meet"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 25,
+            "fear": 15
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "اذهب إلى المطبخ.",
+          "next": "n_kitchen"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ. اسألها لماذا خافت.",
+          "next": "n_kitchen_why"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_207",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "قلمها يتوقف في منتصف كلمة.",
+        "«لا توجد غرفة بهذا الرقم.»",
+        "تقولها كمن يقرأ جملة حفظها منذ سنوات.",
+        "ثم، بصوت أخفض: «ومن قال لك إنها موجودة، لا يقصد لك خيرًا.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_sealed"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "push",
+          "text": "«لكن أحدهم أرسل لي الرقم.»",
+          "next": "n_rec_push",
+          "effects": {
+            "rel": {
+              "receptionist": {
+                "suspicion": 20
+              }
+            },
+            "stats": {
+              "suspicion": 8
+            }
+          }
+        },
+        {
+          "id": "soft",
+          "text": "اعتذر وغيّر الموضوع.",
+          "next": "n_rec_soft",
+          "effects": {
+            "rel": {
+              "receptionist": {
+                "trust": 15
+              }
+            }
+          }
+        },
+        {
+          "id": "leavedesk",
+          "text": "اتركها واصعد.",
+          "next": "n_stairs"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_push",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "تنظر إلى الكاميرا في الزاوية، ثم إليك.",
+        "«ليس هنا.»",
+        "تدفع نحوك ورقة صغيرة تحت الكاونتر: «المطبخ. بعد الثانية عشرة إلا ربع.»",
+        "ثم بصوت عالٍ وواضح: «آسفة، لا نملك غرفة بهذا الرقم يا سيدي.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "kitchen_meet"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 25
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "ok",
+          "text": "أومئ برأسك وابتعد كأن شيئًا لم يحدث.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "kitchen",
+          "text": "اذهب إلى المطبخ الآن.",
+          "next": "n_kitchen"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_soft",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "تتحدث عن الفندق كمن يتحدث عن قريب مريض.",
+        "«ثمانية وثلاثون عامًا. تغيّر كل شيء مرتين، إلا الطابق الثاني.»",
+        "«لماذا الثاني؟»",
+        "تبتسم بلا ابتسامة: «لأنه لم يُطلب منا تغييره.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "receptionist": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "hala",
+          "text": "اسألها عن الموظفين القدامى.",
+          "next": "n_rec_hala",
+          "required": {
+            "rel": {
+              "receptionist": {
+                "trust": {
+                  "min": 25
+                }
+              }
+            }
+          },
+          "lockedText": "لن تخبرك بهذا الآن."
+        },
+        {
+          "id": "keys",
+          "text": "اسأل عن الخطاف الفارغ في لوحة المفاتيح.",
+          "next": "n_rec_key"
+        },
+        {
+          "id": "back",
+          "text": "اشكرها وابتعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_hala",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "«كانت هنا واحدة قبلي. هالة.»",
+        "«تركت العمل؟»",
+        "«لا أحد قال ذلك. فقط… توقف اسمها عن الظهور في الجدول.»",
+        "تصمت. «وما زال أحد يطلب لها قهوة كل ليلة اثنين.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_hala"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "photo",
+          "text": "اسألها إن كانت هناك صورة لها.",
+          "next": "n_rec_photo"
+        },
+        {
+          "id": "back",
+          "text": "دوّن الاسم في رأسك وابتعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_photo",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "تخرج من الدرج صورة قديمة لطاقم الفندق.",
+        "وجه واحد في الصف الخلفي مشطوب بالحبر الأسود، بعناية شديدة.",
+        "«خُذها. أنا لا أريدها في درجي.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "old_photo"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "ضع الصورة في جيبك.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_key",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "«ذلك الخطاف فارغ منذ ما قبلي.»",
+        "«ولمن كان؟»",
+        "«لغرفة لم تعد تُؤجَّر.»",
+        "تلمح تحت الكاونتر مفتاحًا صدئًا ملقى بين الأوراق."
+      ],
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ المفتاح حين تلتفت.",
+          "next": "n_take_key",
+          "effects": {
+            "stats": {
+              "suspicion": 10
+            }
+          }
+        },
+        {
+          "id": "askfor",
+          "text": "اطلب المفتاح صراحة.",
+          "next": "n_ask_key"
+        },
+        {
+          "id": "leaveit",
+          "text": "اتركه. لست لصًا.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "trust": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_take_key",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "تنزلق يدك. المعدن بارد وثقيل أكثر من مفتاح عادي.",
+        "حين ترفع رأسك، تكون قد عادت إلى الكتابة.",
+        "لكن قلمها توقف عن الحركة."
+      ],
+      "onEnter": {
+        "addItems": [
+          "rusty_key"
+        ],
+        "rel": {
+          "receptionist": {
+            "suspicion": 25
+          }
+        },
+        "setFlags": [
+          "stole_key"
+        ]
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "ابتعد بهدوء.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_ask_key",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "تنظر إليك طويلًا.",
+        "«إن أعطيتك إياه، فأنت من أخذته. مفهوم؟»",
+        "تضعه على الكاونتر وتدير ظهرها."
+      ],
+      "onEnter": {
+        "addItems": [
+          "rusty_key"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 15
+          }
+        },
+        "setFlags": [
+          "given_key"
+        ]
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "خذ المفتاح.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_rec_letter",
+      "act": "act1",
+      "location": "lobby",
+      "character": "receptionist",
+      "lines": [
+        "تقرأ الورقة دون أن تلمسها.",
+        "وجهها لا يتغير، لكن يدها تنزل تحت الكاونتر ببطء.",
+        "«الخط… ليس خطًا جديدًا.»",
+        "«ما معنى ذلك؟»",
+        "«معناه أن هذه الرسالة كُتبت قبل أن تولد المشكلة التي جئت من أجلها.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_1997"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 20,
+            "fear": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "more",
+          "text": "«أخبريني بالباقي.»",
+          "next": "n_rec_hala",
+          "effects": {
+            "rel": {
+              "receptionist": {
+                "trust": 10
+              }
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "خذ الرسالة وابتعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_stairs",
+      "act": "act2",
+      "location": "stairs",
+      "lines": [
+        "درج ضيق، سجاده مأكول عند الحواف.",
+        "بين الطابقين، لمبة تصدر طنينًا خفيفًا.",
+        "على الجدار، خدش عميق: دائرة يقطعها خط."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_symbol"
+        ]
+      },
+      "choices": [
+        {
+          "id": "up",
+          "text": "أكمل إلى الطابق الثاني.",
+          "next": "n_hall2"
+        },
+        {
+          "id": "down",
+          "text": "الدرج يستمر إلى الأسفل. انزل.",
+          "next": "n_basement_stairs"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الاستقبال.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_elevator",
+      "act": "act2",
+      "location": "elevator",
+      "lines": [
+        "المصعد يفتح قبل أن تضغط الزر.",
+        "بالداخل، أربعة أزرار: 1، 2، 3، و زر بلا رقم تحتها كلها.",
+        "تضغط 2.",
+        "المؤشر يعدّ: 1… 2… ثم يتوقف. ثم يعدّ مرة أخرى: 1… 2…"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_floor"
+        ],
+        "stats": {
+          "fear": 6
+        }
+      },
+      "choices": [
+        {
+          "id": "out",
+          "text": "اخرج حين يفتح الباب.",
+          "next": "n_hall2"
+        },
+        {
+          "id": "blank",
+          "text": "اضغط الزر الذي بلا رقم.",
+          "next": "n_elevator_blank",
+          "effects": {
+            "stats": {
+              "fear": 10,
+              "suspicion": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_elevator_blank",
+      "act": "act2",
+      "location": "elevator",
+      "lines": [
+        "الزر لا يضيء.",
+        "المصعد ينزل رغم ذلك.",
+        "ينزل أطول مما يحتمله مبنى من ثلاثة طوابق.",
+        "ثم يفتح على ممر ضيق تفوح منه رائحة ماء راكد."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "used_blank_button"
+        ]
+      },
+      "choices": [
+        {
+          "id": "step",
+          "text": "اخرج إلى الممر.",
+          "next": "n_basement",
+          "effects": {
+            "stats": {
+              "fear": 12
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "اضغط 2 بسرعة.",
+          "next": "n_hall2",
+          "effects": {
+            "stats": {
+              "fear": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_hall2",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "الممر فارغ.",
+        "لكن المصباح في نهايته ما زال يعمل.",
+        "ثم ينطفئ.",
+        "واحدًا تلو الآخر، حتى يبقى ضوء واحد فوق باب في آخر الممر."
+      ],
+      "choices": [
+        {
+          "id": "door",
+          "text": "امشِ نحو الباب المضاء.",
+          "next": "n_door207"
+        },
+        {
+          "id": "cart",
+          "text": "افحص عربة التنظيف المتروكة.",
+          "next": "n_cart",
+          "hiddenUnless": {
+            "notFlags": [
+              "saw_cart"
+            ]
+          }
+        },
+        {
+          "id": "d208",
+          "text": "اطرق باب الغرفة 208.",
+          "next": "n_door208",
+          "hiddenUnless": {
+            "notFlags": [
+              "knocked_208"
+            ]
+          }
+        },
+        {
+          "id": "back",
+          "text": "انزل مرة أخرى.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_cart",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "مناشف، ومحلول تنظيف، ومصباح يدوي في القاع.",
+        "وتحت المناشف: بطاقة موظف بلا اسم.",
+        "الصورة لامرأة تنظر بعيدًا عن الكاميرا."
+      ],
+      "onEnter": {
+        "addItems": [
+          "flashlight",
+          "staff_badge"
+        ],
+        "setFlags": [
+          "saw_cart"
+        ]
+      },
+      "choices": [
+        {
+          "id": "compare",
+          "text": "قارن الوجه بالصورة القديمة.",
+          "next": "n_compare_faces",
+          "required": {
+            "items": [
+              "old_photo"
+            ]
+          },
+          "lockedText": "ليس معك ما تقارنه به."
+        },
+        {
+          "id": "back",
+          "text": "خذ ما وجدت وتابع.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_compare_faces",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "الوجه المشطوب في الصورة القديمة… هو نفسه في البطاقة.",
+        "نفس الابتسامة المتحفظة. نفس النظرة بعيدًا عن العدسة.",
+        "لكن البطاقة جديدة. البلاستيك لم يصفرّ بعد."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_hala"
+        ],
+        "setFlags": [
+          "secret_faces"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "ضع الاثنتين في جيبك.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_door208",
+      "act": "act2",
+      "location": "room208",
+      "lines": [
+        "تطرق. لا أحد.",
+        "تطرق ثانية. يفتح رجل بمعطف مطر جافّ تمامًا رغم المطر بالخارج.",
+        "«أنت مبكر»، يقول.",
+        "«على ماذا؟»",
+        "«على أن تفهم.»"
+      ],
+      "character": "stranger",
+      "onEnter": {
+        "setFlags": [
+          "knocked_208"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "talk",
+          "text": "«من أنت؟»",
+          "next": "n_stranger_talk"
+        },
+        {
+          "id": "trust",
+          "text": "«ساعدني إذًا.»",
+          "next": "n_stranger_help",
+          "effects": {
+            "rel": {
+              "stranger": {
+                "trust": 25
+              }
+            },
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "shut",
+          "text": "أغلق الحوار وابتعد.",
+          "next": "n_hall2",
+          "effects": {
+            "rel": {
+              "stranger": {
+                "suspicion": 15
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_stranger_talk",
+      "act": "act2",
+      "location": "room208",
+      "character": "stranger",
+      "lines": [
+        "«رجل ينزل في 208 منذ إحدى عشرة ليلة.»",
+        "«ولماذا؟»",
+        "«لأن الجدار بيني وبين 207 سماكته عشرون سنتيمترًا.»",
+        "«وماذا تسمع؟»",
+        "«نفس الجملة. كل ليلة. بنفس النبرة تمامًا، كأن أحدًا يعيد تشغيل شريط.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice"
+        ]
+      },
+      "choices": [
+        {
+          "id": "what",
+          "text": "«ما الجملة؟»",
+          "next": "n_stranger_line"
+        },
+        {
+          "id": "back",
+          "text": "اتركه وعد إلى الممر.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_stranger_line",
+      "act": "act2",
+      "location": "room208",
+      "character": "stranger",
+      "lines": [
+        "ينظر إلى الجدار.",
+        "«لست أنا من فتح الباب.»",
+        "ثم يضيف: «وأنا أصدّقها.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_line"
+        ]
+      },
+      "choices": [
+        {
+          "id": "door",
+          "text": "اذهب إلى الباب 207 فورًا.",
+          "next": "n_door207",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الممر وفكّر.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_stranger_help",
+      "act": "act2",
+      "location": "room208",
+      "character": "stranger",
+      "lines": [
+        "يفتح يده. قطعة معدنية صغيرة، عليها دائرة يقطعها خط.",
+        "«حين تصل إلى الأسفل، ضعها في الفتحة الوحيدة التي تناسبها.»",
+        "«وإن لم أصل؟»",
+        "«ستصل. الجميع يصل.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "metal_token"
+        ],
+        "rel": {
+          "stranger": {
+            "trust": 15
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "خذ القطعة وعد إلى الممر.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_door207",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "الرقم النحاسي مثبت بمسمار واحد: 207.",
+        "المسمار جديد.",
+        "من تحت الباب، خيط ضوء أصفر لا يرتجف."
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "text": "ألصق أذنك بالباب.",
+          "next": "n_listen207",
+          "hiddenUnless": {
+            "notFlags": [
+              "listened"
+            ]
+          }
+        },
+        {
+          "id": "knock",
+          "text": "اطرق.",
+          "next": "n_knock207"
+        },
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_open207",
+          "effects": {
+            "stats": {
+              "fear": 15
+            }
+          }
+        },
+        {
+          "id": "key",
+          "text": "استخدم المفتاح الصدئ.",
+          "next": "n_key207",
+          "required": {
+            "items": [
+              "rusty_key"
+            ]
+          },
+          "lockedText": "الباب مغلق، ولا تملك مفتاحًا."
+        },
+        {
+          "id": "observe",
+          "text": "ابتعد وراقب الباب من نهاية الممر.",
+          "next": "n_observe"
+        },
+        {
+          "id": "back",
+          "text": "انسحب.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_listen207",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "صوت امرأة، منخفض جدًا.",
+        "«لست أنا من فتح الباب.»",
+        "صمت أربع ثوانٍ.",
+        "«لست أنا من فتح الباب.»",
+        "نفس النبرة. نفس التوقيت. كأنها لا تتنفس بينهما."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice"
+        ],
+        "setFlags": [
+          "listened"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "ارفع رأسك عن الباب.",
+          "next": "n_door207"
+        }
+      ]
+    },
+    {
+      "id": "n_knock207",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "تطرق ثلاث طرقات.",
+        "الصوت بالداخل يتوقف في منتصف الجملة.",
+        "خطوات. ثم يُسحب المزلاج من الداخل.",
+        "الباب يُفتح عشرة سنتيمترات فقط."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "knocked_207"
+        ]
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادفع الباب وادخل.",
+          "next": "n_room207_in",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "wait",
+          "text": "انتظر أن تتكلم هي أولًا.",
+          "next": "n_woman_intro",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 20
+              }
+            },
+            "stats": {
+              "trust": 5
+            }
+          }
+        },
+        {
+          "id": "run",
+          "text": "تراجع خطوة.",
+          "next": "n_hall2",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_open207",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "المقبض يدور بلا مقاومة.",
+        "الباب مفتوح منذ البداية.",
+        "وهذا أسوأ."
+      ],
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل.",
+          "next": "n_room207_in",
+          "effects": {
+            "stats": {
+              "fear": 12
+            }
+          }
+        },
+        {
+          "id": "no",
+          "text": "أغلقه بهدوء وابتعد.",
+          "next": "n_observe",
+          "effects": {
+            "stats": {
+              "fear": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_key207",
+      "act": "act2",
+      "location": "hallway2",
+      "lines": [
+        "المفتاح يدخل حتى المنتصف ثم يتوقف.",
+        "تضغط. يدور.",
+        "لكنك تسمع مزلاجين، لا واحدًا.",
+        "كأن الباب كان مغلقًا من الجهتين."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_double_lock"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل.",
+          "next": "n_room207_in"
+        },
+        {
+          "id": "back",
+          "text": "أعد قفله واتركه.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_room207_in",
+      "act": "act2",
+      "location": "room207",
+      "lines": [
+        "الغرفة مرتبة إلى درجة مزعجة.",
+        "سرير مفرود بإحكام. كأس ماء ممتلئ نصفه على الطاولة.",
+        "والمصباح الأصفر مضاء رغم أن مفتاح الكهرباء مطفأ.",
+        "وفي الزاوية، امرأة واقفة تنظر إلى الجدار."
+      ],
+      "character": "woman",
+      "onEnter": {
+        "stats": {
+          "fear": 14
+        }
+      },
+      "choices": [
+        {
+          "id": "speak",
+          "text": "«من أنتِ؟»",
+          "next": "n_woman_intro"
+        },
+        {
+          "id": "search",
+          "text": "لا تتكلم. افحص الغرفة بعينيك.",
+          "next": "n_room207_search",
+          "effects": {
+            "rel": {
+              "woman": {
+                "suspicion": 10
+              }
+            }
+          }
+        },
+        {
+          "id": "out",
+          "text": "اخرج فورًا.",
+          "next": "n_hall2",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_room207_search",
+      "act": "act2",
+      "location": "room207",
+      "lines": [
+        "لا حقائب. لا ملابس. لا أثر لأحد نام هنا.",
+        "لكن الغبار على حافة النافذة مكنوس في شكل نصف دائرة، كأن أحدًا يجلس هناك كل ليلة.",
+        "وتحت السرير: شريط تسجيل صغير.",
+        "«خذه»، تقول دون أن تلتفت. «هو السبب في أنني ما زلت هنا.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "tape"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "turn",
+          "text": "التفت إليها.",
+          "next": "n_woman_intro"
+        }
+      ]
+    },
+    {
+      "id": "n_woman_intro",
+      "act": "act2",
+      "location": "room207",
+      "character": "woman",
+      "lines": [
+        "«تأخرت اثنتي عشرة دقيقة»، تقول.",
+        "«كنت أعرف أنك ستتأخر. الجميع يتأخر.»",
+        "تستدير أخيرًا. وجهها هو الوجه الذي في الصورة، لكن بلا سنة واحدة زائدة.",
+        "«اسمي هالة. وأنا لست هنا لأخيفك. أنا هنا لأنني لا أستطيع النزول.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_hala"
+        ],
+        "setFlags": [
+          "met_woman"
+        ]
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "«لماذا لا تستطيعين النزول؟»",
+          "next": "n_woman_why"
+        },
+        {
+          "id": "photo",
+          "text": "أرِها الصورة القديمة.",
+          "next": "n_woman_photo",
+          "required": {
+            "items": [
+              "old_photo"
+            ]
+          },
+          "lockedText": "لا تملك ما تريه إياها."
+        },
+        {
+          "id": "accuse",
+          "text": "«أنتِ من أرسلت الرسائل.»",
+          "next": "n_woman_accuse",
+          "effects": {
+            "rel": {
+              "woman": {
+                "suspicion": 15
+              }
+            }
+          }
+        },
+        {
+          "id": "leave",
+          "text": "اعتذر واخرج من الغرفة.",
+          "next": "n_leave_woman",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": -10
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_woman_why",
+      "act": "act3",
+      "location": "room207",
+      "character": "woman",
+      "lines": [
+        "«في الليلة الأخيرة، طُلب مني أن أقفل هذه الغرفة وأنسى رقمها.»",
+        "«فعلتُ نصف الطلب.»",
+        "«والنصف الآخر؟»",
+        "«لم أنسَ.»",
+        "«ومنذ ذلك اليوم، كلما نزلت الدرج، أجد نفسي هنا مرة أخرى.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_1997"
+        ],
+        "rel": {
+          "woman": {
+            "trust": 15
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "«أرِيني إذًا.»",
+          "next": "n_hidden_corridor",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 20
+              }
+            },
+            "stats": {
+              "trust": 15
+            }
+          }
+        },
+        {
+          "id": "doubt",
+          "text": "«هذه قصة جميلة. لكنني لا أصدّقها.»",
+          "next": "n_woman_doubt",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": -20
+              }
+            },
+            "stats": {
+              "suspicion": 15
+            }
+          }
+        },
+        {
+          "id": "tape",
+          "text": "اسألها عن الشريط.",
+          "next": "n_woman_tape",
+          "required": {
+            "items": [
+              "tape"
+            ]
+          },
+          "lockedText": "لا تملك الشريط."
+        }
+      ]
+    },
+    {
+      "id": "n_woman_photo",
+      "act": "act3",
+      "location": "room207",
+      "character": "woman",
+      "lines": [
+        "تنظر إلى الوجه المشطوب طويلًا.",
+        "«من شطبها لم يكن يكرهها.»",
+        "«كان يحاول حمايتها من قائمة.»",
+        "«أي قائمة؟»",
+        "«القائمة التي كُتب فيها اسمك أيضًا، قبل يوم من وصولك.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_ledger"
+        ],
+        "rel": {
+          "woman": {
+            "trust": 25
+          }
+        },
+        "setFlags": [
+          "secret_list"
+        ]
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "«خذيني إلى القائمة.»",
+          "next": "n_hidden_corridor",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 15
+              }
+            }
+          }
+        },
+        {
+          "id": "more",
+          "text": "«لماذا لا تستطيعين النزول؟»",
+          "next": "n_woman_why"
+        }
+      ]
+    },
+    {
+      "id": "n_woman_tape",
+      "act": "act3",
+      "location": "room207",
+      "character": "woman",
+      "lines": [
+        "«هذا صوتي، لكن ليست كلماتي.»",
+        "«سجّلوا لي جملة واحدة وكرّروها حتى صارت الغرفة تقولها بدلًا مني.»",
+        "«لماذا؟»",
+        "«ليعرف من يمر في الممر أن هناك أحدًا بالداخل… فلا يبحث عن الباب الآخر.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice"
+        ],
+        "setFlags": [
+          "knows_other_door"
+        ],
+        "rel": {
+          "woman": {
+            "trust": 20
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "other",
+          "text": "«أين الباب الآخر؟»",
+          "next": "n_hidden_corridor"
+        },
+        {
+          "id": "doubt",
+          "text": "تراجع خطوة. هذا كثير.",
+          "next": "n_woman_doubt"
+        }
+      ]
+    },
+    {
+      "id": "n_woman_accuse",
+      "act": "act3",
+      "location": "room207",
+      "character": "woman",
+      "lines": [
+        "«لو كنت أنا، لكتبت رقمًا صحيحًا.»",
+        "تخرج هاتفًا قديمًا وتريك شاشته.",
+        "نفس الرسالة. نفس الكلمات. مُرسَلة إليها هي، قبل أربعة وعشرين عامًا."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_1997"
+        ],
+        "stats": {
+          "fear": 12
+        },
+        "setFlags": [
+          "secret_same_message"
+        ]
+      },
+      "choices": [
+        {
+          "id": "sit",
+          "text": "اجلس. اسمعها من البداية.",
+          "next": "n_woman_why",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 20
+              }
+            }
+          }
+        },
+        {
+          "id": "out",
+          "text": "هذا كثير. اخرج.",
+          "next": "n_leave_woman",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_woman_doubt",
+      "act": "act3",
+      "location": "room207",
+      "character": "woman",
+      "lines": [
+        "لا تغضب. تكتفي بالإشارة إلى المرآة.",
+        "المرآة تعكس الغرفة كاملة: السرير، الطاولة، الكأس، وأنت.",
+        "ولا تعكسها هي."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 20
+        },
+        "setFlags": [
+          "saw_mirror"
+        ]
+      },
+      "choices": [
+        {
+          "id": "stay",
+          "text": "ابقَ. اسألها ماذا تريد.",
+          "next": "n_woman_why",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 10
+              }
+            }
+          }
+        },
+        {
+          "id": "run",
+          "text": "اركض إلى الباب.",
+          "next": "n_panic_run",
+          "effects": {
+            "stats": {
+              "fear": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_panic_run",
+      "act": "act3",
+      "location": "hallway2",
+      "lines": [
+        "تفتح الباب وتخرج إلى الممر.",
+        "الممر أطول مما كان.",
+        "الأبواب على يمينك: 206، 205، 204… 207."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "calm",
+          "text": "توقف. تنفّس. اقرأ الأرقام مرة أخرى.",
+          "next": "n_hall2",
+          "effects": {
+            "stats": {
+              "fear": -10
+            }
+          }
+        },
+        {
+          "id": "run",
+          "text": "تابع الركض إلى الدرج.",
+          "next": "n_end_no_exit",
+          "required": {
+            "stats": {
+              "fear": {
+                "min": 60
+              }
+            }
+          },
+          "lockedText": "قدماك تعرفان أنك لست خائفًا لهذه الدرجة بعد."
+        },
+        {
+          "id": "stairs",
+          "text": "انزل الدرج بهدوء.",
+          "next": "n_basement_stairs"
+        }
+      ]
+    },
+    {
+      "id": "n_leave_woman",
+      "act": "act3",
+      "location": "hallway2",
+      "lines": [
+        "تغلق الباب خلفك.",
+        "الضوء تحت الباب ينطفئ فورًا.",
+        "وحين تلتفت، يكون الرقم النحاسي قد سقط على السجاد."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "refused_woman"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "pick",
+          "text": "التقط الرقم.",
+          "next": "n_pick_number"
+        },
+        {
+          "id": "down",
+          "text": "انزل إلى الاستقبال.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_pick_number",
+      "act": "act3",
+      "location": "hallway2",
+      "lines": [
+        "خلف الرقم النحاسي، محفور بخط رفيع: «207 ليس رقمًا.»",
+        "تقلب القطعة. على الوجه الآخر: دائرة يقطعها خط."
+      ],
+      "onEnter": {
+        "addItems": [
+          "metal_token"
+        ],
+        "addClues": [
+          "clue_symbol"
+        ],
+        "setFlags": [
+          "secret_number"
+        ]
+      },
+      "choices": [
+        {
+          "id": "down",
+          "text": "انزل.",
+          "next": "n_lobby"
+        },
+        {
+          "id": "basement",
+          "text": "ابحث عن الطابق السفلي.",
+          "next": "n_basement_stairs"
+        }
+      ]
+    },
+    {
+      "id": "n_hidden_corridor",
+      "act": "act4",
+      "location": "hidden_room",
+      "character": "woman",
+      "lines": [
+        "تدفع الخزانة جانبًا. خلفها فتحة بارتفاع رجل.",
+        "«هذا هو الباب الآخر.»",
+        "الهواء الخارج منه أبرد من الغرفة بعشر درجات.",
+        "«لا تلمس الجدران. ستشعر بالحفر، وستريد أن تعدّها. لا تعدّها.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "found_corridor"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "ادخل خلفها.",
+          "next": "n_corridor_walk"
+        },
+        {
+          "id": "light",
+          "text": "أشعل المصباح أولًا.",
+          "next": "n_corridor_light",
+          "required": {
+            "items": [
+              "flashlight"
+            ]
+          },
+          "lockedText": "لا تملك مصباحًا."
+        },
+        {
+          "id": "no",
+          "text": "ارفض. عد إلى الممر.",
+          "next": "n_leave_woman",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": -25
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_corridor_light",
+      "act": "act4",
+      "location": "hidden_room",
+      "lines": [
+        "الضوء الأصفر يكشف الجدران.",
+        "حفر صغيرة. مئات. كل حفرة رقم غرفة.",
+        "207 مكرر ثلاث مرات. بخطوط أيدٍ مختلفة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_symbol"
+        ],
+        "setFlags": [
+          "secret_walls"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "تابع في الممر.",
+          "next": "n_corridor_walk"
+        }
+      ]
+    },
+    {
+      "id": "n_corridor_walk",
+      "act": "act4",
+      "location": "hidden_room",
+      "character": "woman",
+      "lines": [
+        "الممر ينحدر.",
+        "بعد خمسين خطوة، تنتهي الجدران المطلية ويبدأ حجر قديم.",
+        "«الفندق بُني سنة 1961»، تقول. «وهذا الحجر أقدم منه بكثير.»",
+        "«ماذا كان هنا قبله؟»",
+        "«شيء واحد فقط. غرفة.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_stone"
+        ]
+      },
+      "choices": [
+        {
+          "id": "down",
+          "text": "تابع إلى الأسفل.",
+          "next": "n_basement"
+        },
+        {
+          "id": "ask",
+          "text": "«ولماذا بُني الفندق حولها؟»",
+          "next": "n_corridor_answer"
+        }
+      ]
+    },
+    {
+      "id": "n_corridor_answer",
+      "act": "act4",
+      "location": "hidden_room",
+      "character": "woman",
+      "lines": [
+        "«لأن أحدًا قرر أنه من الأسهل أن تخفي بابًا وسط مئة باب.»",
+        "تتوقف. «وأنا كنت الموظفة التي توزّع المفاتيح.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_true_name"
+        ],
+        "setFlags": [
+          "secret_purpose"
+        ],
+        "rel": {
+          "woman": {
+            "trust": 15
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "down",
+          "text": "تابع إلى الأسفل.",
+          "next": "n_basement"
+        }
+      ]
+    },
+    {
+      "id": "n_observe",
+      "act": "act3",
+      "location": "hallway2",
+      "lines": [
+        "تجلس في نهاية الممر، خلف نبتة اصطناعية، وتنتظر.",
+        "إحدى عشرة دقيقة.",
+        "ثم يخرج من الدرج رجل بزيّ أمن، يمشي حتى الباب، ويضع أذنه عليه.",
+        "ثم يكتب شيئًا في دفتر صغير، ويعود."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "observed_door"
+        ]
+      },
+      "character": "guard",
+      "choices": [
+        {
+          "id": "follow",
+          "text": "اتبعه بهدوء.",
+          "next": "n_follow_guard"
+        },
+        {
+          "id": "confront",
+          "text": "اعترضه.",
+          "next": "n_guard_talk",
+          "effects": {
+            "rel": {
+              "guard": {
+                "suspicion": 20
+              }
+            }
+          }
+        },
+        {
+          "id": "wait",
+          "text": "ابقَ مكانك وانتظر أكثر.",
+          "next": "n_observe_more"
+        }
+      ]
+    },
+    {
+      "id": "n_observe_more",
+      "act": "act3",
+      "location": "hallway2",
+      "lines": [
+        "الضوء تحت الباب يخفت ثم يعود.",
+        "خمس مرات. بفواصل متساوية تمامًا.",
+        "ليست كهرباء متعبة. هذه إشارة.",
+        "ثم يتوقف كل شيء، ويعود الممر إلى الظلام."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_symbol"
+        ],
+        "setFlags": [
+          "secret_signal"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "door",
+          "text": "اذهب إلى الباب الآن.",
+          "next": "n_door207"
+        },
+        {
+          "id": "guard",
+          "text": "انزل وابحث عن الحارس.",
+          "next": "n_guard_talk"
+        }
+      ]
+    },
+    {
+      "id": "n_follow_guard",
+      "act": "act3",
+      "location": "back_corridor",
+      "character": "guard",
+      "lines": [
+        "ينزل درجًا خلفيًا لا يظهر في الخريطة.",
+        "يفتح بابًا معدنيًا، ويدخل غرفة صغيرة مليئة بشاشات.",
+        "يجلس. ويكتب في الدفتر: «22:41 — الغرفة ما زالت مشغولة.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "found_security"
+        ]
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل خلفه.",
+          "next": "n_guard_talk",
+          "effects": {
+            "stats": {
+              "suspicion": 10
+            }
+          }
+        },
+        {
+          "id": "wait",
+          "text": "انتظر حتى يخرج، ثم ادخل وحدك.",
+          "next": "n_security_alone",
+          "effects": {
+            "stats": {
+              "suspicion": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_guard_talk",
+      "act": "act3",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "«الطابق الثاني مغلق للصيانة»، يقول قبل أن تسأل.",
+        "«منذ متى؟»",
+        "يبتسم. «منذ ما قبل نوبتي.»",
+        "حذاؤه مبلل. وأرض الطابق الثاني جافة تمامًا."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_guard_lie"
+        ]
+      },
+      "choices": [
+        {
+          "id": "shoes",
+          "text": "«حذاؤك مبلل. من أين نزلت؟»",
+          "next": "n_guard_pressed",
+          "effects": {
+            "rel": {
+              "guard": {
+                "suspicion": 25,
+                "fear": 10
+              }
+            },
+            "stats": {
+              "suspicion": 10
+            }
+          }
+        },
+        {
+          "id": "friendly",
+          "text": "اعرض عليه سيجارة وتحدث عن الطقس.",
+          "next": "n_guard_friendly",
+          "effects": {
+            "rel": {
+              "guard": {
+                "trust": 30
+              }
+            },
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "footage",
+          "text": "اطلب أن ترى تسجيل الكاميرا.",
+          "next": "n_footage_request"
+        }
+      ]
+    },
+    {
+      "id": "n_guard_pressed",
+      "act": "act3",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "ابتسامته تبقى في مكانها، لكن عينيه تغادران.",
+        "«ينبغي أن تعود إلى بيتك.»",
+        "يقف بينك وبين الباب.",
+        "«لن أقولها مرة ثالثة.»"
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 15
+        },
+        "rel": {
+          "guard": {
+            "suspicion": 20
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "تراجع واعتذر.",
+          "next": "n_lobby",
+          "effects": {
+            "rel": {
+              "guard": {
+                "trust": 5
+              }
+            }
+          }
+        },
+        {
+          "id": "push",
+          "text": "«مرة ثالثة على ماذا؟»",
+          "next": "n_guard_threat",
+          "effects": {
+            "stats": {
+              "fear": 10,
+              "suspicion": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_guard_threat",
+      "act": "act3",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "يمسك ذراعك ويقودك إلى المصعد.",
+        "«الناس الذين يسألون كثيرًا ينتهون في السجل.»",
+        "«أي سجل؟»",
+        "يضغط زر الطابق الأرضي ولا يجيب.",
+        "لكنك لمحت الدفتر في جيبه الخلفي."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 12,
+          "health": -5
+        }
+      },
+      "choices": [
+        {
+          "id": "steal",
+          "text": "اسحب الدفتر وأنت تخرج.",
+          "next": "n_stole_notebook",
+          "effects": {
+            "stats": {
+              "suspicion": 15
+            }
+          }
+        },
+        {
+          "id": "obey",
+          "text": "اخرج بهدوء.",
+          "next": "n_street"
+        }
+      ]
+    },
+    {
+      "id": "n_stole_notebook",
+      "act": "act3",
+      "location": "lobby",
+      "lines": [
+        "في الحمام، تفتح الدفتر.",
+        "سطور متطابقة، كل ليلة، منذ شهور:",
+        "«الغرفة ما زالت مشغولة.»",
+        "وفي آخر صفحة، بخط مختلف: «حين يسأل أحدهم عن 207، بلّغ فورًا.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "notebook"
+        ],
+        "addClues": [
+          "clue_ledger"
+        ],
+        "setFlags": [
+          "secret_notebook"
+        ]
+      },
+      "choices": [
+        {
+          "id": "office",
+          "text": "اذهب إلى مكتب المدير.",
+          "next": "n_office_door"
+        },
+        {
+          "id": "basement",
+          "text": "انزل إلى الطابق السفلي.",
+          "next": "n_basement_stairs"
+        }
+      ]
+    },
+    {
+      "id": "n_guard_friendly",
+      "act": "act3",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "يتكلم عن ابنته، وعن نوبات لا تنتهي.",
+        "ثم، بلا مقدمات: «أنت هنا بسبب الغرفة.»",
+        "«نعم.»",
+        "يزفر. «أنا أحرس بابًا لا يُسمح لي بفتحه، منذ ثلاث سنوات.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "guard": {
+            "trust": 20
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "«ومن يمنعك؟»",
+          "next": "n_guard_secret",
+          "required": {
+            "rel": {
+              "guard": {
+                "trust": {
+                  "min": 40
+                }
+              }
+            }
+          },
+          "lockedText": "لا يثق بك بما يكفي بعد."
+        },
+        {
+          "id": "footage",
+          "text": "اطلب أن ترى التسجيل.",
+          "next": "n_footage_request"
+        }
+      ]
+    },
+    {
+      "id": "n_guard_secret",
+      "act": "act4",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "«المدير. وقبله مدير آخر. وقبله شخص لا نعرف اسمه.»",
+        "يفتح درجًا ويعطيك مفتاحًا صدئًا.",
+        "«لا أريد أن أعرف ماذا ستفعل به.»",
+        "«ولماذا تعطيني إياه؟»",
+        "«لأنني تعبت من كتابة نفس السطر كل ليلة.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "rusty_key"
+        ],
+        "rel": {
+          "guard": {
+            "trust": 15
+          }
+        },
+        "setFlags": [
+          "guard_ally"
+        ]
+      },
+      "choices": [
+        {
+          "id": "up",
+          "text": "اصعد إلى الباب 207.",
+          "next": "n_door207"
+        },
+        {
+          "id": "down",
+          "text": "اسأله عن الطابق السفلي.",
+          "next": "n_guard_basement"
+        }
+      ]
+    },
+    {
+      "id": "n_guard_basement",
+      "act": "act4",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "«تحتنا ليس قبوًا. تحتنا ممر.»",
+        "«إلى أين؟»",
+        "«إلى الأعلى. هذه هي المشكلة.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_floor"
+        ]
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "انزل إلى الأسفل.",
+          "next": "n_basement_stairs"
+        },
+        {
+          "id": "footage",
+          "text": "اطلب التسجيل أولًا.",
+          "next": "n_footage_request"
+        }
+      ]
+    },
+    {
+      "id": "n_footage_request",
+      "act": "act3",
+      "location": "security_room",
+      "character": "guard",
+      "lines": [
+        "يتردد، ثم يدير الشاشة نحوك.",
+        "الكاميرا 4 — الطابق الثاني. 22:39.",
+        "الممر فارغ.",
+        "وأنت كنت واقفًا هناك في تلك اللحظة بالضبط."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_footage"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "rewind",
+          "text": "اطلب منه إرجاع الشريط أربعًا وعشرين ساعة.",
+          "next": "n_footage_old"
+        },
+        {
+          "id": "leave",
+          "text": "غادر الغرفة بصمت.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_footage_old",
+      "act": "act4",
+      "location": "security_room",
+      "lines": [
+        "نفس الممر. نفس الزاوية. أمس.",
+        "شخص يمشي نحو الباب 207 ويطرق.",
+        "تقرّب الصورة.",
+        "الشخص يلبس ملابسك."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_double"
+        ],
+        "stats": {
+          "fear": 20
+        },
+        "addClues": [
+          "clue_ledger"
+        ]
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "اذهب إلى الأرشيف. تحتاج أوراقًا لا شاشات.",
+          "next": "n_archive"
+        },
+        {
+          "id": "room",
+          "text": "اصعد إلى 207 فورًا.",
+          "next": "n_door207",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_security_alone",
+      "act": "act3",
+      "location": "security_room",
+      "lines": [
+        "يخرج بعد سبع دقائق. تدخل.",
+        "الدفتر على الطاولة. الشاشات كلها تعمل إلا واحدة: الكاميرا 4.",
+        "خلف الشاشة المطفأة، مفتاح صغير معلق بشريط لاصق."
+      ],
+      "onEnter": {
+        "addItems": [
+          "notebook",
+          "rusty_key"
+        ],
+        "addClues": [
+          "clue_footage"
+        ],
+        "setFlags": [
+          "secret_notebook"
+        ],
+        "stats": {
+          "suspicion": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "read",
+          "text": "اقرأ الدفتر.",
+          "next": "n_stole_notebook"
+        },
+        {
+          "id": "out",
+          "text": "اخرج قبل أن يعود.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_ask_manager",
+      "act": "act3",
+      "location": "lobby",
+      "lines": [
+        "«المدير؟» تقول الموظفة دون أن ترفع رأسها. «آخر الممر، الباب الذي بلا لوحة.»",
+        "«هل هو موجود في هذه الساعة؟»",
+        "«هو دائمًا موجود.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "asked_manager"
+        ]
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "اذهب إلى المكتب.",
+          "next": "n_office_door"
+        },
+        {
+          "id": "later",
+          "text": "لاحقًا. عد إلى الاستقبال.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_office_door",
+      "act": "act3",
+      "location": "manager_office",
+      "lines": [
+        "باب خشبي بلا لوحة.",
+        "من تحته، ضوء أبيض بارد وصوت آلة كاتبة.",
+        "آلة كاتبة. في هذه السنة."
+      ],
+      "choices": [
+        {
+          "id": "knock",
+          "text": "اطرق.",
+          "next": "n_manager"
+        },
+        {
+          "id": "listen",
+          "text": "استمع أولًا.",
+          "next": "n_office_listen"
+        },
+        {
+          "id": "back",
+          "text": "ابتعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_office_listen",
+      "act": "act3",
+      "location": "manager_office",
+      "lines": [
+        "الطرق يتوقف.",
+        "صوت رجل: «…لا، لم يصعد بعد.»",
+        "صمت.",
+        "«سأتأكد. نعم. نفس الإجراء.»",
+        "ثم صوت سماعة توضع في مكانها."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "heard_manager_call"
+        ],
+        "stats": {
+          "suspicion": 15,
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "knock",
+          "text": "اطرق الآن.",
+          "next": "n_manager"
+        },
+        {
+          "id": "back",
+          "text": "تراجع. الأفضل ألا يعرف أنك سمعت.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_manager",
+      "act": "act4",
+      "location": "manager_office",
+      "character": "manager",
+      "lines": [
+        "رجل في الستين، قميصه مكوي وعيناه ليستا.",
+        "«تفضل. اجلس.»",
+        "على مكتبه سلسلة مفاتيح فيها اثنان وأربعون مفتاحًا لفندق فيه ست وعشرون غرفة.",
+        "«أنت تبحث عن غرفة»، يقول. لم يكن سؤالًا."
+      ],
+      "choices": [
+        {
+          "id": "yes",
+          "text": "«207. وأنت تعرف ذلك.»",
+          "next": "n_manager_admit",
+          "effects": {
+            "stats": {
+              "suspicion": 10
+            }
+          }
+        },
+        {
+          "id": "lie",
+          "text": "«أبحث عن غرفة شاغرة فقط.»",
+          "next": "n_manager_lie",
+          "effects": {
+            "rel": {
+              "manager": {
+                "trust": 15
+              }
+            }
+          }
+        },
+        {
+          "id": "evidence",
+          "text": "ضع كل ما جمعته على مكتبه.",
+          "next": "n_manager_evidence",
+          "required": {
+            "minClues": 4
+          },
+          "lockedText": "ما معك لا يكفي لمواجهة رجل كهذا."
+        }
+      ]
+    },
+    {
+      "id": "n_manager_lie",
+      "act": "act4",
+      "location": "manager_office",
+      "character": "manager",
+      "lines": [
+        "يبتسم ويكتب لك رقم غرفة على ورقة.",
+        "الرقم: 206.",
+        "«الغرفة الأخيرة في الممر. لا شيء بعدها.»",
+        "ثم يضيف بهدوء: «حاول ألا تسمع شيئًا من الجدار.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "manager": {
+            "trust": 10
+          }
+        },
+        "setFlags": [
+          "got_206"
+        ]
+      },
+      "choices": [
+        {
+          "id": "up",
+          "text": "اصعد إلى 206.",
+          "next": "n_room206"
+        },
+        {
+          "id": "push",
+          "text": "«أي جدار؟»",
+          "next": "n_manager_admit"
+        }
+      ]
+    },
+    {
+      "id": "n_room206",
+      "act": "act4",
+      "location": "room208",
+      "lines": [
+        "غرفة عادية تمامًا. وهذا أول شيء غير طبيعي الليلة.",
+        "تضع أذنك على الجدار المشترك.",
+        "لا صوت.",
+        "ثم تلاحظ أن الجدار… يبعد عن النافذة أكثر مما يجب. هناك مترانِ لا مكان لهما."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_no_207"
+        ],
+        "setFlags": [
+          "secret_gap"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "break",
+          "text": "افحص الجدار بحثًا عن فتحة.",
+          "next": "n_room206_panel"
+        },
+        {
+          "id": "out",
+          "text": "اخرج إلى الممر.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_room206_panel",
+      "act": "act4",
+      "location": "room208",
+      "lines": [
+        "خلف اللوحة الخشبية، لوح خفيف مثبت بأربعة براغٍ.",
+        "البراغي جديدة.",
+        "تفكها بحافة المفتاح. خلفها فتحة سوداء، وهواء بارد.",
+        "وفي الأسفل، ضوء أصفر بعيد."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "found_corridor",
+          "secret_panel"
+        ]
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل الفتحة.",
+          "next": "n_corridor_walk",
+          "required": {
+            "items": [
+              "flashlight"
+            ]
+          },
+          "lockedText": "الظلام بالداخل مطبق. تحتاج مصباحًا."
+        },
+        {
+          "id": "cart",
+          "text": "ابحث عن مصباح في الممر أولًا.",
+          "next": "n_cart"
+        }
+      ]
+    },
+    {
+      "id": "n_manager_admit",
+      "act": "act4",
+      "location": "manager_office",
+      "character": "manager",
+      "lines": [
+        "يزيح الأوراق جانبًا ببطء.",
+        "«الغرفة أُغلقت سنة 1997 بقرار من المالك.»",
+        "«ومن المالك؟»",
+        "«شركة اشترت الفندق بشرط واحد: ألا يُفتح باب واحد.»",
+        "«وأنت وافقت.»",
+        "«أنا وُظِّفت لأوافق.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_sealed",
+          "clue_1997"
+        ],
+        "rel": {
+          "manager": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "«أرِني الأوراق.»",
+          "next": "n_archive",
+          "effects": {
+            "rel": {
+              "manager": {
+                "trust": 10
+              }
+            }
+          }
+        },
+        {
+          "id": "elevator",
+          "text": "«وما الزر الذي بلا رقم في المصعد؟»",
+          "next": "n_manager_elevator",
+          "required": {
+            "clues": [
+              "clue_missing_floor"
+            ]
+          },
+          "lockedText": "لم تلاحظ شيئًا كهذا بعد."
+        },
+        {
+          "id": "leave",
+          "text": "اتركه. لن يقول أكثر.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_manager_evidence",
+      "act": "act4",
+      "location": "manager_office",
+      "character": "manager",
+      "lines": [
+        "ينظر إلى الأوراق والصور والشريط أمامه.",
+        "ثم يفعل شيئًا لم تتوقعه: يزفر كمن وُضع عنه حِمل.",
+        "«أربعة وعشرون عامًا وأنا أنتظر شخصًا يجمعها كلها.»",
+        "يفتح الدرج ويخرج مفتاح مصعد نحاسيًا.",
+        "«اذهب. وإن لم تعد قبل الفجر، سأبلغ أنني لم أرك أبدًا.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "metal_token"
+        ],
+        "setFlags": [
+          "manager_ally",
+          "secret_manager"
+        ],
+        "rel": {
+          "manager": {
+            "trust": 40
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "elev",
+          "text": "اذهب إلى المصعد السري.",
+          "next": "n_secret_elevator"
+        },
+        {
+          "id": "archive",
+          "text": "مرّ على الأرشيف أولًا.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_manager_elevator",
+      "act": "act4",
+      "location": "manager_office",
+      "character": "manager",
+      "lines": [
+        "يصمت طويلًا.",
+        "«ذلك الزر ليس للنزول.»",
+        "«إذًا؟»",
+        "«الفندق ثلاثة طوابق. والمصعد يعرف أربعة.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_floor"
+        ],
+        "setFlags": [
+          "knows_elevator"
+        ]
+      },
+      "choices": [
+        {
+          "id": "elev",
+          "text": "اذهب إلى المصعد.",
+          "next": "n_secret_elevator"
+        },
+        {
+          "id": "archive",
+          "text": "اطلب رؤية الأرشيف.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_archive",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "رفوف معدنية، وروائح ورق مبلل ثم جفّ.",
+        "سجلات النزلاء مرتبة بالسنوات.",
+        "1996… 1998.",
+        "1997 غير موجودة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_1997"
+        ],
+        "setFlags": [
+          "in_archive"
+        ]
+      },
+      "choices": [
+        {
+          "id": "search",
+          "text": "ابحث خلف الرفوف.",
+          "next": "n_archive_find"
+        },
+        {
+          "id": "current",
+          "text": "افتح سجل هذه السنة وابحث عن اسمك.",
+          "next": "n_archive_name"
+        },
+        {
+          "id": "out",
+          "text": "اخرج.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_find",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "خلف الرف الأخير، صندوق بلا ملصق.",
+        "بداخله: ملف واحد، وشريط تسجيل، وصورة موظفين.",
+        "الملف عنوانه: «الغرفة — إجراءات الإغلاق».",
+        "وفي الصفحة الأولى: «لا تُذكر بالرقم. تُذكر بالاسم.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "tape",
+          "old_photo"
+        ],
+        "addClues": [
+          "clue_true_name",
+          "clue_sealed"
+        ],
+        "setFlags": [
+          "secret_file"
+        ]
+      },
+      "choices": [
+        {
+          "id": "name",
+          "text": "ابحث عن الاسم في الملف.",
+          "next": "n_archive_truename"
+        },
+        {
+          "id": "out",
+          "text": "خذ كل شيء واخرج.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_truename",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الصفحات الداخلية مشطوبة، إلا سطرًا واحدًا نجا:",
+        "«غرفة هالة.»",
+        "ثم بخط أصغر: «الرقم أُضيف لاحقًا ليبدو المكان طبيعيًا.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_hala",
+          "clue_true_name"
+        ],
+        "setFlags": [
+          "secret_truename"
+        ]
+      },
+      "choices": [
+        {
+          "id": "elev",
+          "text": "اذهب إلى المصعد.",
+          "next": "n_secret_elevator",
+          "hiddenUnless": {
+            "flags": [
+              "knows_elevator"
+            ]
+          }
+        },
+        {
+          "id": "base",
+          "text": "انزل إلى الطابق السفلي.",
+          "next": "n_basement_stairs"
+        },
+        {
+          "id": "up",
+          "text": "اصعد إلى الباب 207.",
+          "next": "n_door207"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_name",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "سجل هذه السنة، الصفحة الأخيرة.",
+        "اسمك مكتوب بخط واضح.",
+        "بتاريخ الأمس.",
+        "وتوقيع بجانبه ليس توقيعك."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_ledger"
+        ],
+        "stats": {
+          "fear": 18
+        },
+        "setFlags": [
+          "secret_ledger"
+        ]
+      },
+      "choices": [
+        {
+          "id": "sign",
+          "text": "وقّع بجانب اسمك لترى ماذا يحدث.",
+          "next": "n_end_last_name",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "tear",
+          "text": "مزّق الصفحة وضعها في جيبك.",
+          "next": "n_tear_page",
+          "effects": {
+            "stats": {
+              "suspicion": 15
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "أغلق السجل وابتعد.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_tear_page",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الورقة تتمزق بصوت أعلى مما يجب في مكان صامت.",
+        "تطويها وتضعها في جيبك.",
+        "وحين ترفع رأسك، يكون السجل مفتوحًا على نفس الصفحة.",
+        "كاملة. غير ممزقة. واسمك ما زال هناك."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 20
+        },
+        "setFlags": [
+          "secret_page"
+        ]
+      },
+      "choices": [
+        {
+          "id": "run",
+          "text": "اخرج من الأرشيف بسرعة.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        },
+        {
+          "id": "base",
+          "text": "انزل إلى الطابق السفلي. تريد النهاية.",
+          "next": "n_basement_stairs"
+        }
+      ]
+    },
+    {
+      "id": "n_secret_elevator",
+      "act": "act5",
+      "location": "elevator",
+      "lines": [
+        "تضع القطعة النحاسية في الفتحة تحت الأزرار.",
+        "تدور نصف دورة.",
+        "الزر بلا رقم يضيء لأول مرة.",
+        "المصعد يتحرك، ولا تعرف إن كان يصعد أم ينزل."
+      ],
+      "required": {
+        "items": [
+          "metal_token"
+        ]
+      },
+      "onEnter": {
+        "setFlags": [
+          "used_secret_elevator"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "out",
+          "text": "اخرج حين يفتح.",
+          "next": "n_basement"
+        }
+      ]
+    },
+    {
+      "id": "n_basement_stairs",
+      "act": "act4",
+      "location": "stairs",
+      "lines": [
+        "الدرج يستمر تحت الطابق الأرضي.",
+        "الجدران هنا غير مطلية.",
+        "وفي منتصف النزول، تشعر أن الهواء يدخل من الأسفل لا من الأعلى."
+      ],
+      "choices": [
+        {
+          "id": "down",
+          "text": "أكمل النزول.",
+          "next": "n_basement",
+          "required": {
+            "items": [
+              "flashlight"
+            ]
+          },
+          "lockedText": "الظلام تحتك كامل. لن تنزل بلا ضوء."
+        },
+        {
+          "id": "phone",
+          "text": "استخدم ضوء الهاتف.",
+          "next": "n_basement_dim",
+          "required": {
+            "items": [
+              "phone"
+            ]
+          }
+        },
+        {
+          "id": "back",
+          "text": "اصعد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_basement_dim",
+      "act": "act4",
+      "location": "basement",
+      "lines": [
+        "ضوء الهاتف يكفي لمترين فقط.",
+        "الأرض مبللة. الماء يصل إلى كاحلك.",
+        "البطارية: 12%.",
+        "شيء ما يتحرك في الماء أمامك، ثم يسكن."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 18
+        },
+        "setFlags": [
+          "low_light"
+        ]
+      },
+      "choices": [
+        {
+          "id": "on",
+          "text": "تابع رغم كل شيء.",
+          "next": "n_basement",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "اصعد قبل أن ينطفئ الهاتف.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_kitchen",
+      "act": "act3",
+      "location": "kitchen",
+      "character": "receptionist",
+      "lines": [
+        "المطبخ مطفأ إلا ثلاجة تطنّ.",
+        "تصل بعد دقائق، ما زالت ترتدي معطفها.",
+        "«لديّ خمس دقائق قبل أن يلاحظ الحارس.»",
+        "«تكلمي.»",
+        "«الغرفة 207 ليست في الطابق الثاني. هي تحتنا. الطابق الثاني مجرد باب.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_floor"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 25
+          }
+        },
+        "setFlags": [
+          "kitchen_done"
+        ]
+      },
+      "choices": [
+        {
+          "id": "how",
+          "text": "«كيف أنزل؟»",
+          "next": "n_kitchen_how"
+        },
+        {
+          "id": "why",
+          "text": "«لماذا تساعدينني؟»",
+          "next": "n_kitchen_why"
+        }
+      ]
+    },
+    {
+      "id": "n_kitchen_why",
+      "act": "act3",
+      "location": "kitchen",
+      "character": "receptionist",
+      "lines": [
+        "«لأنني أعمل هنا منذ ست سنوات، وكل عام يأتي شخص يسأل عن الرقم.»",
+        "«وماذا يحدث لهم؟»",
+        "«يغادرون في الصباح ولا يتذكرون لماذا جاؤوا.»",
+        "تنظر إليك. «أنت الأول الذي وصل إلى المطبخ.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "receptionist": {
+            "trust": 15
+          }
+        },
+        "setFlags": [
+          "secret_visitors"
+        ]
+      },
+      "choices": [
+        {
+          "id": "how",
+          "text": "«كيف أنزل؟»",
+          "next": "n_kitchen_how"
+        }
+      ]
+    },
+    {
+      "id": "n_kitchen_how",
+      "act": "act3",
+      "location": "kitchen",
+      "character": "receptionist",
+      "lines": [
+        "تشير إلى باب خدمة خلف الأفران.",
+        "«الممر الخلفي. ثم الدرج. ثم لا تلتفت.»",
+        "وتضع في يدك مصباحًا يدويًا وبطاقة موظف.",
+        "«إن أوقفك أحد، أنت من طاقم الصيانة.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "flashlight",
+          "staff_badge"
+        ],
+        "rel": {
+          "receptionist": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "اذهب إلى الممر الخلفي.",
+          "next": "n_back_corridor"
+        },
+        {
+          "id": "wait",
+          "text": "«تعالي معي.»",
+          "next": "n_kitchen_refuse"
+        }
+      ]
+    },
+    {
+      "id": "n_kitchen_refuse",
+      "act": "act3",
+      "location": "kitchen",
+      "character": "receptionist",
+      "lines": [
+        "تهزّ رأسها.",
+        "«أنا نزلت مرة.»",
+        "ترفع كمّها. على ساعدها، ندبة بشكل دائرة يقطعها خط.",
+        "«ولن أنزل مرة ثانية.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_symbol"
+        ],
+        "setFlags": [
+          "secret_scar"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "اذهب وحدك.",
+          "next": "n_back_corridor"
+        }
+      ]
+    },
+    {
+      "id": "n_back_corridor",
+      "act": "act4",
+      "location": "back_corridor",
+      "lines": [
+        "ممر خدمة ضيق، أنابيب على السقف، ولمبة كل عشرة أمتار.",
+        "على الجدار، أرقام غرف مرسومة بالطلاء للدلالة على الأنابيب.",
+        "201، 202، … 206.",
+        "ثم، بعد فراغ طويل، رقم أخير مكتوب بخط يد مختلف: 207."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_symbol"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "اتبع الأنبوب المؤدي إلى 207.",
+          "next": "n_basement"
+        },
+        {
+          "id": "roof",
+          "text": "الدرج هنا يصعد أيضًا. اصعد إلى السطح.",
+          "next": "n_roof"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الاستقبال.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_roof",
+      "act": "act4",
+      "location": "roof",
+      "lines": [
+        "الهواء بارد ونظيف لأول مرة الليلة.",
+        "من هنا ترى شكل المبنى كاملًا.",
+        "الجناح الشرقي أطول من الجناح الغربي بغرفة كاملة.",
+        "وفي مكان تلك الغرفة، لا نافذة. فقط جدار مصمت وأنبوب تهوية يخرج منه بخار دافئ."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_no_207"
+        ],
+        "setFlags": [
+          "secret_roof"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "vent",
+          "text": "افحص أنبوب التهوية.",
+          "next": "n_roof_vent"
+        },
+        {
+          "id": "down",
+          "text": "انزل إلى الأسفل.",
+          "next": "n_back_corridor"
+        }
+      ]
+    },
+    {
+      "id": "n_roof_vent",
+      "act": "act4",
+      "location": "roof",
+      "lines": [
+        "تضع يدك على الشبكة. دافئة.",
+        "ومن الداخل، صوت خافت جدًا:",
+        "«…لست أنا من فتح الباب.»",
+        "ثم، لأول مرة، جملة ثانية: «لكنك ستفتحه.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice"
+        ],
+        "setFlags": [
+          "secret_vent"
+        ],
+        "stats": {
+          "fear": 18
+        }
+      },
+      "choices": [
+        {
+          "id": "down",
+          "text": "انزل. الآن.",
+          "next": "n_basement_stairs"
+        },
+        {
+          "id": "room",
+          "text": "اصعد… لا، انزل إلى الطابق الثاني.",
+          "next": "n_hall2"
+        }
+      ]
+    },
+    {
+      "id": "n_basement",
+      "act": "act5",
+      "location": "basement",
+      "lines": [
+        "مساحة أوسع مما يسمح به المبنى.",
+        "أعمدة حجرية، وماء ضحل، وباب واحد في الجهة المقابلة.",
+        "باب خشبي قديم، عليه رقم نحاسي: 207.",
+        "نفس الباب. في مكان آخر تمامًا."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "reached_basement"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "token",
+          "text": "ضع القطعة المعدنية في الفتحة المحفورة في الباب.",
+          "next": "n_hidden_room",
+          "required": {
+            "items": [
+              "metal_token"
+            ]
+          },
+          "lockedText": "هناك فتحة صغيرة في الخشب، لكن ليس معك ما يملؤها."
+        },
+        {
+          "id": "key",
+          "text": "جرّب المفتاح الصدئ.",
+          "next": "n_basement_key",
+          "required": {
+            "items": [
+              "rusty_key"
+            ]
+          },
+          "lockedText": "الباب مغلق."
+        },
+        {
+          "id": "force",
+          "text": "اكسر الباب بكتفك.",
+          "next": "n_basement_force"
+        },
+        {
+          "id": "look",
+          "text": "افحص المكان قبل أن تلمس الباب.",
+          "next": "n_basement_look",
+          "hiddenUnless": {
+            "notFlags": [
+              "searched_basement"
+            ]
+          }
+        },
+        {
+          "id": "back",
+          "text": "اصعد. يكفي هذا.",
+          "next": "n_leave_final"
+        }
+      ]
+    },
+    {
+      "id": "n_basement_look",
+      "act": "act5",
+      "location": "basement",
+      "lines": [
+        "على العمود الأقرب، أسماء محفورة. عشرات.",
+        "كل اسم فوقه تاريخ، وتحته خط أفقي.",
+        "آخر اسم محفور حديثًا. الحجر حوله ما زال ناعمًا.",
+        "الاسم اسمك. والتاريخ اليوم."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_ledger",
+          "clue_true_name"
+        ],
+        "setFlags": [
+          "searched_basement",
+          "secret_column"
+        ],
+        "stats": {
+          "fear": 22
+        }
+      },
+      "choices": [
+        {
+          "id": "door",
+          "text": "اذهب إلى الباب.",
+          "next": "n_basement"
+        },
+        {
+          "id": "flee",
+          "text": "اهرب.",
+          "next": "n_end_no_exit",
+          "required": {
+            "stats": {
+              "fear": {
+                "min": 70
+              }
+            }
+          },
+          "lockedText": "ساقاك ما زالتا تطيعانك."
+        }
+      ]
+    },
+    {
+      "id": "n_basement_key",
+      "act": "act5",
+      "location": "basement",
+      "lines": [
+        "المفتاح يدخل بسلاسة، كأنه صُنع لهذا الباب لا لغيره.",
+        "المزلاج يفتح.",
+        "لكن الباب لا يتحرك.",
+        "شيء ما يمسكه من الداخل."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 15
+        },
+        "setFlags": [
+          "key_used_below"
+        ]
+      },
+      "choices": [
+        {
+          "id": "knock",
+          "text": "اطرق.",
+          "next": "n_basement_knock"
+        },
+        {
+          "id": "force",
+          "text": "ادفع بكل ثقلك.",
+          "next": "n_basement_force"
+        }
+      ]
+    },
+    {
+      "id": "n_basement_knock",
+      "act": "act5",
+      "location": "basement",
+      "lines": [
+        "ثلاث طرقات.",
+        "من الداخل، ثلاث طرقات مطابقة. بنفس الإيقاع.",
+        "تطرق أربعًا.",
+        "تعود أربع."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 18
+        },
+        "setFlags": [
+          "secret_knock"
+        ]
+      },
+      "choices": [
+        {
+          "id": "speak",
+          "text": "«هالة؟»",
+          "next": "n_basement_name",
+          "required": {
+            "clues": [
+              "clue_hala"
+            ]
+          },
+          "lockedText": "لا تعرف اسمًا تناديه."
+        },
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_hidden_room"
+        },
+        {
+          "id": "back",
+          "text": "تراجع.",
+          "next": "n_leave_final"
+        }
+      ]
+    },
+    {
+      "id": "n_basement_name",
+      "act": "act5",
+      "location": "basement",
+      "lines": [
+        "الطرق يتوقف فورًا.",
+        "صمت طويل.",
+        "ثم صوت، أقرب مما يجب، من الجهة الأخرى من الخشب:",
+        "«لم ينادِني أحد باسمي منذ 1997.»",
+        "والباب ينفتح وحده."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "called_name",
+          "secret_name"
+        ],
+        "addClues": [
+          "clue_hala",
+          "clue_1997"
+        ]
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل.",
+          "next": "n_hidden_room"
+        }
+      ]
+    },
+    {
+      "id": "n_basement_force",
+      "act": "act5",
+      "location": "basement",
+      "lines": [
+        "تصطدم بالخشب مرتين. ثلاثًا.",
+        "في الثالثة ينكسر الإطار، لا الباب.",
+        "كتفك يؤلمك، والماء تحتك صار أعمق.",
+        "الباب مفتوح الآن. لكن شيئًا في المكان تغيّر: الصمت صار كاملًا."
+      ],
+      "onEnter": {
+        "stats": {
+          "health": -20,
+          "fear": 15
+        },
+        "setFlags": [
+          "forced_door"
+        ]
+      },
+      "choices": [
+        {
+          "id": "in",
+          "text": "ادخل.",
+          "next": "n_hidden_room"
+        },
+        {
+          "id": "out",
+          "text": "لا. اصعد.",
+          "next": "n_leave_final"
+        }
+      ]
+    },
+    {
+      "id": "n_hidden_room",
+      "act": "act5",
+      "location": "hidden_room",
+      "lines": [
+        "الغرفة مطابقة للغرفة 207 في الطابق الثاني. تمامًا.",
+        "نفس السرير. نفس الكأس نصف الممتلئ. نفس المصباح الأصفر.",
+        "الفرق الوحيد: هنا يوجد بابان.",
+        "الذي دخلت منه… وباب ثانٍ في الجدار المقابل."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "in_hidden_room"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "truth",
+          "text": "اجمع كل ما تعرفه وواجه الغرفة.",
+          "next": "n_truth_1",
+          "required": {
+            "minClues": 8,
+            "flags": [
+              "clue_gate"
+            ]
+          },
+          "lockedText": "أنت تعرف أشياء كثيرة، لكنك لا تراها كقصة واحدة بعد."
+        },
+        {
+          "id": "truth2",
+          "text": "اجمع كل ما تعرفه وواجه الغرفة.",
+          "next": "n_truth_1",
+          "required": {
+            "minClues": 8,
+            "clues": [
+              "clue_true_name",
+              "clue_hala",
+              "clue_1997"
+            ]
+          },
+          "hiddenUnless": {
+            "clues": [
+              "clue_true_name"
+            ]
+          },
+          "lockedText": "ينقصك خيط."
+        },
+        {
+          "id": "second",
+          "text": "افتح الباب الثاني.",
+          "next": "n_second_door"
+        },
+        {
+          "id": "tape",
+          "text": "شغّل الشريط هنا.",
+          "next": "n_play_tape",
+          "required": {
+            "items": [
+              "tape"
+            ]
+          },
+          "lockedText": "لا تملك شريطًا."
+        },
+        {
+          "id": "sit",
+          "text": "اجلس على السرير وانتظر.",
+          "next": "n_wait_room"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج من حيث أتيت.",
+          "next": "n_leave_final"
+        }
+      ]
+    },
+    {
+      "id": "n_play_tape",
+      "act": "act5",
+      "location": "hidden_room",
+      "lines": [
+        "الشريط يدور.",
+        "صوت رجل: «الإجراء الأخير. أغلقوا الباب العلوي واتركوا السفلي.»",
+        "صوت امرأة: «ولماذا نترك واحدًا؟»",
+        "«لأن الشيء الذي بالداخل يحتاج أن يخرج أحد ليعود آخر.»",
+        "ثم صوتها، أخيرًا، خافتًا: «لست أنا من فتح الباب.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice",
+          "clue_true_name"
+        ],
+        "setFlags": [
+          "clue_gate",
+          "secret_tape"
+        ]
+      },
+      "choices": [
+        {
+          "id": "truth",
+          "text": "الآن كل شيء اتصل ببعضه.",
+          "next": "n_truth_1",
+          "required": {
+            "minClues": 8
+          },
+          "lockedText": "ما زال ينقصك ما يكفي من الأدلة."
+        },
+        {
+          "id": "second",
+          "text": "افتح الباب الثاني.",
+          "next": "n_second_door"
+        }
+      ]
+    },
+    {
+      "id": "n_wait_room",
+      "act": "act5",
+      "location": "hidden_room",
+      "lines": [
+        "تجلس. الماء يقطر في مكان ما بإيقاع ثابت.",
+        "بعد دقائق، يبدأ الكأس على الطاولة بالامتلاء وحده.",
+        "حين يصل إلى الحافة، يُفتح الباب الثاني ببطء.",
+        "ولا أحد خلفه."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 20
+        },
+        "setFlags": [
+          "waited"
+        ]
+      },
+      "choices": [
+        {
+          "id": "second",
+          "text": "ادخل الباب الثاني.",
+          "next": "n_second_door"
+        },
+        {
+          "id": "out",
+          "text": "انهض واخرج.",
+          "next": "n_leave_final"
+        }
+      ]
+    },
+    {
+      "id": "n_second_door",
+      "act": "act6",
+      "location": "hidden_room",
+      "lines": [
+        "خلف الباب الثاني: ممر قصير، ثم درج يصعد.",
+        "تصعد. تسع عشرة درجة.",
+        "وتخرج… إلى الممر في الطابق الثاني.",
+        "أمامك مباشرة، باب عليه رقم نحاسي: 207. مغلق. والضوء تحته مطفأ.",
+        "وفي جيبك، مفتاح لم يكن هناك قبل قليل."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 15
+        },
+        "setFlags": [
+          "loop_seen"
+        ]
+      },
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الباب مرة أخرى.",
+          "next": "n_end_room_never"
+        },
+        {
+          "id": "walk",
+          "text": "لا. امشِ إلى الدرج واخرج من الفندق.",
+          "next": "n_end_return"
+        },
+        {
+          "id": "truth",
+          "text": "توقف. اقرأ كل ما تعرفه من جديد.",
+          "next": "n_truth_1",
+          "required": {
+            "minClues": 8,
+            "clues": [
+              "clue_true_name"
+            ]
+          },
+          "lockedText": "الخيوط في يدك، لكنها ليست كاملة."
+        }
+      ]
+    },
+    {
+      "id": "n_truth_1",
+      "act": "act6",
+      "location": "hidden_room",
+      "lines": [
+        "تُخرج كل شيء: الخريطة، الصورة، البطاقة، الشريط، الرسالة.",
+        "الرسالة مكتوبة بخط قديم. الصورة فيها وجه مشطوب. البطاقة جديدة لامرأة قديمة.",
+        "الطابق الثاني ينتهي عند 206. والمصعد يعدّ مرتين.",
+        "الفندق لا يخفي غرفة.",
+        "الفندق بُني حول غرفة كانت هنا قبله."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_truth_path"
+        ],
+        "addClues": [
+          "clue_true_name"
+        ]
+      },
+      "choices": [
+        {
+          "id": "call",
+          "text": "نادِها باسمها.",
+          "next": "n_truth_2",
+          "required": {
+            "clues": [
+              "clue_hala"
+            ]
+          },
+          "lockedText": "لا تعرف من تنادي."
+        },
+        {
+          "id": "leave",
+          "text": "اترك كل هذا واخرج.",
+          "next": "n_end_witness"
+        }
+      ]
+    },
+    {
+      "id": "n_truth_2",
+      "act": "act6",
+      "location": "hidden_room",
+      "character": "woman",
+      "lines": [
+        "«هالة.»",
+        "تظهر في الزاوية كما لو كانت هناك طوال الوقت.",
+        "«أربعة وعشرون عامًا وأنا أرسل نفس الرسالة إلى أرقام لا أعرفها.»",
+        "«لماذا أنا؟»",
+        "«لأنك الوحيد الذي عاد إلى الأسفل بعد أن رأى اسمه على العمود.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "woman": {
+            "trust": 30
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "together",
+          "text": "«إذًا نفتحه معًا.»",
+          "next": "n_end_truth",
+          "required": {
+            "minClues": 9
+          },
+          "lockedText": "تحتاج أن تفهم أكثر قبل أن تفعل شيئًا كهذا."
+        },
+        {
+          "id": "alone",
+          "text": "«لا. سأخرج، وسأعود بمن يصدّقني.»",
+          "next": "n_end_witness"
+        },
+        {
+          "id": "blame",
+          "text": "«أنتِ من أوقعتني في هذا.»",
+          "next": "n_end_trust_no_one",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": -40
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_leave_final",
+      "act": "act6",
+      "location": "lobby",
+      "lines": [
+        "تصعد. الاستقبال فارغ.",
+        "الساعة على الحائط تقول 11:48.",
+        "نفس الوقت الذي دخلت فيه.",
+        "الباب الخارجي مفتوح، والمطر بدأ من جديد."
+      ],
+      "choices": [
+        {
+          "id": "out",
+          "text": "اخرج.",
+          "next": "n_street_final"
+        },
+        {
+          "id": "stay",
+          "text": "لا. عد إلى الأعلى.",
+          "next": "n_hall2",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_street",
+      "act": "act3",
+      "location": "street",
+      "lines": [
+        "تخرج إلى الشارع. الهواء رطب.",
+        "سيارة أجرة متوقفة على بعد عشرين مترًا، محركها يعمل، وسائقها ينظر إليك.",
+        "هاتفك يهتز: «لا تركب.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "went_outside"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "taxi",
+          "text": "اركب التاكسي.",
+          "next": "n_taxi"
+        },
+        {
+          "id": "walk",
+          "text": "امشِ في الاتجاه المعاكس.",
+          "next": "n_street_follow"
+        },
+        {
+          "id": "call",
+          "text": "اتصل بالرقم الذي أرسل الرسائل.",
+          "next": "n_phone_call"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الفندق.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_taxi",
+      "act": "act3",
+      "location": "street",
+      "lines": [
+        "«إلى أين؟» يسأل دون أن يلتفت.",
+        "تعطيه عنوان بيتك.",
+        "يقود عشر دقائق في شوارع تعرفها.",
+        "ثم يتوقف. أمام الفندق."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 20
+        },
+        "setFlags": [
+          "taxi_loop"
+        ]
+      },
+      "choices": [
+        {
+          "id": "out",
+          "text": "انزل وادخل الفندق مرة أخرى.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "insist",
+          "text": "«قلت لك عنوان بيتي.»",
+          "next": "n_end_return"
+        }
+      ]
+    },
+    {
+      "id": "n_phone_call",
+      "act": "act3",
+      "location": "street",
+      "lines": [
+        "الرنين يبدأ.",
+        "وفي نفس اللحظة، يرنّ هاتف في مكان قريب جدًا.",
+        "تلتفت. الصوت يأتي من داخل الفندق.",
+        "من الطابق الثاني."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_message"
+        ],
+        "stats": {
+          "fear": 15
+        },
+        "setFlags": [
+          "secret_call"
+        ]
+      },
+      "choices": [
+        {
+          "id": "back",
+          "text": "عد إلى الداخل.",
+          "next": "n_lobby"
+        },
+        {
+          "id": "leave",
+          "text": "اقفل الخط وامشِ.",
+          "next": "n_street_follow"
+        }
+      ]
+    },
+    {
+      "id": "n_street_follow",
+      "act": "act3",
+      "location": "street",
+      "lines": [
+        "بعد ثلاثة شوارع، تلاحظ الخطوات.",
+        "تتوقف. تتوقف.",
+        "تسرع. تسرع.",
+        "تلتفت أخيرًا: رجل بمعطف مطر جافّ تمامًا."
+      ],
+      "character": "stranger",
+      "onEnter": {
+        "stats": {
+          "fear": 18
+        }
+      },
+      "choices": [
+        {
+          "id": "face",
+          "text": "واجهه.",
+          "next": "n_stranger_street"
+        },
+        {
+          "id": "run",
+          "text": "اركض.",
+          "next": "n_end_survivor",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الفندق. المكان المضاء أأمن.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_stranger_street",
+      "act": "act3",
+      "location": "street",
+      "character": "stranger",
+      "lines": [
+        "«لم تفتح الباب»، يقول بنبرة من يقرأ نتيجة.",
+        "«ولن أفتحه.»",
+        "«لا بأس. سيُفتح على أي حال. الفرق الوحيد أنك لن تكون في الداخل لتفهم لماذا.»",
+        "يمدّ يده. مفتاح صدئ."
+      ],
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ المفتاح وعد.",
+          "next": "n_lobby",
+          "effects": {
+            "addItems": [
+              "rusty_key"
+            ],
+            "rel": {
+              "stranger": {
+                "trust": 20
+              }
+            },
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "refuse",
+          "text": "ارفض وامشِ.",
+          "next": "n_end_survivor",
+          "effects": {
+            "stats": {
+              "fear": -5
+            }
+          }
+        },
+        {
+          "id": "grab",
+          "text": "امسك ياقته واسأله من يكون.",
+          "next": "n_end_trust_no_one",
+          "effects": {
+            "stats": {
+              "suspicion": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_street_final",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "المطر يغسل كل شيء عدا ما في جيبك.",
+        "تمشي حتى ناصية الشارع.",
+        "ثم تلتفت إلى الفندق مرة أخيرة."
+      ],
+      "choices": [
+        {
+          "id": "witness",
+          "text": "أنت تعرف ما يكفي. سترجع بمن يصدّقك.",
+          "next": "n_end_witness",
+          "required": {
+            "minClues": 6
+          },
+          "lockedText": "لا تملك ما يكفي ليصدّقك أحد."
+        },
+        {
+          "id": "home",
+          "text": "اذهب إلى بيتك وانسَ الليلة.",
+          "next": "n_end_survivor"
+        },
+        {
+          "id": "secret",
+          "text": "افتح الرسالة مرة أخيرة واقرأ الرقم بدقة.",
+          "next": "n_secret_check",
+          "required": {
+            "items": [
+              "phone"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_secret_check",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "الرسالة الأولى. تقرأ رأس المحادثة.",
+        "الرقم المُرسَل إليه ليس رقمك.",
+        "خانة واحدة مختلفة.",
+        "الرسالة لم تكن لك أبدًا."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_wrong_number"
+        ],
+        "addClues": [
+          "clue_message"
+        ]
+      },
+      "choices": [
+        {
+          "id": "end",
+          "text": "اجلس على الرصيف واستوعب.",
+          "next": "n_end_secret_207"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الفندق. عليك أن تحذّر الشخص الصحيح.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_end_survivor",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تمشي، ولا تلتفت هذه المرة."
+      ],
+      "ending": "e_survivor"
+    },
+    {
+      "id": "n_end_room_never",
+      "act": "act6",
+      "location": "room207",
+      "lines": [
+        "الباب ينغلق خلفك بهدوء تام."
+      ],
+      "ending": "e_room_never"
+    },
+    {
+      "id": "n_end_witness",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تضع كل شيء في جيبك الداخلي وتمشي بسرعة."
+      ],
+      "ending": "e_witness"
+    },
+    {
+      "id": "n_end_trust_no_one",
+      "act": "act6",
+      "location": "hidden_room",
+      "lines": [
+        "الوجه الذي أمامك لا يتغيّر أبدًا. ولا حتى الآن."
+      ],
+      "ending": "e_trust_no_one"
+    },
+    {
+      "id": "n_end_return",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "السيارة تتحرك، والمطر يعيد رسم الشارع نفسه."
+      ],
+      "ending": "e_return"
+    },
+    {
+      "id": "n_end_no_exit",
+      "act": "act6",
+      "location": "stairs",
+      "lines": [
+        "الدرجة الحادية والأربعون لم تأتِ."
+      ],
+      "ending": "e_no_exit"
+    },
+    {
+      "id": "n_end_last_name",
+      "act": "act6",
+      "location": "archive",
+      "lines": [
+        "القلم يكتب أخف مما ينبغي، كأن الورق يعرف الاسم مسبقًا."
+      ],
+      "ending": "e_last_name"
+    },
+    {
+      "id": "n_end_secret_207",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "الرصيف بارد، والرقم على الشاشة لا يتغير مهما نظرت إليه."
+      ],
+      "ending": "e_secret_207"
+    },
+    {
+      "id": "n_end_truth",
+      "act": "act6",
+      "location": "hidden_room",
+      "lines": [
+        "تمدّ يدك. وتمدّ يدها.",
+        "والمقبض يدور للمرة الأولى منذ أربعة وعشرين عامًا."
+      ],
+      "ending": "e_truth"
+    }
+  ]
+}
