@@ -53,7 +53,7 @@ function SettingsPage() {
   };
 
   return (
-    <Scene location="manager_office">
+    <Scene location="settings">
       <main className="mx-auto w-full max-w-md flex-1 px-5 py-14">
         <Link to="/" className="text-sm text-muted-foreground hover:text-foreground">
           ← القائمة الرئيسية

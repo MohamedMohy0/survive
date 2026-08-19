@@ -38,6 +38,9 @@ const imageByLocation: Record<string, string> = {
 const moodByLocation: Record<string, string> = {
   menu: "from-[oklch(0.26_0.03_245)] to-[oklch(0.15_0.02_255)]",
   missions: "from-[oklch(0.28_0.035_72)] to-[oklch(0.16_0.02_255)]",
+  settings: "from-[oklch(0.28_0.04_70)] to-[oklch(0.16_0.02_255)]",
+  journal: "from-[oklch(0.26_0.03_80)] to-[oklch(0.15_0.02_255)]",
+  endings: "from-[oklch(0.22_0.03_240)] to-[oklch(0.14_0.02_255)]",
   hotel_exterior: "from-[oklch(0.24_0.03_250)] to-[oklch(0.18_0.02_255)]",
   lobby: "from-[oklch(0.3_0.035_70)] to-[oklch(0.2_0.02_250)]",
   stairs: "from-[oklch(0.25_0.02_250)] to-[oklch(0.17_0.02_255)]",
