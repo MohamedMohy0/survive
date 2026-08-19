@@ -46,7 +46,7 @@ function MainMenu() {
   const resumeMission = hasRun ? getMission(hasRun) : undefined;
 
   return (
-    <Scene location="hotel_exterior" flicker>
+    <Scene location="menu" flicker>
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center">
         <p className="text-sm tracking-[0.5em] text-primary/80">لعبة نجاة قصصية</p>
         <h1 className="mt-6">
