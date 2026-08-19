@@ -24,7 +24,7 @@ export function AdSlot({ placement, className = "", compact = false }: AdSlotPro
         compact ? "py-1" : "py-2 safe-bottom"
       } ${className}`}
     >
-      <AdBanner />
+      <AdBanner height={compact ? 90 : 110} />
     </aside>
   );
 }
