@@ -6,10 +6,16 @@ import room from "@/assets/scene-room.jpg";
 import basement from "@/assets/scene-basement.jpg";
 import menu from "@/assets/scene-menu.jpg";
 import missionsImg from "@/assets/scene-missions.jpg";
+import settingsImg from "@/assets/scene-settings.jpg";
+import journalImg from "@/assets/scene-journal.jpg";
+import endingsImg from "@/assets/scene-endings.jpg";
 
 const imageByLocation: Record<string, string> = {
   menu: menu,
   missions: missionsImg,
+  settings: settingsImg,
+  journal: journalImg,
+  endings: endingsImg,
   hotel_exterior: hotel,
   street: hotel,
   parking: hotel,
