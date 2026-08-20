@@ -190,7 +190,6 @@ function PlayPage() {
               </button>
             )}
 
-            <AdSlot placement="play" compact className="mt-4" />
           </div>
         </div>
       </main>
