@@ -12,4 +12,6 @@ export const upcomingMissions = [
   { code: "03", title: "الإشارة", subtitle: "أحدهم يبثّ من مكان لا يوجد فيه أحد." },
   { code: "04", title: "القبو", subtitle: "ما نزل، لم يصعد." },
   { code: "05", title: "الرجل الذي لا يتذكر", subtitle: "كل صباح يبدأ من نفس الجملة." },
+  { code: "06", title: "حافلة منتصف الليل ", subtitle: "رحلة أسرار غامضة في منتصف الليل." },
+
 ];
