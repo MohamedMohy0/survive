@@ -21,7 +21,7 @@ export function AdSlot({ placement, className = "", compact = false }: AdSlotPro
       aria-label="مساحة إعلانية"
       data-ad-slot={slot.id}
       className={`mx-auto flex w-full max-w-3xl items-center justify-center ${
-        compact ? "py-1" : "py-2 safe-bottom"
+        compact ? "py-1" : "py-2"
       } ${className}`}
     >
       <AdBanner height={compact ? 90 : 110} />

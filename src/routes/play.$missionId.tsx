@@ -131,6 +131,8 @@ function PlayPage() {
 
   return (
     <Scene location={node.location} flicker={node.location === "hallway2"}>
+      <AdSlot placement="play" compact className="px-4 pt-4" />
+
       <Hud
         mission={mission}
         state={state}
@@ -188,7 +190,6 @@ function PlayPage() {
               </button>
             )}
 
-            <AdSlot placement="play" compact className="mt-4" />
           </div>
         </div>
       </main>

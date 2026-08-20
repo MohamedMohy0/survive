@@ -29,6 +29,8 @@ function EndingsPage() {
 
   return (
     <Scene location="endings">
+      <AdSlot placement="endings" className="mt-6 px-4" />
+
       <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-12">
         <Link to="/" className="text-xs text-muted-foreground hover:text-foreground">
           ← القائمة الرئيسية
@@ -78,8 +80,6 @@ function EndingsPage() {
           );
         })}
       </main>
-
-      <AdSlot placement="endings" className="mb-6 px-4" />
     </Scene>
   );
 }

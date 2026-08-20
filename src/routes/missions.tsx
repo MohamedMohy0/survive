@@ -36,6 +36,8 @@ function MissionsPage() {
 
   return (
     <Scene location="missions">
+      <AdSlot placement="missions" className="mt-6 px-4" />
+
       <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-12">
         <Link to="/" className="text-xs text-muted-foreground hover:text-foreground">
           ← القائمة الرئيسية
@@ -101,8 +103,6 @@ function MissionsPage() {
           ))}
         </div>
       </main>
-
-      <AdSlot placement="missions" className="mb-6 px-4" />
     </Scene>
   );
 }
