@@ -80,6 +80,21 @@ const moodByLocation: Record<string, string> = {
   parking: "from-[oklch(0.25_0.02_250)] to-[oklch(0.17_0.02_250)]",
   street: "from-[oklch(0.28_0.03_245)] to-[oklch(0.18_0.02_250)]",
   hidden_room: "from-[oklch(0.26_0.05_60)] to-[oklch(0.15_0.02_250)]",
+  station_exterior: "from-[oklch(0.3_0.03_75)] to-[oklch(0.18_0.02_250)]",
+  main_hall: "from-[oklch(0.27_0.03_70)] to-[oklch(0.17_0.02_250)]",
+  ticket_office: "from-[oklch(0.28_0.03_80)] to-[oklch(0.18_0.02_250)]",
+  old_waiting_room: "from-[oklch(0.25_0.03_70)] to-[oklch(0.16_0.02_250)]",
+  platform1: "from-[oklch(0.26_0.03_230)] to-[oklch(0.16_0.02_255)]",
+  platform2: "from-[oklch(0.25_0.03_235)] to-[oklch(0.16_0.02_255)]",
+  platform3: "from-[oklch(0.24_0.03_240)] to-[oklch(0.15_0.02_255)]",
+  platform4: "from-[oklch(0.23_0.04_245)] to-[oklch(0.14_0.02_255)]",
+  staff_corridor: "from-[oklch(0.24_0.02_200)] to-[oklch(0.16_0.02_250)]",
+  signal_room: "from-[oklch(0.28_0.04_70)] to-[oklch(0.17_0.02_250)]",
+  control_room: "from-[oklch(0.27_0.03_160)] to-[oklch(0.17_0.02_250)]",
+  tunnel: "from-[oklch(0.2_0.03_220)] to-[oklch(0.12_0.02_250)]",
+  train: "from-[oklch(0.26_0.04_150)] to-[oklch(0.15_0.02_250)]",
+  last_car: "from-[oklch(0.22_0.04_150)] to-[oklch(0.13_0.02_250)]",
+  lost_station: "from-[oklch(0.3_0.03_230)] to-[oklch(0.16_0.02_255)]",
 };
 
 export function Scene({
