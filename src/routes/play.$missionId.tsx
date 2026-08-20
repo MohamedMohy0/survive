@@ -16,19 +16,21 @@ export const Route = createFileRoute("/play/$missionId")({
   validateSearch: (search: Record<string, unknown>) => ({
     resume: search["resume"] === true || search["resume"] === "true",
   }),
-  head: () => ({
-    meta: [
-      { title: "غرفة 207 — SURVIVE" },
-      {
-        name: "description",
-        content: "المهمة الأولى من SURVIVE: رسالة مجهولة، فندق قديم، وغرفة يقول الجميع إنها غير موجودة.",
-      },
-      { property: "og:title", content: "غرفة 207 — SURVIVE" },
-      { property: "og:description", content: "«بعض الأبواب لا يجب أن تُفتح.»" },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: ({ params }) => {
+    const m = getMission(params.missionId);
+    const title = `${m?.title ?? "مهمة"} — SURVIVE`;
+    const desc = m?.preview ?? "قصة تفاعلية مرعبة بقرارات متفرعة ونهايات متعددة.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: desc },
+        { property: "og:title", content: title },
+        { property: "og:description", content: m?.subtitle ?? desc },
+        { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+    };
+  },
   component: PlayPage,
 });
 
