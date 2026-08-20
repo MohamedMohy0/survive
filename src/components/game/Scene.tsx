@@ -9,6 +9,13 @@ import missionsImg from "@/assets/scene-missions.jpg";
 import settingsImg from "@/assets/scene-settings.jpg";
 import journalImg from "@/assets/scene-journal.jpg";
 import endingsImg from "@/assets/scene-endings.jpg";
+import station from "@/assets/scene-station.jpg";
+import hall from "@/assets/scene-hall.jpg";
+import platform from "@/assets/scene-platform.jpg";
+import tunnelImg from "@/assets/scene-tunnel.jpg";
+import trainImg from "@/assets/scene-train.jpg";
+import lostStation from "@/assets/scene-lost-station.jpg";
+import signalImg from "@/assets/scene-signal.jpg";
 
 const imageByLocation: Record<string, string> = {
   menu: menu,
