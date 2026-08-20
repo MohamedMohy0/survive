@@ -1,0 +1,3976 @@
+{
+  "id": "mission-002-last-train",
+  "index": 2,
+  "code": "02",
+  "title": "آخر قطار",
+  "subtitle": "المحطة الأخيرة ليست محطة.",
+  "preview": "تذكرة بلا اسم. محطة مهجورة في وضح النهار. وقطار يصل في موعد لا يظهر في أي جدول.",
+  "loadingLine": "جاري فتح ملف الرحلة...",
+  "unlockAfter": "mission-001-room-207",
+  "acts": [
+    {
+      "id": "act1",
+      "name": "الفصل الأول — المحطة"
+    },
+    {
+      "id": "act2",
+      "name": "الفصل الثاني — الرصيف الرابع"
+    },
+    {
+      "id": "act3",
+      "name": "الفصل الثالث — ما بين المحطات"
+    },
+    {
+      "id": "act4",
+      "name": "الفصل الرابع — السجل المفقود"
+    },
+    {
+      "id": "act5",
+      "name": "الفصل الخامس — آخر قطار"
+    },
+    {
+      "id": "act6",
+      "name": "الفصل السادس — الوجهة"
+    }
+  ],
+  "start": "n_arrival",
+  "initialStats": {
+    "health": 100,
+    "fear": 15,
+    "trust": 0,
+    "suspicion": 0
+  },
+  "items": [
+    {
+      "id": "ticket",
+      "name": "تذكرة قديمة",
+      "description": "تذكرة ورقية بلا اسم. مطبوع عليها: الرصيف 4 — 16:17."
+    },
+    {
+      "id": "phone",
+      "name": "هاتف",
+      "description": "البطارية 67%. لا توجد إشارة داخل المحطة."
+    },
+    {
+      "id": "station_map",
+      "name": "خريطة المحطة",
+      "description": "خريطة حديثة نسبيًا، لكن الرصيف الرابع غير موجود عليها."
+    },
+    {
+      "id": "pocket_watch",
+      "name": "ساعة جيب",
+      "description": "ساعة متوقفة عند 16:17، وعلى الغطاء خدش على شكل خطين متقاطعين."
+    },
+    {
+      "id": "conductor_badge",
+      "name": "شارة محصل",
+      "description": "شارة نحاسية باسم ممسوح. خلفها رقم: 041."
+    },
+    {
+      "id": "red_key",
+      "name": "مفتاح أحمر",
+      "description": "مفتاح صغير لخزائن المحطة. الطلاء الأحمر حديث."
+    },
+    {
+      "id": "old_manifest",
+      "name": "سجل الركاب",
+      "description": "دفتر رحلات قديم. صفحة الرحلة الأخيرة ممزقة من المنتصف."
+    },
+    {
+      "id": "cassette",
+      "name": "شريط صوتي",
+      "description": "شريط صغير مكتوب عليه: الرحلة 041 — لا تُشغّله قبل الوصول."
+    },
+    {
+      "id": "platform_token",
+      "name": "قطعة رصيف",
+      "description": "قطعة معدنية مربعة تحمل الرقم 4 منقوشًا مرتين."
+    },
+    {
+      "id": "blue_lantern",
+      "name": "مصباح أزرق",
+      "description": "مصباح إشارة يعمل ببطارية قديمة، وضوؤه لا يظهر إلا من مسافة قريبة."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_ticket_time",
+      "name": "وقت التذكرة",
+      "description": "التذكرة تحدد 16:17، وهو موعد لا يظهر في أي جدول معلن."
+    },
+    {
+      "id": "clue_missing_platform",
+      "name": "الرصيف المفقود",
+      "description": "المحطة تحتوي على ثلاثة أرصفة رسميًا، لكن آثارًا قديمة تشير إلى رصيف رابع."
+    },
+    {
+      "id": "clue_stopped_clock",
+      "name": "الساعة المتوقفة",
+      "description": "كل الساعات المرتبطة بالرصيف الرابع تتوقف عند 16:17."
+    },
+    {
+      "id": "clue_041",
+      "name": "الرحلة 041",
+      "description": "رقم الرحلة يظهر على شارة المحصل والسجل والشريط الصوتي."
+    },
+    {
+      "id": "clue_passenger_list",
+      "name": "قائمة الركاب",
+      "description": "أسماء ركاب الرحلة الأخيرة تنتهي باسم لم يُشطب رغم أن الرحلة لم تُسجّل رسميًا."
+    },
+    {
+      "id": "clue_signal",
+      "name": "الإشارة الزرقاء",
+      "description": "المصباح الأزرق يستخدم كإشارة لا يعرفها موظفو المحطة الحاليون."
+    },
+    {
+      "id": "clue_tunnel",
+      "name": "النفق المغلق",
+      "description": "خلف الرصيف الثالث نفق قديم يؤدي إلى مسار غير موجود على الخرائط."
+    },
+    {
+      "id": "clue_driver_note",
+      "name": "ملاحظة السائق",
+      "description": "ملاحظة قديمة تقول إن القطار لا يتوقف إلا إذا كان شخص ما ينتظره."
+    },
+    {
+      "id": "clue_second_ticket",
+      "name": "تذكرة ثانية",
+      "description": "تذكرة أخرى تحمل نفس الوقت، لكن اسم الراكب هو اسمك."
+    },
+    {
+      "id": "clue_destination",
+      "name": "الوجهة الحقيقية",
+      "description": "الرحلة 041 لا تتجه إلى مدينة؛ وجهتها مكتوبة باسم محطة أُزيلت من الخرائط منذ سنوات."
+    }
+  ],
+  "locations": [
+    {
+      "id": "station_exterior",
+      "name": "أمام المحطة"
+    },
+    {
+      "id": "main_hall",
+      "name": "صالة المحطة"
+    },
+    {
+      "id": "ticket_office",
+      "name": "شباك التذاكر"
+    },
+    {
+      "id": "platform1",
+      "name": "الرصيف الأول"
+    },
+    {
+      "id": "platform2",
+      "name": "الرصيف الثاني"
+    },
+    {
+      "id": "platform3",
+      "name": "الرصيف الثالث"
+    },
+    {
+      "id": "platform4",
+      "name": "الرصيف الرابع"
+    },
+    {
+      "id": "old_waiting_room",
+      "name": "قاعة الانتظار القديمة"
+    },
+    {
+      "id": "staff_corridor",
+      "name": "ممر الموظفين"
+    },
+    {
+      "id": "signal_room",
+      "name": "غرفة الإشارات"
+    },
+    {
+      "id": "archive",
+      "name": "أرشيف المحطة"
+    },
+    {
+      "id": "tunnel",
+      "name": "النفق القديم"
+    },
+    {
+      "id": "control_room",
+      "name": "غرفة التحكم"
+    },
+    {
+      "id": "train",
+      "name": "القطار 041"
+    },
+    {
+      "id": "last_car",
+      "name": "العربة الأخيرة"
+    },
+    {
+      "id": "lost_station",
+      "name": "المحطة التي اختفت"
+    },
+    {
+      "id": "street",
+      "name": "الشارع"
+    }
+  ],
+  "characters": [
+    {
+      "id": "clerk",
+      "name": "موظف التذاكر",
+      "description": "رجل هادئ يعرف أن هناك رصيفًا رابعًا، لكنه يتصرف كأنه لا يعرف."
+    },
+    {
+      "id": "inspector",
+      "name": "مفتش المحطة",
+      "description": "يظهر في أماكن مختلفة دون أن تراه ينتقل بينها. يريد منك المغادرة قبل 16:17."
+    },
+    {
+      "id": "woman",
+      "name": "الراكبة ذات المعطف الأزرق",
+      "description": "امرأة تحمل حقيبة صغيرة وتقول إنها تنتظر قطارًا تأخر عشرين عامًا."
+    },
+    {
+      "id": "conductor",
+      "name": "المحصل",
+      "description": "رجل بزي قديم لا يتذكر متى بدأ عمله، لكنه يعرف أسماء الركاب واحدًا واحدًا."
+    },
+    {
+      "id": "driver",
+      "name": "سائق القطار",
+      "description": "لا يتحدث إلا عندما يتأكد أن من أمامه يحمل تذكرة الرحلة 041."
+    }
+  ],
+  "endings": [
+    {
+      "id": "e_leave_station",
+      "index": 1,
+      "name": "الناجي",
+      "tagline": "غادرت قبل أن يصل القطار.",
+      "description": "أعدت التذكرة إلى جيبك وغادرت المحطة قبل 16:17. في اليوم التالي، قرأت خبرًا عن محطة أُغلقت منذ عشرين عامًا. كانت صورتها هي المحطة التي خرجت منها للتو.",
+      "kind": "normal",
+      "mood": "calm"
+    },
+    {
+      "id": "e_wrong_train",
+      "index": 2,
+      "name": "القطار الخطأ",
+      "tagline": "وصل القطار، لكنك لم تسأل إلى أين يذهب.",
+      "description": "صعدت إلى أول عربة فتحت لك. عندما تحرك القطار، اختفت المدينة من النوافذ. في المحطة التالية، كان اسمك مكتوبًا على لوحة الوصول قبل اسم المحطة.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_locked_car",
+      "index": 3,
+      "name": "العربة الأخيرة",
+      "tagline": "بقيت حتى آخر عربة.",
+      "description": "وصلت إلى العربة الأخيرة ووجدت عشرات المقاعد الفارغة وتذكرة واحدة على كل مقعد. كلها تحمل أسماء أشخاص غادروا المحطة ولم يعودوا إليها.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_conductor",
+      "index": 4,
+      "name": "المحصل",
+      "tagline": "صدقت الرجل الذي يعرف أسماء الركاب.",
+      "description": "أعطيته تذكرتك، فابتسم وقال إن الرحلة تحتاج راكبًا واحدًا فقط. أغلقت الأبواب خلفك، ولم يكن هناك قطار حين وصلت إلى الرصيف في الصباح.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_loop",
+      "index": 5,
+      "name": "الدائرة",
+      "tagline": "وصلت إلى وجهتك وعدت إلى البداية.",
+      "description": "نزلت في محطة تعرفها جيدًا، ثم رأيت نفسك واقفًا أمام المحطة نفسها قبل ساعات. التذكرة في يدك تحمل الآن موعدًا جديدًا: 16:17 غدًا.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_missing",
+      "index": 6,
+      "name": "المحطة المفقودة",
+      "tagline": "وجدت المكان الذي حُذف من الخرائط.",
+      "description": "دخلت المحطة القديمة واكتشفت أن الرحلة 041 لم تكن رحلة ركاب، بل طريقًا لإخراج أشخاص من مكان لا يجب أن يعرف أحد بوجوده. وأنت الآن واحد منهم.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_truth",
+      "index": 7,
+      "name": "النهاية الحقيقية — آخر قطار",
+      "tagline": "فهمت لماذا كان القطار ينتظر.",
+      "description": "الرحلة 041 كانت تُستخدم مرة واحدة كل عشرين عامًا لإعادة شخص واحد إلى اللحظة التي اختفى فيها الرصيف الرابع. المرأة ذات المعطف الأزرق ليست راكبة؛ إنها أول من انتظر. وحين جمعت الأدلة وأشعلت الإشارة الزرقاء، توقف القطار أمام الرصيف الرابع للمرة الأخيرة. لم تصعد وحدك. أغلقت الأبواب بعد أن خرج جميع من كانوا عالقين منذ الرحلة الأولى، ثم اختفى الرصيف من جديد. هذه المرة، اختفى معه اسمك من قائمة الركاب.",
+      "kind": "true",
+      "mood": "warm"
+    },
+    {
+      "id": "e_secret",
+      "index": 8,
+      "name": "النهاية السرية — التذكرة الثانية",
+      "tagline": "التذكرة لم تكن لك وحدك.",
+      "description": "اكتشفت أن هناك تذكرتين متطابقتين، واحدة باسمك وواحدة باسم شخص لم يولد بعد. عندما قارنت الرقمين، فهمت أن الرسالة لم تكن تستدعيك إلى القطار؛ كانت تستدعي شخصًا سيأتي بعدك. أنت غادرت، لكنك تركت التذكرة الثانية في شباك التذاكر. وفي اليوم التالي، وصلت رسالة جديدة: «شكرًا لأنك أبقيت الرحلة ممكنة.»",
+      "kind": "secret",
+      "mood": "mysterious"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_arrival",
+      "act": "act1",
+      "location": "station_exterior",
+      "lines": [
+        "الساعة 15:32. الشمس ما زالت عالية، لكن المحطة أمامك تبدو كأنها لم تستقبل قطارًا منذ سنوات.",
+        "في يدك تذكرة لم تشترها.",
+        "على الورقة: «الرصيف 4 — 16:17».",
+        "المشكلة أن المحطة تعلن بوضوح: ثلاثة أرصفة فقط."
+      ],
+      "onEnter": {
+        "addItems": [
+          "ticket",
+          "phone"
+        ],
+        "addClues": [
+          "clue_ticket_time"
+        ]
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل المحطة.",
+          "next": "n_hall"
+        },
+        {
+          "id": "inspect",
+          "text": "افحص التذكرة تحت الضوء.",
+          "next": "n_ticket"
+        },
+        {
+          "id": "leave",
+          "text": "أعد التذكرة إلى جيبك وغادر.",
+          "next": "n_leave_early",
+          "effects": {
+            "stats": {
+              "fear": -5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_ticket",
+      "act": "act1",
+      "location": "station_exterior",
+      "lines": [
+        "الورق قديم، لكن الحبر لم يتلاشى.",
+        "في أسفل التذكرة رقم صغير: 041.",
+        "وعندما تقلبها، تجد كتابة بقلم رصاص: «لا تسأل عن الرصيف. ابحث عنه.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_041"
+        ],
+        "setFlags": [
+          "examined_ticket"
+        ]
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل وابحث.",
+          "next": "n_hall"
+        },
+        {
+          "id": "leave",
+          "text": "هذا يكفي. غادر.",
+          "next": "n_leave_early"
+        }
+      ]
+    },
+    {
+      "id": "n_leave_early",
+      "act": "act1",
+      "location": "street",
+      "lines": [
+        "تخطو بعيدًا عن المحطة.",
+        "بعد عشرين مترًا فقط، تسمع جرس قطار خلفك.",
+        "تلتفت. لا سكة أمام المحطة، ومع ذلك ترى ضوءًا يمر خلف النوافذ للحظة."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "return",
+          "text": "عد إلى المحطة.",
+          "next": "n_hall"
+        },
+        {
+          "id": "keep",
+          "text": "تابع طريقك.",
+          "next": "n_end_leave_station"
+        }
+      ]
+    },
+    {
+      "id": "n_hall",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "الصالة مضاءة بضوء النهار من السقف الزجاجي.",
+        "شاشة الرحلات تعرض قطارات اليوم فقط.",
+        "الساعة الكبيرة تشير إلى 15:38.",
+        "في الطرف الآخر، موظف تذاكر يراقبك دون أن يقترب."
+      ],
+      "choices": [
+        {
+          "id": "clerk",
+          "text": "تحدث إلى موظف التذاكر.",
+          "next": "n_clerk"
+        },
+        {
+          "id": "map",
+          "text": "افحص خريطة المحطة.",
+          "next": "n_map"
+        },
+        {
+          "id": "clock",
+          "text": "افحص الساعة الكبيرة.",
+          "next": "n_clock"
+        },
+        {
+          "id": "platforms",
+          "text": "اتجه إلى الأرصفة.",
+          "next": "n_platforms"
+        },
+        {
+          "id": "office",
+          "text": "ابحث عن مكتب الموظفين.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "«تذكرة؟» يسأل.",
+        "تريه الورقة.",
+        "تتغير ملامحه لثانية واحدة فقط.",
+        "«هذه ليست تذكرة اليوم.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "met_clerk"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask4",
+          "text": "«أين الرصيف الرابع؟»",
+          "next": "n_clerk_four",
+          "effects": {
+            "stats": {
+              "suspicion": 8
+            }
+          }
+        },
+        {
+          "id": "soft",
+          "text": "«أنا أبحث عن شخص أعطاني هذه.»",
+          "next": "n_clerk_soft",
+          "effects": {
+            "rel": {
+              "clerk": {
+                "trust": 15
+              }
+            }
+          }
+        },
+        {
+          "id": "show",
+          "text": "ضع التذكرة أمامه دون كلام.",
+          "next": "n_clerk_ticket"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_four",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "ينظر إلى الشاشة، ثم إلى الساعة.",
+        "«لا يوجد رصيف رابع.»",
+        "يتوقف.",
+        "«ولا يوجد قطار في 16:17.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_platform"
+        ],
+        "stats": {
+          "fear": 5
+        }
+      },
+      "choices": [
+        {
+          "id": "push",
+          "text": "«إذًا لماذا تعرف الوقت؟»",
+          "next": "n_clerk_slip"
+        },
+        {
+          "id": "leave",
+          "text": "اشكره وابتعد.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_slip",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "يخفض صوته: «لأنني كنت هنا آخر مرة.»",
+        "قبل أن تسأله، ينظر إلى كاميرا السقف.",
+        "«إذا أردت أن ترى الرصيف، لا تصل إليه من الأرصفة.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "clerk_knows_four"
+        ],
+        "rel": {
+          "clerk": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "where",
+          "text": "«من أين إذًا؟»",
+          "next": "n_staff_door"
+        },
+        {
+          "id": "when",
+          "text": "«متى كانت آخر مرة؟»",
+          "next": "n_clerk_past"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_past",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "«منذ عشرين عامًا.»",
+        "ثم يضيف: «في نفس اليوم. نفس الوقت.»",
+        "يفتح درجًا ويغلقه بسرعة قبل أن ترى ما بداخله."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_stopped_clock"
+        ],
+        "setFlags": [
+          "heard_past"
+        ]
+      },
+      "choices": [
+        {
+          "id": "drawer",
+          "text": "راقب الدرج حين يبتعد.",
+          "next": "n_clerk_drawer"
+        },
+        {
+          "id": "back",
+          "text": "اتركه الآن.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_soft",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "«شخص؟» يكررها.",
+        "ثم يبتسم: «كل من ينتظر القطار يظن أن شخصًا أرسله.»",
+        "يخرج ورقة صغيرة ويكتب: «16:17. لا تقف على الرصيف الثالث.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "clerk_warning"
+        ],
+        "addClues": [
+          "clue_ticket_time"
+        ]
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "«لماذا؟»",
+          "next": "n_clerk_warning"
+        },
+        {
+          "id": "map",
+          "text": "خذ الورقة واتجه إلى الخريطة.",
+          "next": "n_map"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_ticket",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "يمسك التذكرة دون أن يرفعها.",
+        "«هذه من الرحلة 041.»",
+        "«متى كانت؟»",
+        "«آخر مرة غادرت فيها المحطة… لم تعد.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_041"
+        ],
+        "setFlags": [
+          "clerk_recognized_ticket"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "«من كان على متنها؟»",
+          "next": "n_passengers_hint"
+        },
+        {
+          "id": "back",
+          "text": "خذ التذكرة.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_passengers_hint",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "يقول أسماء ثلاثة أشخاص.",
+        "ثم يصمت عند الاسم الرابع.",
+        "«الرابعة لم تكن راكبة. كانت تنتظر.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "heard_fourth"
+        ]
+      },
+      "choices": [
+        {
+          "id": "who",
+          "text": "«من؟»",
+          "next": "n_blue_woman_hint"
+        },
+        {
+          "id": "leave",
+          "text": "لا تضغط أكثر.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_woman_hint",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "يشير إلى قاعة الانتظار القديمة.",
+        "«إذا رأيت امرأة بمعطف أزرق، لا تعطها تذكرتك.»",
+        "«لماذا؟»",
+        "«لأنها ستعرف أنك وصلت.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "clerk": {
+            "trust": 20
+          }
+        },
+        "setFlags": [
+          "blue_warning"
+        ]
+      },
+      "choices": [
+        {
+          "id": "old",
+          "text": "اذهب إلى قاعة الانتظار القديمة.",
+          "next": "n_old_waiting"
+        },
+        {
+          "id": "platforms",
+          "text": "اتجه إلى الأرصفة.",
+          "next": "n_platforms"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_drawer",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "حين يبتعد، تفتح الدرج قليلًا.",
+        "في الداخل ساعة جيب متوقفة عند 16:17 وشارة قديمة تحمل 041.",
+        "لا تأخذ شيئًا؛ يكفي أن ترى أن الموظف يخفي الأدلة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_stopped_clock"
+        ],
+        "setFlags": [
+          "saw_clerk_drawer"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "واجهه بما رأيت.",
+          "next": "n_clerk_four"
+        },
+        {
+          "id": "back",
+          "text": "أغلق الدرج.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_clerk_warning",
+      "act": "act1",
+      "location": "ticket_office",
+      "lines": [
+        "ينظر إليك طويلًا.",
+        "«لأن الرصيف الثالث هو المكان الذي يظن الناس أن القطار سيصل إليه.»",
+        "ثم يكتب على الورقة: «لا تكن على الثالث عند 16:17.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "clerk_warning_heard"
+        ],
+        "rel": {
+          "clerk": {
+            "trust": 10
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "«وأين أكون؟»",
+          "next": "n_map"
+        },
+        {
+          "id": "leave",
+          "text": "شكرًا.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_map",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "الخريطة المعلقة تعرض الأرصفة 1 و2 و3.",
+        "لكن خلف اللوحة الزجاجية يظهر مستطيل مطموس بالطلاء.",
+        "تحت الطلاء رقم باهت: 4."
+      ],
+      "onEnter": {
+        "addItems": [
+          "station_map"
+        ],
+        "addClues": [
+          "clue_missing_platform"
+        ],
+        "setFlags": [
+          "saw_map"
+        ]
+      },
+      "choices": [
+        {
+          "id": "scratch",
+          "text": "اكشط جزءًا من الطلاء.",
+          "next": "n_map_reveal"
+        },
+        {
+          "id": "old",
+          "text": "ابحث عن خريطة أقدم.",
+          "next": "n_archive_door"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الصالة.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_map_reveal",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "تحت الطلاء كلمة واحدة: «مؤقت».",
+        "وبجانبها سهم يشير إلى جدار لا يحتوي بابًا.",
+        "تلمس الجدار. أجوف."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "map_revealed"
+        ],
+        "stats": {
+          "fear": 6
+        }
+      },
+      "choices": [
+        {
+          "id": "knock",
+          "text": "اطرق على الجدار.",
+          "next": "n_wall_knock"
+        },
+        {
+          "id": "staff",
+          "text": "ابحث عن مدخل الموظفين.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_wall_knock",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "طرقة واحدة.",
+        "من داخل الجدار تأتي طرقة واحدة.",
+        "ثم ثلاث طرقات سريعة، كأن أحدًا يطلب منك الابتعاد."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "heard_wall"
+        ]
+      },
+      "choices": [
+        {
+          "id": "leave",
+          "text": "ابتعد.",
+          "next": "n_hall"
+        },
+        {
+          "id": "staff",
+          "text": "ابحث عن الممر الخلفي.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_clock",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "ساعة المحطة تعمل.",
+        "لكن عقرب الثواني يتوقف لثلاث ثوانٍ كل دقيقة.",
+        "وعندما تصل الساعة إلى 16:17، يبدو أنك سمعت جرسًا قبل حدوثه."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_stopped_clock"
+        ],
+        "setFlags": [
+          "watched_clock"
+        ]
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "text": "راقبها حتى الدقيقة التالية.",
+          "next": "n_clock_wait"
+        },
+        {
+          "id": "back",
+          "text": "لا تضيع الوقت.",
+          "next": "n_platforms"
+        }
+      ]
+    },
+    {
+      "id": "n_clock_wait",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "العقرب يتوقف.",
+        "15:41… ثم يقفز إلى 15:42.",
+        "على لوحة الرحلات، يظهر سطر لثانية واحدة: 041 — 16:17.",
+        "ثم يختفي."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_041"
+        ],
+        "setFlags": [
+          "saw_041_screen"
+        ]
+      },
+      "choices": [
+        {
+          "id": "screens",
+          "text": "اذهب إلى شاشة الرحلات.",
+          "next": "n_screen_glitch"
+        },
+        {
+          "id": "platforms",
+          "text": "اتجه إلى الأرصفة.",
+          "next": "n_platforms"
+        }
+      ]
+    },
+    {
+      "id": "n_screen_glitch",
+      "act": "act1",
+      "location": "main_hall",
+      "lines": [
+        "تقترب من الشاشة.",
+        "لا يوجد سجل للرحلة 041، لكن رقمها يظهر في سجل النظام للحظة.",
+        "تحت الرقم كلمة: «عودة»."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "screen_return"
+        ]
+      },
+      "choices": [
+        {
+          "id": "staff",
+          "text": "ابحث عن غرفة التحكم.",
+          "next": "n_staff_door"
+        },
+        {
+          "id": "old",
+          "text": "اذهب إلى الأرشيف.",
+          "next": "n_archive_door"
+        }
+      ]
+    },
+    {
+      "id": "n_platforms",
+      "act": "act2",
+      "location": "platform1",
+      "lines": [
+        "الرصيف الأول مزدحم.",
+        "الرصيف الثاني هادئ.",
+        "الرصيف الثالث فارغ تمامًا رغم وجود موعد قطار بعد عشر دقائق.",
+        "لا توجد لوحة تشير إلى الرصيف الرابع."
+      ],
+      "choices": [
+        {
+          "id": "p3",
+          "text": "اذهب إلى الرصيف الثالث.",
+          "next": "n_platform3"
+        },
+        {
+          "id": "old",
+          "text": "ابحث عن قاعة الانتظار القديمة.",
+          "next": "n_old_waiting"
+        },
+        {
+          "id": "staff",
+          "text": "ادخل ممر الموظفين.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_platform3",
+      "act": "act2",
+      "location": "platform3",
+      "lines": [
+        "هواء بارد يمر بين قضبان الرصيف.",
+        "تلاحظ آثار أحذية قديمة تنتهي عند حافة السكة ولا تعود.",
+        "ثم تسمع إعلانًا من مكبر الصوت: «الرحلة 041 ستصل إلى الرصيف الرابع.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_platform"
+        ],
+        "stats": {
+          "fear": 8
+        },
+        "setFlags": [
+          "heard_announcement"
+        ]
+      },
+      "choices": [
+        {
+          "id": "speaker",
+          "text": "افحص مكبر الصوت.",
+          "next": "n_speaker"
+        },
+        {
+          "id": "wait",
+          "text": "ابقَ وانتظر.",
+          "next": "n_platform_wait"
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد عن الرصيف.",
+          "next": "n_old_waiting"
+        }
+      ]
+    },
+    {
+      "id": "n_speaker",
+      "act": "act2",
+      "location": "platform3",
+      "lines": [
+        "مكبر الصوت متصل بنظام قديم منفصل.",
+        "على الجانب الخلفي زر أزرق صغير.",
+        "الزر يحمل نفس الرقم: 041."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_signal"
+        ],
+        "setFlags": [
+          "found_signal_button"
+        ]
+      },
+      "choices": [
+        {
+          "id": "press",
+          "text": "اضغط الزر.",
+          "next": "n_blue_signal"
+        },
+        {
+          "id": "leave",
+          "text": "لا تلمسه.",
+          "next": "n_platform3"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_signal",
+      "act": "act2",
+      "location": "platform3",
+      "lines": [
+        "لا يحدث شيء.",
+        "ثم يضيء مصباح بعيد في نهاية السكة بضوء أزرق.",
+        "لثلاث ثوانٍ فقط.",
+        "ومن مكان لا يجب أن يكون فيه رصيف، يأتي صوت فرامل قطار."
+      ],
+      "onEnter": {
+        "addItems": [
+          "blue_lantern"
+        ],
+        "setFlags": [
+          "signal_seen"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "اتبع الضوء.",
+          "next": "n_platform4_entry"
+        },
+        {
+          "id": "wait",
+          "text": "ابقَ مكانك.",
+          "next": "n_platform_wait"
+        }
+      ]
+    },
+    {
+      "id": "n_platform_wait",
+      "act": "act2",
+      "location": "platform3",
+      "lines": [
+        "تنتظر.",
+        "لا يصل قطار.",
+        "لكن الساعة في هاتفك تقفز من 15:58 إلى 16:06.",
+        "وعلى السكة المقابلة تظهر تذكرة ورقية تحمل اسمك."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_second_ticket"
+        ],
+        "setFlags": [
+          "time_jump"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "التقط التذكرة.",
+          "next": "n_second_ticket"
+        },
+        {
+          "id": "leave",
+          "text": "غادر.",
+          "next": "n_old_waiting"
+        }
+      ]
+    },
+    {
+      "id": "n_second_ticket",
+      "act": "act2",
+      "location": "platform3",
+      "lines": [
+        "التذكرة الثانية تحمل نفس الرقم 041.",
+        "الوقت 16:17.",
+        "والاسم مطبوع بوضوح: اسمك.",
+        "لكن التاريخ ليس تاريخ اليوم. إنه تاريخ قبل عشرين عامًا."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_second_ticket"
+        ],
+        "setFlags": [
+          "has_second_ticket"
+        ]
+      },
+      "choices": [
+        {
+          "id": "compare",
+          "text": "قارنها بتذكرتك الأولى.",
+          "next": "n_ticket_compare"
+        },
+        {
+          "id": "keep",
+          "text": "احتفظ بها.",
+          "next": "n_old_waiting"
+        }
+      ]
+    },
+    {
+      "id": "n_ticket_compare",
+      "act": "act2",
+      "location": "platform3",
+      "lines": [
+        "التذكرتان متطابقتان في كل شيء تقريبًا.",
+        "الاختلاف الوحيد: الأولى بلا اسم، والثانية باسمك.",
+        "وفي أسفل الثانية ختم: «وصل إلى المحطة»."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "ticket_match"
+        ]
+      },
+      "choices": [
+        {
+          "id": "old",
+          "text": "ابحث عن الرحلة في الأرشيف.",
+          "next": "n_archive_door"
+        },
+        {
+          "id": "platform4",
+          "text": "ابحث عن الرصيف الرابع.",
+          "next": "n_platform4_entry"
+        }
+      ]
+    },
+    {
+      "id": "n_platform4_entry",
+      "act": "act2",
+      "location": "platform4",
+      "lines": [
+        "تدخل بين مستودعين لا يظهران على خريطة المحطة.",
+        "الممر ينتهي بجدار، لكن الضوء الأزرق يأتي من خلفه.",
+        "في الأرض قطعة معدنية مربعة: الرقم 4 منقوش مرتين."
+      ],
+      "onEnter": {
+        "addItems": [
+          "platform_token"
+        ],
+        "setFlags": [
+          "reached_hidden_edge"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "token",
+          "text": "التقط القطعة.",
+          "next": "n_platform4_reveal"
+        },
+        {
+          "id": "wall",
+          "text": "ابحث عن باب.",
+          "next": "n_platform4_door"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الرصيف الثالث.",
+          "next": "n_platform3"
+        }
+      ]
+    },
+    {
+      "id": "n_platform4_reveal",
+      "act": "act2",
+      "location": "platform4",
+      "lines": [
+        "حين تضع القطعة في شق صغير بالأرض، يتحرك جزء من الجدار.",
+        "خلفه درج ينزل إلى ممر قديم.",
+        "على الجدار كتابة: «القطار يصل فقط لمن يعرف أنه وصل»."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_tunnel"
+        ],
+        "setFlags": [
+          "opened_platform4"
+        ]
+      },
+      "choices": [
+        {
+          "id": "down",
+          "text": "انزل.",
+          "next": "n_tunnel_entry"
+        },
+        {
+          "id": "back",
+          "text": "أغلق الفتحة.",
+          "next": "n_platform3"
+        }
+      ]
+    },
+    {
+      "id": "n_platform4_door",
+      "act": "act2",
+      "location": "platform4",
+      "lines": [
+        "تبحث بيديك.",
+        "تجد قفلًا صغيرًا مطليًا بالأحمر.",
+        "لا تملك مفتاحه، لكن خلف الجدار تسمع صوت امرأة: «لا تستخدم الباب. القطار أقرب.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "heard_woman_hidden"
+        ]
+      },
+      "choices": [
+        {
+          "id": "listen",
+          "text": "استمع للمرأة.",
+          "next": "n_blue_woman"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_platform3"
+        }
+      ]
+    },
+    {
+      "id": "n_old_waiting",
+      "act": "act2",
+      "location": "old_waiting_room",
+      "lines": [
+        "قاعة انتظار قديمة خلف باب زجاجي مغبر.",
+        "على المقاعد غبار، لكن مقعدًا واحدًا نظيف.",
+        "امرأة بمعطف أزرق تجلس فيه وتحمل حقيبة صغيرة."
+      ],
+      "choices": [
+        {
+          "id": "talk",
+          "text": "تحدث إليها.",
+          "next": "n_blue_woman"
+        },
+        {
+          "id": "observe",
+          "text": "راقبها قبل أن تقترب.",
+          "next": "n_blue_observe"
+        },
+        {
+          "id": "leave",
+          "text": "غادر القاعة.",
+          "next": "n_platforms"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_observe",
+      "act": "act2",
+      "location": "old_waiting_room",
+      "lines": [
+        "تفتح المرأة حقيبتها.",
+        "داخلها تذاكر كثيرة، كلها تحمل الرقم 041.",
+        "ثم تنظر إلى الساعة دون أن تعرف أنك تراقبها."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_041"
+        ],
+        "setFlags": [
+          "observed_blue_woman"
+        ]
+      },
+      "choices": [
+        {
+          "id": "talk",
+          "text": "اقترب واسألها.",
+          "next": "n_blue_woman"
+        },
+        {
+          "id": "ticket",
+          "text": "راقب التذاكر أكثر.",
+          "next": "n_blue_tickets"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_tickets",
+      "act": "act2",
+      "location": "old_waiting_room",
+      "lines": [
+        "واحدة من التذاكر تحمل تاريخ اليوم.",
+        "والاسم عليها: «المحصل».",
+        "أخرى تحمل اسمًا تعرفه… اسم موظف التذاكر."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "saw_old_tickets"
+        ]
+      },
+      "choices": [
+        {
+          "id": "talk",
+          "text": "تحدث إليها.",
+          "next": "n_blue_woman"
+        },
+        {
+          "id": "leave",
+          "text": "عد إلى الصالة.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_woman",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«أنت تأخرت.»",
+        "«عن ماذا؟»",
+        "«عن القطار الذي لم يكن من المفترض أن تسمع عنه.»",
+        "تنظر إلى تذكرتك: «لا تعطها للمحصل قبل أن تعرف الوجهة.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "met_blue_woman"
+        ]
+      },
+      "choices": [
+        {
+          "id": "who",
+          "text": "«من أنتِ؟»",
+          "next": "n_blue_identity"
+        },
+        {
+          "id": "train",
+          "text": "«ماذا يحدث في 16:17؟»",
+          "next": "n_blue_1717"
+        },
+        {
+          "id": "trust",
+          "text": "«سأثق بك.»",
+          "next": "n_blue_help",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 25
+              }
+            },
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "doubt",
+          "text": "لا أصدقك.",
+          "next": "n_blue_doubt",
+          "effects": {
+            "rel": {
+              "woman": {
+                "suspicion": 20
+              }
+            },
+            "stats": {
+              "suspicion": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_blue_identity",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«اسمي لا يهم الآن.»",
+        "تخرج صورة قديمة لطاقم المحطة.",
+        "في الخلف، امرأة بنفس المعطف الأزرق.",
+        "«الصورة عمرها عشرون عامًا.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "blue_old"
+        ]
+      },
+      "choices": [
+        {
+          "id": "photo",
+          "text": "«هذه أنتِ؟»",
+          "next": "n_blue_photo"
+        },
+        {
+          "id": "past",
+          "text": "«ماذا حدث هنا؟»",
+          "next": "n_blue_1717"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_why",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«لأنني ركبت الرحلة 041 في المرة الأولى.»",
+        "«وماذا حدث؟»",
+        "«لم أصل إلى وجهتي. وصلت إلى الدقيقة نفسها، مرارًا.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "blue_loop"
+        ]
+      },
+      "choices": [
+        {
+          "id": "plan",
+          "text": "«كيف أنهيها؟",
+          "next": "n_signal_plan"
+        },
+        {
+          "id": "leave",
+          "text": "لا أستطيع سماع المزيد.",
+          "next": "n_blue_doubt"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_photo",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "تقول: «نعم.»",
+        "«لكنني لم أكبر.»",
+        "ثم تشير إلى ساعة الحائط القديمة: 16:17.",
+        "«أنا لم أصل إلى نهاية الرحلة. أنا بقيت عند بدايتها.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_stopped_clock"
+        ],
+        "setFlags": [
+          "blue_time"
+        ]
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "«كيف؟»",
+          "next": "n_blue_why"
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد خطوة.",
+          "next": "n_blue_doubt"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_1717",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«في 16:17، يصل قطار لا يراه إلا من يحمل تذكرة 041.»",
+        "«وأين يذهب؟»",
+        "«إلى محطة أزيل اسمها من كل خريطة.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "knows_train"
+        ]
+      },
+      "choices": [
+        {
+          "id": "destination",
+          "text": "«ما اسمها؟»",
+          "next": "n_destination_hint"
+        },
+        {
+          "id": "how",
+          "text": "«كيف أوقفه؟»",
+          "next": "n_signal_plan"
+        }
+      ]
+    },
+    {
+      "id": "n_destination_hint",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«اسمها؟» تسأل المرأة.",
+        "«محطة الصفر. الاسم القديم كان يُستخدم في جداول لا يراها الركاب.»",
+        "ثم تضيف: «إذا وجدت السطر 0 في السجل، ستعرف الطريق.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "heard_zero_name"
+        ]
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "ابحث عن السطر 0 في الأرشيف.",
+          "next": "n_archive_door"
+        },
+        {
+          "id": "signal",
+          "text": "اسأل عن الإشارة الزرقاء.",
+          "next": "n_signal_plan"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_help",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«إذًا اسمعني.»",
+        "تخرج مفتاحًا أحمر.",
+        "«الخزائن في ممر الموظفين. ابحث عن سجل الرحلة 041.»",
+        "«لا تفتح الخزانة قبل أن ترى الإشارة الزرقاء.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "red_key"
+        ],
+        "setFlags": [
+          "blue_ally"
+        ]
+      },
+      "choices": [
+        {
+          "id": "key",
+          "text": "خذ المفتاح.",
+          "next": "n_staff_door"
+        },
+        {
+          "id": "ask",
+          "text": "«لماذا تساعدينني؟»",
+          "next": "n_blue_reason"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_reason",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "«لأنني انتظرت عشرين عامًا حتى يأتي شخص لا يريد ركوب القطار.»",
+        "«وماذا يفعل؟»",
+        "«يُخرج من فيه أولًا.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "woman": {
+            "trust": 20
+          }
+        },
+        "setFlags": [
+          "blue_motive"
+        ]
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "ابدأ البحث.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_doubt",
+      "act": "act3",
+      "location": "old_waiting_room",
+      "lines": [
+        "لا تجادلك.",
+        "تشير إلى تذكرتك.",
+        "«ستصدقني عندما تسمع القطار من مكان لا توجد فيه سكة.»"
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 12
+        },
+        "setFlags": [
+          "doubted_blue"
+        ]
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "text": "انتظر حتى 16:17.",
+          "next": "n_pretrain"
+        },
+        {
+          "id": "leave",
+          "text": "غادر.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_staff_door",
+      "act": "act3",
+      "location": "staff_corridor",
+      "lines": [
+        "باب خدمة مكتوب عليه: «للموظفين فقط».",
+        "خلفه ممر ضيق يؤدي إلى غرف صغيرة.",
+        "في نهايته لوحة: الإشارات — الأرشيف — التحكم."
+      ],
+      "choices": [
+        {
+          "id": "signal",
+          "text": "اذهب إلى غرفة الإشارات.",
+          "next": "n_signal_room"
+        },
+        {
+          "id": "archive",
+          "text": "اذهب إلى الأرشيف.",
+          "next": "n_archive_door"
+        },
+        {
+          "id": "control",
+          "text": "ابحث عن غرفة التحكم.",
+          "next": "n_control_door"
+        },
+        {
+          "id": "lockers",
+          "text": "افحص خزائن الموظفين.",
+          "next": "n_lockers"
+        }
+      ]
+    },
+    {
+      "id": "n_lockers",
+      "act": "act3",
+      "location": "staff_corridor",
+      "lines": [
+        "خزانة رقم 041 مقفلة باللون الأحمر.",
+        "المفتاح الأحمر يدخل فيها بسهولة.",
+        "في الداخل شارة محصل ودفتر صغير."
+      ],
+      "required": {
+        "items": [
+          "red_key"
+        ]
+      },
+      "lockedText": "تحتاج مفتاحًا أحمر.",
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الخزانة.",
+          "next": "n_locker_open"
+        },
+        {
+          "id": "back",
+          "text": "لا تفتحها.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_locker_open",
+      "act": "act3",
+      "location": "staff_corridor",
+      "lines": [
+        "الدفتر يحمل اسم الرحلة 041.",
+        "أول سطر: «القطار لا ينقل أشخاصًا. ينقل الوقت.»",
+        "آخر سطر: «إذا عاد، لا تدع الراكب الأخير يصعد.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "conductor_badge",
+          "old_manifest"
+        ],
+        "addClues": [
+          "clue_driver_note"
+        ],
+        "setFlags": [
+          "opened_locker"
+        ]
+      },
+      "choices": [
+        {
+          "id": "badge",
+          "text": "خذ الشارة والدفتر.",
+          "next": "n_badge"
+        },
+        {
+          "id": "read",
+          "text": "اقرأ الصفحة الأخيرة.",
+          "next": "n_manifest_hint"
+        }
+      ]
+    },
+    {
+      "id": "n_badge",
+      "act": "act3",
+      "location": "staff_corridor",
+      "lines": [
+        "خلف الشارة رقم 041.",
+        "وعلى الدفتر ختم غرفة التحكم.",
+        "أحد الأسماء في الصفحة الأخيرة هو اسم المرأة ذات المعطف الأزرق."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "has_badge"
+        ]
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "خذ السجل إلى الأرشيف.",
+          "next": "n_archive_door"
+        },
+        {
+          "id": "control",
+          "text": "اذهب إلى غرفة التحكم.",
+          "next": "n_control_door"
+        }
+      ]
+    },
+    {
+      "id": "n_manifest_hint",
+      "act": "act3",
+      "location": "staff_corridor",
+      "lines": [
+        "الصفحة الأخيرة تقول: «المحطة الوجهة: السطر 0.»",
+        "تحتها بخط مختلف: «السطر 0 ليس مكانًا. إنه اللحظة التي لم تغادر.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "read_manifest"
+        ]
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "ابحث عن السطر 0 في الأرشيف.",
+          "next": "n_archive_door"
+        },
+        {
+          "id": "signal",
+          "text": "اذهب إلى الإشارات.",
+          "next": "n_signal_room"
+        }
+      ]
+    },
+    {
+      "id": "n_signal_room",
+      "act": "act3",
+      "location": "signal_room",
+      "lines": [
+        "غرفة صغيرة مليئة بمفاتيح ميكانيكية.",
+        "ثلاثة أضواء: أحمر، أبيض، أزرق.",
+        "الضوء الأزرق لا يحمل رقم مسار."
+      ],
+      "choices": [
+        {
+          "id": "blue",
+          "text": "شغّل الضوء الأزرق.",
+          "next": "n_signal_test"
+        },
+        {
+          "id": "red",
+          "text": "شغّل الأحمر.",
+          "next": "n_bad_signal"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_signal_test",
+      "act": "act3",
+      "location": "signal_room",
+      "lines": [
+        "الضوء الأزرق يشتعل.",
+        "في اللحظة نفسها، يتوقف صوت المحطة كله.",
+        "لا إعلانات. لا خطوات. لا قطارات.",
+        "ثم يأتي صوت عجلات من تحت الأرض."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_signal"
+        ],
+        "setFlags": [
+          "blue_signal_active"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "اتبع الصوت إلى النفق.",
+          "next": "n_tunnel_entry"
+        },
+        {
+          "id": "stop",
+          "text": "أطفئ الإشارة.",
+          "next": "n_signal_stop"
+        }
+      ]
+    },
+    {
+      "id": "n_bad_signal",
+      "act": "act3",
+      "location": "signal_room",
+      "lines": [
+        "الضوء الأحمر يشتعل.",
+        "جرس إنذار قصير.",
+        "من الممر يأتي صوت المفتش: «من سمح لك بالدخول؟»"
+      ],
+      "onEnter": {
+        "stats": {
+          "suspicion": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "hide",
+          "text": "اختبئ.",
+          "next": "n_inspector_room"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج بسرعة.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_signal_stop",
+      "act": "act3",
+      "location": "signal_room",
+      "lines": [
+        "حين تطفئه، يعود كل شيء.",
+        "لكن الساعة الصغيرة فوق اللوحة أصبحت 16:12 بدل 16:03.",
+        "لم يمر الوقت بهذا الشكل."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_stopped_clock"
+        ],
+        "setFlags": [
+          "time_distortion"
+        ]
+      },
+      "choices": [
+        {
+          "id": "tunnel",
+          "text": "اذهب إلى النفق.",
+          "next": "n_tunnel_entry"
+        },
+        {
+          "id": "control",
+          "text": "اذهب إلى غرفة التحكم.",
+          "next": "n_control_door"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_door",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الأرشيف مغلق، لكن بابه لا يحتوي على قفل حديث.",
+        "من الداخل رائحة ورق قديم.",
+        "وعلى الباب ملصق ممزق: «السجلات التي لا يجب أن تعود»."
+      ],
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_archive"
+        },
+        {
+          "id": "listen",
+          "text": "استمع من خلف الباب.",
+          "next": "n_archive_listen"
+        },
+        {
+          "id": "back",
+          "text": "ارجع.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_listen",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "تسمع تقليب صفحات.",
+        "ثم صوت امرأة: «الرحلة 041 وصلت.»",
+        "صمت.",
+        "«لكنها لم تصل بعد.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "heard_archive"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_archive"
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_archive",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "السجلات مرتبة حسب السنة.",
+        "آخر سجل رسمي للرحلة 041 يعود إلى عشرين عامًا.",
+        "لكن ملفًا حديثًا وضع فوقه اليوم."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "entered_archive"
+        ]
+      },
+      "choices": [
+        {
+          "id": "old",
+          "text": "افتح الملف القديم.",
+          "next": "n_old_manifest"
+        },
+        {
+          "id": "new",
+          "text": "افتح الملف الحديث.",
+          "next": "n_new_manifest"
+        },
+        {
+          "id": "search",
+          "text": "ابحث عن اسمك.",
+          "next": "n_archive_name"
+        }
+      ]
+    },
+    {
+      "id": "n_old_manifest",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "قائمة الرحلة 041 تضم أربعة ركاب ومحصلًا وسائقًا.",
+        "الراكب الرابع ليس له اسم.",
+        "بجانب خانته: «ينتظر على الرصيف الرابع»."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "old_manifest_read"
+        ]
+      },
+      "choices": [
+        {
+          "id": "name",
+          "text": "ابحث عن الملاحظة أسفل الصفحة.",
+          "next": "n_manifest_bottom"
+        },
+        {
+          "id": "back",
+          "text": "أعد الملف.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_manifest_bottom",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "في أسفل الصفحة: «عندما يعود القطار، لا تبحث عن المحطة. ابحث عن الدقيقة.»",
+        "وتحتها وقت واحد: 16:17."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination",
+          "clue_ticket_time"
+        ],
+        "setFlags": [
+          "manifest_bottom"
+        ]
+      },
+      "choices": [
+        {
+          "id": "destination",
+          "text": "ابحث عن وجهة الرحلة.",
+          "next": "n_destination"
+        },
+        {
+          "id": "tunnel",
+          "text": "اذهب إلى النفق.",
+          "next": "n_tunnel_entry"
+        }
+      ]
+    },
+    {
+      "id": "n_new_manifest",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الملف حديث.",
+        "فيه ورقة مطبوعة اليوم: «تم تأكيد حضور الراكب الأخير.»",
+        "الاسم: اسمك.",
+        "التوقيع: فارغ."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_second_ticket"
+        ],
+        "setFlags": [
+          "modern_manifest"
+        ]
+      },
+      "choices": [
+        {
+          "id": "tear",
+          "text": "مزق الورقة.",
+          "next": "n_tear_manifest",
+          "effects": {
+            "stats": {
+              "suspicion": 15
+            }
+          }
+        },
+        {
+          "id": "keep",
+          "text": "احتفظ بها.",
+          "next": "n_archive_name"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_name",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "تجد اسمك في سجل لم يُفترض أن يكون موجودًا.",
+        "بجانبه وقت الوصول: 16:17.",
+        "وفي خانة المغادرة: فارغة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_second_ticket"
+        ],
+        "setFlags": [
+          "name_in_record"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "sign",
+          "text": "وقّع في خانة المغادرة.",
+          "next": "n_end_loop"
+        },
+        {
+          "id": "erase",
+          "text": "اشطب اسمك.",
+          "next": "n_erase_name"
+        },
+        {
+          "id": "back",
+          "text": "اترك السجل.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_erase_name",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "تمسح الاسم.",
+        "الحبر يعود إلى الورقة من تلقاء نفسه.",
+        "ثم يظهر اسم آخر مكانه: اسم المرأة ذات المعطف الأزرق."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "names_exchange"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "truth",
+          "text": "ابحث عنها.",
+          "next": "n_blue_revisit"
+        },
+        {
+          "id": "run",
+          "text": "غادر الأرشيف.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_tear_manifest",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الورقة تتمزق.",
+        "في اللحظة نفسها، تسمع صفير قطار داخل المحطة.",
+        "الساعة: 16:14."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "torn_manifest"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "tunnel",
+          "text": "اذهب إلى النفق.",
+          "next": "n_tunnel_entry"
+        },
+        {
+          "id": "platform",
+          "text": "اذهب إلى الرصيف الرابع.",
+          "next": "n_pretrain"
+        }
+      ]
+    },
+    {
+      "id": "n_destination",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "تجد صفحة مخفية خلف غلاف الملف.",
+        "الوجهة مكتوبة: «محطة الصفر».",
+        "الملاحظة: «لا توجد في العالم الحالي، لكنها تظهر بين 16:17 و16:18.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "knows_zero_station"
+        ]
+      },
+      "choices": [
+        {
+          "id": "tunnel",
+          "text": "اذهب إلى النفق.",
+          "next": "n_tunnel_entry"
+        },
+        {
+          "id": "blue",
+          "text": "اسأل المرأة عن محطة الصفر.",
+          "next": "n_blue_revisit"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_revisit",
+      "act": "act4",
+      "location": "old_waiting_room",
+      "lines": [
+        "المرأة ما زالت في مكانها.",
+        "«وجدت محطة الصفر.» تقول.",
+        "«إذًا عرفت لماذا أرسلوا التذكرة.»",
+        "تنظر إلى الساعة: 16:15."
+      ],
+      "onEnter": {
+        "rel": {
+          "woman": {
+            "trust": 20
+          }
+        },
+        "setFlags": [
+          "blue_revisited"
+        ]
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "«لماذا أنا؟»",
+          "next": "n_blue_final_hint"
+        },
+        {
+          "id": "plan",
+          "text": "«كيف أوقف الرحلة؟»",
+          "next": "n_signal_plan"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_final_hint",
+      "act": "act4",
+      "location": "old_waiting_room",
+      "lines": [
+        "«لأنك الوحيد الذي يحمل تذكرتين دون أن يطلبهما.»",
+        "ثم تمد يدها.",
+        "«أعطني التذكرة الأولى، واحتفظ بالثانية.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "two_ticket_choice"
+        ]
+      },
+      "choices": [
+        {
+          "id": "give",
+          "text": "أعطها التذكرة الأولى.",
+          "next": "n_pretrain",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 25
+              }
+            },
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "refuse",
+          "text": "ارفض.",
+          "next": "n_blue_doubt"
+        }
+      ]
+    },
+    {
+      "id": "n_signal_plan",
+      "act": "act4",
+      "location": "signal_room",
+      "lines": [
+        "تقول المرأة إن الإشارة الزرقاء لا توقف القطار.",
+        "«هي فقط تجعله يفتح الأبواب.»",
+        "«ومن يوقفه؟»",
+        "«الشخص الموجود في غرفة التحكم.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "signal_plan"
+        ],
+        "addClues": [
+          "clue_signal"
+        ]
+      },
+      "choices": [
+        {
+          "id": "control",
+          "text": "اذهب إلى غرفة التحكم.",
+          "next": "n_control_door"
+        },
+        {
+          "id": "blue",
+          "text": "شغّل الإشارة الآن.",
+          "next": "n_signal_test"
+        }
+      ]
+    },
+    {
+      "id": "n_control_door",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "باب غرفة التحكم مفتوح.",
+        "في الداخل لوحة قديمة وشاشة تعرض ثلاثة مسارات.",
+        "مسار رابع يظهر في الشاشة دون أن يكون له سكة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_missing_platform"
+        ],
+        "setFlags": [
+          "found_control"
+        ]
+      },
+      "choices": [
+        {
+          "id": "inspect",
+          "text": "افحص المسار الرابع.",
+          "next": "n_control"
+        },
+        {
+          "id": "person",
+          "text": "نادِ من في الداخل.",
+          "next": "n_control_person"
+        },
+        {
+          "id": "back",
+          "text": "ارجع.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_control_person",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "لا أحد يجيب.",
+        "لكن كرسي المحطة يتحرك وحده.",
+        "وعلى الطاولة دفتر مفتوح عند صفحة الرحلة 041."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "read",
+          "text": "اقرأ الدفتر.",
+          "next": "n_control"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_control",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "الدفتر يقول: «الرحلة لا تتبع السكة. السكة تتبع الراكب.»",
+        "ثم: «عند 16:17، افتح المسار الرابع، لا تغلقه.»",
+        "تحتها توقيع السائق."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_driver_note",
+          "clue_destination"
+        ],
+        "setFlags": [
+          "control_understood"
+        ]
+      },
+      "choices": [
+        {
+          "id": "driver",
+          "text": "ابحث عن السائق.",
+          "next": "n_driver_note"
+        },
+        {
+          "id": "train",
+          "text": "انتظر القطار.",
+          "next": "n_pretrain"
+        }
+      ]
+    },
+    {
+      "id": "n_driver_note",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "في درج صغير تجد ملاحظة: «إذا وجدت تذكرة باسمك، فأنت لست الراكب الأخير. أنت المفتاح.»",
+        "أسفلها رقم 041."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_driver_note"
+        ],
+        "setFlags": [
+          "driver_note_read"
+        ]
+      },
+      "choices": [
+        {
+          "id": "train",
+          "text": "اذهب إلى الرصيف الرابع.",
+          "next": "n_pretrain"
+        },
+        {
+          "id": "tunnel",
+          "text": "اعبر النفق.",
+          "next": "n_tunnel_entry"
+        }
+      ]
+    },
+    {
+      "id": "n_inspector_room",
+      "act": "act4",
+      "location": "staff_corridor",
+      "lines": [
+        "تختبئ خلف خزائن قديمة.",
+        "المفتش يمر ويقول في هاتفه: «الراكب وصل قبل الموعد.»",
+        "ثم يتوقف أمامك مباشرة دون أن يراك.",
+        "«إذا سمعته، لا تصعد.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "heard_inspector"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "اتبعه.",
+          "next": "n_inspector"
+        },
+        {
+          "id": "wait",
+          "text": "انتظر حتى يذهب.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_inspector",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "يدخل المفتش غرفة التحكم.",
+        "يفتح خزانة ويخرج سجلًا صغيرًا.",
+        "«كل عشرين عامًا، يأتي شخص يحمل التذكرة نفسها.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "followed_inspector"
+        ]
+      },
+      "choices": [
+        {
+          "id": "confront",
+          "text": "واجهه.",
+          "next": "n_inspector_talk"
+        },
+        {
+          "id": "listen",
+          "text": "استمع أكثر.",
+          "next": "n_inspector_listen"
+        }
+      ]
+    },
+    {
+      "id": "n_inspector_talk",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "«أنت لا تفهم ما سيحدث إذا وصل القطار.»",
+        "«إلى أين يذهب؟»",
+        "«إلى المكان الذي كان يجب أن تذهب إليه الرحلة الأولى.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "inspector": {
+            "suspicion": 20
+          }
+        },
+        "stats": {
+          "suspicion": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "«ومن كان الراكب الأول؟»",
+          "next": "n_first_passenger"
+        },
+        {
+          "id": "leave",
+          "text": "اتركه.",
+          "next": "n_pretrain"
+        }
+      ]
+    },
+    {
+      "id": "n_inspector_listen",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "«لا نمنع القطار.» يقول للمكالمة.",
+        "«نمنع الناس من رؤية المحطة بعده.»",
+        "ثم يضع السجل في الخزانة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "inspector_secret"
+        ]
+      },
+      "choices": [
+        {
+          "id": "steal",
+          "text": "خذ السجل.",
+          "next": "n_inspector_steal"
+        },
+        {
+          "id": "leave",
+          "text": "غادر.",
+          "next": "n_pretrain"
+        }
+      ]
+    },
+    {
+      "id": "n_inspector_steal",
+      "act": "act4",
+      "location": "control_room",
+      "lines": [
+        "تأخذ السجل.",
+        "آخر صفحة: «لا يمكن إلغاء الرحلة. يمكن فقط تغيير من يعود.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "old_manifest"
+        ],
+        "setFlags": [
+          "stole_control_log"
+        ]
+      },
+      "choices": [
+        {
+          "id": "read",
+          "text": "اقرأ الصفحة السابقة.",
+          "next": "n_first_passenger"
+        },
+        {
+          "id": "run",
+          "text": "اهرب إلى النفق.",
+          "next": "n_tunnel_entry"
+        }
+      ]
+    },
+    {
+      "id": "n_first_passenger",
+      "act": "act5",
+      "location": "control_room",
+      "lines": [
+        "الاسم الأول في السجل ممسوح.",
+        "لكن بجانبه ملاحظة: «امرأة بمعطف أزرق. بقيت عند الرصيف الرابع.»",
+        "أنت تفهم أن المرأة لم تكن تنتظر القطار. كانت تنتظر شخصًا آخر."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "first_passenger_known"
+        ]
+      },
+      "choices": [
+        {
+          "id": "blue",
+          "text": "اذهب إليها.",
+          "next": "n_blue_final"
+        },
+        {
+          "id": "train",
+          "text": "اذهب إلى القطار.",
+          "next": "n_pretrain"
+        }
+      ]
+    },
+    {
+      "id": "n_tunnel_entry",
+      "act": "act4",
+      "location": "tunnel",
+      "lines": [
+        "النفق ضيق ومبلل.",
+        "على الجدار علامات زرقاء متكررة.",
+        "كل علامة تتوقف عند رقم 041.",
+        "في آخر النفق ترى ضوء النهار، رغم أنك تحت المحطة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_tunnel"
+        ],
+        "setFlags": [
+          "entered_tunnel"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "تابع.",
+          "next": "n_tunnel_end"
+        },
+        {
+          "id": "back",
+          "text": "ارجع.",
+          "next": "n_staff_door"
+        }
+      ]
+    },
+    {
+      "id": "n_tunnel_end",
+      "act": "act5",
+      "location": "tunnel",
+      "lines": [
+        "تخرج إلى رصيف قديم لا يظهر في الخرائط.",
+        "لوحة الصالة تقول: «المحطة الرابعة».",
+        "الساعة: 16:16.",
+        "في نهاية السكة، ضوء قطار يقترب."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "reached_old_platform"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "text": "انتظر.",
+          "next": "n_pretrain"
+        },
+        {
+          "id": "return",
+          "text": "ارجع قبل وصوله.",
+          "next": "n_leave_early"
+        }
+      ]
+    },
+    {
+      "id": "n_pretrain",
+      "act": "act5",
+      "location": "platform4",
+      "lines": [
+        "16:17.",
+        "الصوت يأتي أولًا، ثم الضوء.",
+        "قطار أسود قديم يدخل المحطة بلا رقم على مقدمته.",
+        "يتوقف تمامًا أمامك.",
+        "أبوابه تفتح."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "train_arrived"
+        ],
+        "addClues": [
+          "clue_driver_note"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "اصعد.",
+          "next": "n_train"
+        },
+        {
+          "id": "inspect",
+          "text": "افحص المحصل أولًا.",
+          "next": "n_conductor"
+        },
+        {
+          "id": "signal",
+          "text": "شغّل الإشارة الزرقاء.",
+          "next": "n_train_signal"
+        },
+        {
+          "id": "leave",
+          "text": "لا تركب. ابتعد.",
+          "next": "n_leave_before_train"
+        }
+      ]
+    },
+    {
+      "id": "n_train_signal",
+      "act": "act5",
+      "location": "platform4",
+      "lines": [
+        "تشعل الضوء الأزرق.",
+        "كل أبواب القطار تفتح في الوقت نفسه.",
+        "من النوافذ ترى ركابًا لا يتحركون.",
+        "في آخر عربة، امرأة تشبه المرأة ذات المعطف الأزرق تمامًا."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "train_opened"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "اصعد.",
+          "next": "n_train"
+        },
+        {
+          "id": "last",
+          "text": "اذهب إلى العربة الأخيرة.",
+          "next": "n_last_car"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ خارج القطار.",
+          "next": "n_train_standoff"
+        }
+      ]
+    },
+    {
+      "id": "n_conductor",
+      "act": "act5",
+      "location": "platform4",
+      "lines": [
+        "المحصل ينزل.",
+        "زيه قديم، وشارة على صدره تحمل الرقم 041.",
+        "«التذكرة.» يقول.",
+        "خلفه، كل ساعة في القطار تشير إلى 16:17."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_041"
+        ],
+        "setFlags": [
+          "met_conductor"
+        ]
+      },
+      "choices": [
+        {
+          "id": "give",
+          "text": "أعطه التذكرة.",
+          "next": "n_conductor_take"
+        },
+        {
+          "id": "ask",
+          "text": "«إلى أين؟»",
+          "next": "n_destination_train"
+        },
+        {
+          "id": "refuse",
+          "text": "ارفض إعطاءها.",
+          "next": "n_train_standoff"
+        }
+      ]
+    },
+    {
+      "id": "n_conductor_take",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "ينظر إلى التذكرة.",
+        "«هذه ليست تذكرتك.»",
+        "ثم ينظر إلى وجهك.",
+        "«لكنها تحمل اسمك الآن.»"
+      ],
+      "onEnter": {
+        "rel": {
+          "conductor": {
+            "trust": 20
+          }
+        },
+        "setFlags": [
+          "ticket_checked"
+        ]
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "اصعد.",
+          "next": "n_train"
+        },
+        {
+          "id": "question",
+          "text": "«من الراكب الأخير؟»",
+          "next": "n_last_passenger"
+        }
+      ]
+    },
+    {
+      "id": "n_destination_train",
+      "act": "act5",
+      "location": "platform4",
+      "lines": [
+        "«محطة الصفر.»",
+        "«أين هي؟»",
+        "يبتسم: «أنت تعرف. أنت رأيتها في السجلات قبل أن تركب.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "destination_confirmed"
+        ]
+      },
+      "choices": [
+        {
+          "id": "board",
+          "text": "اصعد.",
+          "next": "n_train"
+        },
+        {
+          "id": "refuse",
+          "text": "لن أصعد.",
+          "next": "n_train_standoff"
+        }
+      ]
+    },
+    {
+      "id": "n_last_passenger",
+      "act": "act5",
+      "location": "platform4",
+      "lines": [
+        "المحصل ينظر إلى العربة الأخيرة.",
+        "«الشخص الذي لم يصل في الرحلة الأولى.»",
+        "ثم يقول: «هو هنا الآن.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_passenger_list"
+        ],
+        "setFlags": [
+          "last_passenger_hint"
+        ]
+      },
+      "choices": [
+        {
+          "id": "last",
+          "text": "اذهب إلى العربة الأخيرة.",
+          "next": "n_last_car"
+        },
+        {
+          "id": "blue",
+          "text": "ابحث عن المرأة الزرقاء.",
+          "next": "n_blue_final"
+        }
+      ]
+    },
+    {
+      "id": "n_train_standoff",
+      "act": "act5",
+      "location": "platform4",
+      "lines": [
+        "أبواب القطار تبقى مفتوحة.",
+        "القطار لا يتحرك.",
+        "المحصل لا يقترب منك.",
+        "ومن داخل العربة تسمع صوت المرأة: «أخيرًا.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "train_waiting"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "اصعد.",
+          "next": "n_train"
+        },
+        {
+          "id": "walk",
+          "text": "اتبع الصوت إلى العربة الأخيرة.",
+          "next": "n_last_car"
+        },
+        {
+          "id": "leave",
+          "text": "غادر الرصيف.",
+          "next": "n_end_leave_station"
+        }
+      ]
+    },
+    {
+      "id": "n_train",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "العربة الأولى شبه فارغة.",
+        "المقاعد مغطاة بقماش قديم.",
+        "على النافذة يظهر انعكاس المحطة، لكن الرصيف خلفك غير موجود في الانعكاس."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "boarded_train"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "driver",
+          "text": "اتجه إلى مقدمة القطار.",
+          "next": "n_driver"
+        },
+        {
+          "id": "last",
+          "text": "اتجه إلى العربة الأخيرة.",
+          "next": "n_last_car"
+        },
+        {
+          "id": "sit",
+          "text": "اجلس وانتظر.",
+          "next": "n_end_wrong_train"
+        }
+      ]
+    },
+    {
+      "id": "n_driver",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "السائق لا ينظر إليك.",
+        "«لا أحد يجلس هنا.»",
+        "تقول له إنك تريد معرفة الوجهة.",
+        "«الوجهة لا تظهر إلا بعد أن يقرر الراكب إن كان سيعود.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "met_driver"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "«كيف أعود؟»",
+          "next": "n_driver_return"
+        },
+        {
+          "id": "route",
+          "text": "«ما محطة الصفر؟»",
+          "next": "n_driver_zero"
+        },
+        {
+          "id": "leave",
+          "text": "اتركه واتجه للخلف.",
+          "next": "n_last_car"
+        }
+      ]
+    },
+    {
+      "id": "n_driver_return",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "«لا تعود من القطار.»",
+        "«إذًا؟»",
+        "«تعود من الشخص الذي انتظر.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_driver_note"
+        ],
+        "setFlags": [
+          "driver_return_hint"
+        ]
+      },
+      "choices": [
+        {
+          "id": "blue",
+          "text": "ابحث عن المرأة الزرقاء.",
+          "next": "n_blue_final"
+        },
+        {
+          "id": "last",
+          "text": "اذهب إلى آخر عربة.",
+          "next": "n_last_car"
+        }
+      ]
+    },
+    {
+      "id": "n_driver_zero",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "السائق يشير إلى الزجاج الأمامي.",
+        "خلفه، لا توجد سكة.",
+        "هناك ضوء أبيض طويل فقط.",
+        "«هذه محطة الصفر.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "saw_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "continue",
+          "text": "دع القطار يتحرك.",
+          "next": "n_train_move"
+        },
+        {
+          "id": "stop",
+          "text": "اطلب منه التوقف.",
+          "next": "n_train_standoff"
+        }
+      ]
+    },
+    {
+      "id": "n_train_move",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "يتحرك القطار.",
+        "المحطة تختفي خلال ثانية.",
+        "النوافذ تعرض أيامًا مختلفة من السنة نفسها.",
+        "ثم تظهر لوحة: «الوصول 16:17»."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "train_moving"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "last",
+          "text": "اذهب إلى آخر عربة.",
+          "next": "n_last_car"
+        },
+        {
+          "id": "wait",
+          "text": "ابقَ في مكانك.",
+          "next": "n_train_window"
+        }
+      ]
+    },
+    {
+      "id": "n_train_window",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "ترى المحطة من النافذة.",
+        "لكنها ليست محطة اليوم.",
+        "ترى المرأة ذات المعطف الأزرق أصغر بعشرين عامًا، واقفة على الرصيف الرابع.",
+        "ثم ترى نفسك واقفًا بجانبها."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "saw_past_station"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "choices": [
+        {
+          "id": "last",
+          "text": "اذهب إلى آخر عربة.",
+          "next": "n_last_car"
+        },
+        {
+          "id": "jump",
+          "text": "حاول فتح الباب.",
+          "next": "n_wrong_door"
+        }
+      ]
+    },
+    {
+      "id": "n_last_car",
+      "act": "act5",
+      "location": "last_car",
+      "lines": [
+        "العربة الأخيرة مختلفة.",
+        "لا مقاعد فيها إلا مقعد واحد.",
+        "على المقعد حقيبة المرأة الزرقاء، وبجانبها شريط صوتي.",
+        "على الباب الداخلي رقم 041."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "reached_last_car"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "cassette",
+          "text": "خذ الشريط.",
+          "next": "n_cassette"
+        },
+        {
+          "id": "bag",
+          "text": "افتح الحقيبة.",
+          "next": "n_blue_bag"
+        },
+        {
+          "id": "door",
+          "text": "افتح الباب الداخلي.",
+          "next": "n_end_locked_car"
+        }
+      ]
+    },
+    {
+      "id": "n_cassette",
+      "act": "act5",
+      "location": "last_car",
+      "lines": [
+        "على الشريط: «الرحلة 041 — لا تُشغّله قبل الوصول.»",
+        "حين تضعه في يدك، تسمع الصوت من دون تشغيله: «لا تصعد وحدك.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "cassette"
+        ],
+        "setFlags": [
+          "has_cassette"
+        ],
+        "addClues": [
+          "clue_driver_note"
+        ]
+      },
+      "choices": [
+        {
+          "id": "play",
+          "text": "شغّل الشريط.",
+          "next": "n_play_cassette"
+        },
+        {
+          "id": "bag",
+          "text": "افتح الحقيبة.",
+          "next": "n_blue_bag"
+        }
+      ]
+    },
+    {
+      "id": "n_play_cassette",
+      "act": "act5",
+      "location": "last_car",
+      "lines": [
+        "صوت المرأة قبل عشرين عامًا: «إذا عاد القطار، سيكون هناك شخص يحمل تذكرتين.»",
+        "صوت رجل: «وإذا صعد؟»",
+        "«سيعيد الرحلة إلى بدايتها.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_second_ticket",
+          "clue_destination"
+        ],
+        "setFlags": [
+          "cassette_played"
+        ]
+      },
+      "choices": [
+        {
+          "id": "truth",
+          "text": "اجمع الأدلة.",
+          "next": "n_truth_gate"
+        },
+        {
+          "id": "door",
+          "text": "افتح الباب الداخلي.",
+          "next": "n_car_door"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_bag",
+      "act": "act5",
+      "location": "last_car",
+      "lines": [
+        "داخل الحقيبة صورة للمحطة قبل عشرين عامًا.",
+        "الرصيف الرابع ظاهر بوضوح.",
+        "وبجانب المرأة يقف شخص ملامحه تشبهك."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_second_ticket"
+        ],
+        "setFlags": [
+          "blue_bag_open"
+        ]
+      },
+      "choices": [
+        {
+          "id": "photo",
+          "text": "قارن الوجه بنفسك.",
+          "next": "n_face_compare"
+        },
+        {
+          "id": "door",
+          "text": "افتح الباب الداخلي.",
+          "next": "n_car_door"
+        }
+      ]
+    },
+    {
+      "id": "n_face_compare",
+      "act": "act5",
+      "location": "last_car",
+      "lines": [
+        "الوجه في الصورة ليس أنت تمامًا.",
+        "لكنه الشخص الذي يحمل اسمك في السجل القديم.",
+        "وتحت الصورة تاريخ الرحلة الأولى."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "face_link"
+        ],
+        "addClues": [
+          "clue_passenger_list"
+        ]
+      },
+      "choices": [
+        {
+          "id": "truth",
+          "text": "الآن فهمت.",
+          "next": "n_truth_gate"
+        },
+        {
+          "id": "door",
+          "text": "تابع إلى الباب.",
+          "next": "n_car_door"
+        }
+      ]
+    },
+    {
+      "id": "n_car_door",
+      "act": "act5",
+      "location": "last_car",
+      "lines": [
+        "الباب الداخلي يقود إلى ممر قصير.",
+        "في نهايته نافذة ترى محطة قديمة.",
+        "على اللوحة: «المحطة الرابعة — 16:17»."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_destination"
+        ],
+        "setFlags": [
+          "door_to_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "اعبر.",
+          "next": "n_lost_station"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى العربة.",
+          "next": "n_last_car"
+        }
+      ]
+    },
+    {
+      "id": "n_lost_station",
+      "act": "act5",
+      "location": "lost_station",
+      "lines": [
+        "تنزل إلى محطة لم تعد موجودة.",
+        "المقاعد مليئة بأشخاص ينتظرون، لكن لا أحد يتحدث.",
+        "المرأة ذات المعطف الأزرق تقف عند لوحة الرحلات.",
+        "«هذه هي الرحلة الأولى.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "reached_zero"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "talk",
+          "text": "تحدث إليها.",
+          "next": "n_blue_final"
+        },
+        {
+          "id": "control",
+          "text": "ابحث عن غرفة التحكم.",
+          "next": "n_zero_control"
+        },
+        {
+          "id": "exit",
+          "text": "ابحث عن مخرج.",
+          "next": "n_zero_exit"
+        }
+      ]
+    },
+    {
+      "id": "n_blue_final",
+      "act": "act5",
+      "location": "lost_station",
+      "lines": [
+        "«كنت أعرف أنك ستصل.»",
+        "«من هؤلاء؟»",
+        "«الذين لم يعودوا في وقتهم.»",
+        "تشير إلى الباب: «يمكنك إخراجهم، لكن ليس بالصعود.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "blue_final"
+        ],
+        "rel": {
+          "woman": {
+            "trust": 15
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "«كيف؟»",
+          "next": "n_truth_gate"
+        },
+        {
+          "id": "trust",
+          "text": "«سأفعل.»",
+          "next": "n_truth_gate",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 30
+              }
+            },
+            "stats": {
+              "trust": 15
+            }
+          }
+        },
+        {
+          "id": "leave",
+          "text": "أريد الخروج فقط.",
+          "next": "n_zero_exit"
+        }
+      ]
+    },
+    {
+      "id": "n_zero_control",
+      "act": "act5",
+      "location": "lost_station",
+      "lines": [
+        "غرفة التحكم هنا أصغر.",
+        "لا توجد أزرار سوى زر أزرق واحد.",
+        "تحت الزر: «أخرج الراكب الأخير قبل إغلاق الدقيقة»."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "zero_control"
+        ]
+      },
+      "choices": [
+        {
+          "id": "press",
+          "text": "اضغط الزر الأزرق.",
+          "next": "n_zero_signal"
+        },
+        {
+          "id": "wait",
+          "text": "انتظر.",
+          "next": "n_zero_wait"
+        }
+      ]
+    },
+    {
+      "id": "n_zero_signal",
+      "act": "act5",
+      "location": "lost_station",
+      "lines": [
+        "يضيء الضوء الأزرق.",
+        "الركاب في المحطة يرفعون رؤوسهم للمرة الأولى.",
+        "المحصل يدخل ويقول: «واحد فقط يستطيع العودة.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "zero_signal_active"
+        ],
+        "addClues": [
+          "clue_signal"
+        ]
+      },
+      "choices": [
+        {
+          "id": "yourself",
+          "text": "«سأعود أنا.»",
+          "next": "n_truth_gate"
+        },
+        {
+          "id": "woman",
+          "text": "«هي ستعود.»",
+          "next": "n_truth_gate",
+          "effects": {
+            "rel": {
+              "woman": {
+                "trust": 20
+              }
+            },
+            "stats": {
+              "trust": 10
+            }
+          }
+        },
+        {
+          "id": "all",
+          "text": "«سيخرج الجميع.»",
+          "next": "n_truth_gate",
+          "effects": {
+            "stats": {
+              "trust": 15
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_zero_wait",
+      "act": "act5",
+      "location": "lost_station",
+      "lines": [
+        "تنتظر.",
+        "الساعة تتحرك من 16:17 إلى 16:18.",
+        "كل شيء يتجمد.",
+        "ثم تسمع القطار يعود إلى المحطة دون أن يتحرك."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "missed_minute"
+        ],
+        "stats": {
+          "fear": 20
+        }
+      },
+      "choices": [
+        {
+          "id": "board",
+          "text": "اصعد القطار.",
+          "next": "n_truth_gate"
+        },
+        {
+          "id": "exit",
+          "text": "اخرج من المحطة.",
+          "next": "n_end_missing"
+        }
+      ]
+    },
+    {
+      "id": "n_zero_exit",
+      "act": "act5",
+      "location": "lost_station",
+      "lines": [
+        "تجد درجًا يؤدي إلى شارع تعرفه.",
+        "قبل أن تصعد، ترى لوحة صغيرة: «لا تخرج قبل أن يخرج الراكب الأخير»."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "found_exit"
+        ]
+      },
+      "choices": [
+        {
+          "id": "obey",
+          "text": "عد إلى المحطة.",
+          "next": "n_truth_gate"
+        },
+        {
+          "id": "ignore",
+          "text": "اصعد.",
+          "next": "n_end_missing"
+        }
+      ]
+    },
+    {
+      "id": "n_wrong_door",
+      "act": "act5",
+      "location": "train",
+      "lines": [
+        "الباب لا يفتح على محطة.",
+        "يفتح على نفس الرصيف الذي غادرته.",
+        "أنت ترى نفسك ما زلت واقفًا هناك.",
+        "والقطار لم يغادر بعد."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "loop_seen"
+        ],
+        "stats": {
+          "fear": 20
+        }
+      },
+      "choices": [
+        {
+          "id": "return",
+          "text": "انزل إلى الرصيف.",
+          "next": "n_pretrain"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ في القطار.",
+          "next": "n_end_loop"
+        }
+      ]
+    },
+    {
+      "id": "n_truth_gate",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تجمع التذكرة الأولى والثانية، السجل، الشارة، الشريط، وإشارة الرصيف.",
+        "كل خيط يقود إلى شيء واحد: الرحلة 041 لم تكن تنقل أشخاصًا.",
+        "كانت تعيد دقيقة واحدة إلى مكانها.",
+        "والمحطة المفقودة هي الدقيقة التي لم تنتهِ."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "truth_path"
+        ]
+      },
+      "choices": [
+        {
+          "id": "true",
+          "text": "أكمل الخطة وأنقذ الركاب.",
+          "next": "n_true_plan",
+          "required": {
+            "minClues": 8,
+            "clues": [
+              "clue_destination",
+              "clue_second_ticket",
+              "clue_signal"
+            ]
+          },
+          "lockedText": "تحتاج إلى ربط الأدلة قبل أن تفتح الدقيقة."
+        },
+        {
+          "id": "leave",
+          "text": "انسحب قبل أن تُغلق الدقيقة.",
+          "next": "n_end_leave_station"
+        },
+        {
+          "id": "secret",
+          "text": "افحص التذكرتين مرة أخيرة.",
+          "next": "n_secret_ticket",
+          "required": {
+            "items": [
+              "ticket",
+              "phone"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_true_plan",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تشعل الإشارة الزرقاء.",
+        "المرأة ذات المعطف الأزرق تقف بجانب الباب.",
+        "المحصل يفتح السجل.",
+        "القطار يصل مرة أخرى، لكن هذه المرة لا يطلب تذكرة."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "final_plan"
+        ]
+      },
+      "choices": [
+        {
+          "id": "release",
+          "text": "افتح الأبواب لجميع الركاب.",
+          "next": "n_true_release",
+          "required": {
+            "minClues": 9
+          },
+          "lockedText": "ما زال اسم واحد ناقصًا من الحقيقة."
+        },
+        {
+          "id": "woman",
+          "text": "دع المرأة تختار أولًا.",
+          "next": "n_true_woman"
+        }
+      ]
+    },
+    {
+      "id": "n_true_woman",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "المرأة تقترب من القطار.",
+        "«أنا انتظرت بما يكفي.»",
+        "ثم تضع تذكرتها القديمة على الأرض.",
+        "«الآن أخرجهم.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "woman_ready"
+        ],
+        "rel": {
+          "woman": {
+            "trust": 30
+          }
+        }
+      },
+      "choices": [
+        {
+          "id": "release",
+          "text": "افتح الأبواب.",
+          "next": "n_true_release",
+          "required": {
+            "minClues": 8
+          }
+        },
+        {
+          "id": "board",
+          "text": "اصعد معها.",
+          "next": "n_end_conductor"
+        }
+      ]
+    },
+    {
+      "id": "n_true_release",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تفتح الأبواب.",
+        "الركاب يبدأون بالخروج واحدًا تلو الآخر.",
+        "المحصل يختفي أولًا.",
+        "ثم السائق.",
+        "ثم المرأة.",
+        "وأخيرًا ترى آخر راكب… الشخص الذي يحمل اسمك في السجل القديم."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "passengers_released"
+        ],
+        "stats": {
+          "fear": -10
+        }
+      },
+      "choices": [
+        {
+          "id": "face",
+          "text": "اقترب منه.",
+          "next": "n_true_face"
+        },
+        {
+          "id": "door",
+          "text": "أغلق الأبواب.",
+          "next": "n_true_close"
+        }
+      ]
+    },
+    {
+      "id": "n_true_face",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "الراكب الأخير يبتسم.",
+        "ملامحه تشبهك، لكنه أكبر بعشرين عامًا.",
+        "«أنت لم تأتِ إلى هنا لأجلي.»",
+        "«أنا جئت لأتأكد أنك ستأتي.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "met_future_self"
+        ],
+        "addClues": [
+          "clue_second_ticket"
+        ]
+      },
+      "choices": [
+        {
+          "id": "close",
+          "text": "أغلق الباب.",
+          "next": "n_true_close"
+        },
+        {
+          "id": "ask",
+          "text": "«ماذا سيحدث الآن؟»",
+          "next": "n_true_explain"
+        }
+      ]
+    },
+    {
+      "id": "n_true_explain",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "«الدقيقة ستغلق. وكل من علق فيها سيعود إلى زمنه.»",
+        "«وأنا؟»",
+        "«أنت ستخرج بعد أن تختفي التذكرة التي جلبتك.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "understood_loop"
+        ]
+      },
+      "choices": [
+        {
+          "id": "close",
+          "text": "أغلق الباب.",
+          "next": "n_true_close"
+        }
+      ]
+    },
+    {
+      "id": "n_true_close",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تغلق الباب.",
+        "الساعة تنتقل من 16:17 إلى 16:18.",
+        "الرصيف الرابع يبدأ بالتلاشي.",
+        "المرأة تنظر إليك من بعيد وتقول: «الآن أصبح آخر قطار… آخر قطار فعلًا.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "minute_closed"
+        ]
+      },
+      "choices": [
+        {
+          "id": "finish",
+          "text": "انتظر حتى يختفي الرصيف.",
+          "next": "n_end_truth",
+          "required": {
+            "minClues": 9
+          },
+          "lockedText": "تحتاج إلى معرفة كل ما يلزم قبل إغلاق الدقيقة."
+        },
+        {
+          "id": "leave",
+          "text": "اركض نحو المخرج.",
+          "next": "n_end_missing"
+        }
+      ]
+    },
+    {
+      "id": "n_secret_ticket",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تضع التذكرتين جنبًا إلى جنب.",
+        "الاسم في الثانية ليس اسمك فقط.",
+        "هناك حرف صغير مطبوع خلف الاسم: «الراكب الذي سيأتي بعدك»."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_ticket_seen"
+        ],
+        "addClues": [
+          "clue_second_ticket"
+        ]
+      },
+      "choices": [
+        {
+          "id": "keep",
+          "text": "احتفظ بالتذكرة الثانية.",
+          "next": "n_end_secret"
+        },
+        {
+          "id": "return",
+          "text": "أعد التذكرة إلى شباك التذاكر.",
+          "next": "n_secret_return"
+        }
+      ]
+    },
+    {
+      "id": "n_secret_return",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تضع التذكرة الثانية في يد المرأة.",
+        "«إذن فهمت.» تقول.",
+        "«الرحلة لا تحتاج راكبًا جديدًا. تحتاج شخصًا يمنعها من الاختفاء.»"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "secret_returned"
+        ]
+      },
+      "choices": [
+        {
+          "id": "leave",
+          "text": "اخرج.",
+          "next": "n_end_secret"
+        }
+      ]
+    },
+    {
+      "id": "n_end_leave_station",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تغادر المحطة قبل أن يصل القطار.",
+        "وراءك، لا تسمع شيئًا."
+      ],
+      "ending": "e_leave_station"
+    },
+    {
+      "id": "n_leave_before_train",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تبتعد عن الرصيف.",
+        "عندما تصل إلى الشارع، تنظر إلى الساعة: 16:17.",
+        "لكن المحطة خلفك لم تعد موجودة."
+      ],
+      "ending": "e_leave_station"
+    },
+    {
+      "id": "n_end_wrong_train",
+      "act": "act6",
+      "location": "train",
+      "lines": [
+        "تجلس في العربة الأولى.",
+        "القطار يتحرك، والمدينة تختفي من النافذة."
+      ],
+      "ending": "e_wrong_train"
+    },
+    {
+      "id": "n_end_locked_car",
+      "act": "act6",
+      "location": "last_car",
+      "lines": [
+        "الباب الداخلي ينغلق.",
+        "وعلى كل مقعد تذكرة تحمل اسم شخص لم يعد."
+      ],
+      "ending": "e_locked_car"
+    },
+    {
+      "id": "n_end_conductor",
+      "act": "act6",
+      "location": "train",
+      "lines": [
+        "المحصل يختم تذكرتك.",
+        "«الرحلة تحتاج راكبًا واحدًا.»"
+      ],
+      "ending": "e_conductor"
+    },
+    {
+      "id": "n_end_loop",
+      "act": "act6",
+      "location": "platform4",
+      "lines": [
+        "تفتح عينيك أمام المحطة.",
+        "الساعة 15:32.",
+        "التذكرة في يدك من جديد."
+      ],
+      "ending": "e_loop"
+    },
+    {
+      "id": "n_end_missing",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "تصعد الدرج.",
+        "في الأعلى، لا توجد مدينة.",
+        "فقط محطة قديمة تنتظر قطارًا آخر."
+      ],
+      "ending": "e_missing"
+    },
+    {
+      "id": "n_end_truth",
+      "act": "act6",
+      "location": "lost_station",
+      "lines": [
+        "الرصيف الرابع يختفي.",
+        "القطار يفرغ آخر عربة ثم يختفي معه.",
+        "وعندما تفتح يدك، لا تجد التذكرة الأولى."
+      ],
+      "ending": "e_truth"
+    },
+    {
+      "id": "n_end_secret",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تخرج من المحطة والتذكرة الثانية في جيبك.",
+        "بعد يوم، تصل رسالة: «شكرًا لأنك أبقيت الرحلة ممكنة.»"
+      ],
+      "ending": "e_secret"
+    }
+  ]
+}
