@@ -86,8 +86,6 @@ function MainMenu() {
           ))}
         </nav>
       </main>
-
-      <AdSlot placement="menu" className="mb-6 px-4" />
     </Scene>
   );
 }

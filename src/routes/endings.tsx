@@ -80,8 +80,6 @@ function EndingsPage() {
           );
         })}
       </main>
-
-      <AdSlot placement="endings" className="mb-6 px-4" />
     </Scene>
   );
 }

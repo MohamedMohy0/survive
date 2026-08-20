@@ -79,8 +79,6 @@ function JournalPage() {
           );
         })}
       </main>
-
-      <AdSlot placement="stats" className="mb-6 px-4" />
     </Scene>
   );
 }

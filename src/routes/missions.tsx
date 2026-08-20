@@ -103,8 +103,6 @@ function MissionsPage() {
           ))}
         </div>
       </main>
-
-      <AdSlot placement="missions" className="mb-6 px-4" />
     </Scene>
   );
 }

@@ -91,8 +91,6 @@ function SettingsPage() {
           واحدة قبل تشغيلها.
         </p>
       </main>
-
-      <AdSlot placement="settings" className="mb-6 px-4" />
     </Scene>
   );
 }
