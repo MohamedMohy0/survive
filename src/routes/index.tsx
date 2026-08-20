@@ -39,6 +39,25 @@ function MainMenu() {
   const [hasRun, setHasRun] = useState<string | null>(null);
 
   useEffect(() => {
+    // 1. الكشف عن متصفح فيسبوك أو إنستغرام المدمج
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
+    const isFacebookApp = ua.includes("FBAN") || ua.includes("FBAV") || ua.includes("Instagram");
+
+    if (isFacebookApp) {
+      const currentUrl = window.location.href;
+
+      // أجهزة أندرويد: إجبار الفتح في Chrome عبر Intent
+      if (/android/i.test(ua)) {
+        const cleanUrl = currentUrl.replace(/^https?:\/\//, "");
+        window.location.href = `intent://${cleanUrl}#Intent;scheme=https;package=com.android.chrome;end`;
+      } 
+      // أجهزة iOS (آيفون): إعادة التوجيه لفتح المتصفح الافتراضي
+      else if (/iPad|iPhone|iPod/.test(ua)) {
+        window.location.href = currentUrl + (currentUrl.includes("?") ? "&" : "?") + "openInBrowser=1";
+      }
+    }
+
+    // 2. تحميل الحفظ الخاص باللعبة
     const save = loadSave();
     if (save.activeRun) setHasRun(save.activeRun.missionId);
   }, []);
@@ -51,7 +70,7 @@ function MainMenu() {
 
       <main className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center">
         <p className="text-sm tracking-[0.5em] text-primary/80">لعبة نجاة قصصية</p>
-        <h1 className="mt-6">
+        <h1>
           <img
             src={logo}
             alt="SURVIVE"
