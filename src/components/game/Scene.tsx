@@ -40,6 +40,21 @@ const imageByLocation: Record<string, string> = {
   kitchen: basement,
   basement: basement,
   roof: hotel,
+  station_exterior: station,
+  main_hall: hall,
+  ticket_office: hall,
+  old_waiting_room: hall,
+  platform1: platform,
+  platform2: platform,
+  platform3: platform,
+  platform4: platform,
+  staff_corridor: hallway,
+  signal_room: signalImg,
+  control_room: signalImg,
+  tunnel: tunnelImg,
+  train: trainImg,
+  last_car: trainImg,
+  lost_station: lostStation,
 };
 
 const moodByLocation: Record<string, string> = {
