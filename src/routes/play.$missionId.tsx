@@ -100,7 +100,8 @@ function PlayPage() {
 
   if (loading) {
     return (
-      <Scene location="hotel_exterior" flicker>
+      /* تم التعديل هنا: تغيير hotel_exterior إلى outside_station */
+      <Scene location="outside_station" flicker>
         <LoadingScreen
           line={mission.loadingLine}
           title={mission.title}
@@ -132,7 +133,8 @@ function PlayPage() {
   const actName = mission.acts.find((a) => a.id === node.act)?.name;
 
   return (
-    <Scene location={node.location} flicker={node.location === "hallway2"}>
+    /* تم التعديل هنا: تغيير hallway2 إلى back_corridor ليتطابق مع القائمة الجديدة */
+    <Scene location={node.location} flicker={node.location === "back_corridor"}>
       <AdSlot placement="play" compact className="px-4 pt-4" />
 
       <Hud

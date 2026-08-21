@@ -1,0 +1,1907 @@
+{
+  "id": "mission-003-signal",
+  "index": 3,
+  "code": "03",
+  "title": "الإشارة",
+  "subtitle": "أحدهم يبث من مكان لا يوجد فيه أحد.",
+  "preview": "تسجيل مدته 47 ثانية. محطة بث مهجورة. وصوت يعرف ما ستقوله قبل أن تقوله.",
+  "loadingLine": "جاري التقاط الإشارة...",
+  "unlockAfter": null,
+  "acts": [
+    {
+      "id": "act1",
+      "name": "الفصل الأول — التردد"
+    },
+    {
+      "id": "act2",
+      "name": "الفصل الثاني — المحطة"
+    },
+    {
+      "id": "act3",
+      "name": "الفصل الثالث — التسجيل"
+    },
+    {
+      "id": "act4",
+      "name": "الفصل الرابع — الغرفة B"
+    },
+    {
+      "id": "act5",
+      "name": "الفصل الخامس — البث"
+    },
+    {
+      "id": "act6",
+      "name": "الفصل السادس — النهاية"
+    }
+  ],
+  "start": "n_arrival",
+  "initialStats": {
+    "health": 100,
+    "fear": 15,
+    "trust": 0,
+    "suspicion": 0
+  },
+  "items": [
+    {
+      "id": "phone",
+      "name": "هاتف",
+      "description": "بطاريته 68%. آخر تسجيل عليه مدته 47 ثانية."
+    },
+    {
+      "id": "radio",
+      "name": "راديو محمول",
+      "description": "يلتقط الإشارة وحدها رغم أن التردد غير مسجل."
+    },
+    {
+      "id": "receiver",
+      "name": "جهاز استقبال",
+      "description": "جهاز صغير قديم، يمكنه حفظ الترددات يدويًا."
+    },
+    {
+      "id": "tape_47",
+      "name": "شريط 47",
+      "description": "شريط يحمل الرقم 47، والتسجيل عليه لم يحدث بعد."
+    },
+    {
+      "id": "archive_key",
+      "name": "مفتاح الأرشيف",
+      "description": "مفتاح نحاسي قديم يحمل حرف B."
+    },
+    {
+      "id": "headphones",
+      "name": "سماعة",
+      "description": "سماعة مراقبة قديمة، أحد طرفيها مغطى بشريط أسود."
+    },
+    {
+      "id": "logbook",
+      "name": "سجل البث",
+      "description": "دفتر تشغيل المحطة. توجد فيه ساعات غير منطقية."
+    },
+    {
+      "id": "cassette_player",
+      "name": "مسجل أشرطة",
+      "description": "يعمل بالبطارية ويقرأ الأشرطة القديمة."
+    },
+    {
+      "id": "signal_key",
+      "name": "مفتاح الإشارة",
+      "description": "قطعة معدنية صغيرة عليها الرمز 13."
+    },
+    {
+      "id": "camera_disk",
+      "name": "قرص التسجيل",
+      "description": "نسخة من تسجيل كاميرا المراقبة في المحطة."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_47_seconds",
+      "name": "47 ثانية",
+      "description": "كل تسجيل مرتبط بالإشارة ينتهي بعد 47 ثانية بالضبط."
+    },
+    {
+      "id": "clue_dead_frequency",
+      "name": "التردد الميت",
+      "description": "الإشارة تأتي من تردد غير موجود في جداول البث."
+    },
+    {
+      "id": "clue_live_transmitter",
+      "name": "جهاز يعمل",
+      "description": "جهاز إرسال يعمل في محطة لا تصلها الكهرباء."
+    },
+    {
+      "id": "clue_future_tape",
+      "name": "الشريط المستقبلي",
+      "description": "شريط مؤرخ بتاريخ الغد ويحتوي على صوتك."
+    },
+    {
+      "id": "clue_voice_match",
+      "name": "الصوت المطابق",
+      "description": "تسجيل يقول كلماتك قبل أن تنطقها."
+    },
+    {
+      "id": "clue_signal13",
+      "name": "SIGNAL-13",
+      "description": "مشروع سري قديم لدراسة الإشارات غير المعروفة."
+    },
+    {
+      "id": "clue_erased_report",
+      "name": "التقرير المشطوب",
+      "description": "آخر تقرير للمشروع يخفي عبارة: الإشارة تنقل حدثًا."
+    },
+    {
+      "id": "clue_room_b",
+      "name": "الغرفة B",
+      "description": "غرفة غير موجودة في المخطط الرسمي للمحطة."
+    },
+    {
+      "id": "clue_repeated_events",
+      "name": "الأحداث المتكررة",
+      "description": "تسجيلات لنفس اللحظة مع اختلافات صغيرة في كل مرة."
+    },
+    {
+      "id": "clue_number_47",
+      "name": "الرقم 47",
+      "description": "الرقم يظهر في التسجيل الأول وعلى شاشة العد التنازلي."
+    },
+    {
+      "id": "clue_third_device",
+      "name": "الجهاز الثالث",
+      "description": "جهاز يعمل دون كابل أو مصدر طاقة واضح."
+    },
+    {
+      "id": "clue_listener",
+      "name": "المستمع",
+      "description": "الجهاز لا يراقب المكان، بل يسجل وجود الشخص الذي يستمع."
+    }
+  ],
+  "locations": [
+    {
+      "id": "apartment",
+      "name": "الغرفة"
+    },
+    {
+      "id": "street",
+      "name": "الشارع"
+    },
+    {
+      "id": "station_gate",
+      "name": "بوابة المحطة"
+    },
+    {
+      "id": "station_hall",
+      "name": "ممر المحطة"
+    },
+    {
+      "id": "broadcast_room",
+      "name": "غرفة البث"
+    },
+    {
+      "id": "archive",
+      "name": "الأرشيف"
+    },
+    {
+      "id": "security_room",
+      "name": "غرفة المراقبة"
+    },
+    {
+      "id": "back_corridor",
+      "name": "الممر الخلفي"
+    },
+    {
+      "id": "room_b",
+      "name": "الغرفة B"
+    },
+    {
+      "id": "main_transmitter",
+      "name": "غرفة الإرسال الرئيسية"
+    },
+    {
+      "id": "underground_room",
+      "name": "الغرفة السفلية"
+    },
+    {
+      "id": "outside_station",
+      "name": "خارج المحطة"
+    }
+  ],
+  "characters": [
+    {
+      "id": "engineer",
+      "name": "مهندس البث",
+      "description": "آخر مهندس عمل على مشروع SIGNAL-13. يظهر في التسجيلات فقط."
+    },
+    {
+      "id": "guard",
+      "name": "الحارس السابق",
+      "description": "يقول إنه لم يدخل المحطة منذ عشر سنوات، لكنه يعرف الغرفة B."
+    },
+    {
+      "id": "voice",
+      "name": "الصوت",
+      "description": "صوت مجهول يعرف أشياء تحدث بعد ثوانٍ من كلامه."
+    },
+    {
+      "id": "operator",
+      "name": "المشغّل",
+      "description": "شخص يظهر في تسجيلات المراقبة ولا يظهر وجهه أبدًا."
+    },
+    {
+      "id": "recorded_self",
+      "name": "الصوت المطابق",
+      "description": "صوتك أنت، لكنه يقول أشياء لم تقلها بعد."
+    }
+  ],
+  "endings": [
+    {
+      "id": "e_survivor",
+      "index": 1,
+      "name": "الناجي",
+      "tagline": "خرجت قبل أن يصبح الاستماع ردًا.",
+      "description": "غادرت المحطة دون تشغيل الجهاز الثالث. انقطعت الإشارة، لكن بعد ثلاثة أيام التقط هاتفك بثًا قصيرًا: «أحسنت.»",
+      "kind": "normal",
+      "mood": "calm"
+    },
+    {
+      "id": "e_listener",
+      "index": 2,
+      "name": "المستمع",
+      "tagline": "وصلت الإشارة إلى نهايتها.",
+      "description": "انتظرت حتى وصل العد التنازلي إلى صفر. ظهرت عبارة «المستمع: غير موجود»، ثم وجدت تسجيلًا جديدًا مدته 47 ثانية بصوتك.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_broadcast",
+      "index": 3,
+      "name": "البث",
+      "tagline": "أجبت للمرة الأولى.",
+      "description": "شغلت جهاز الإرسال ورددت على الصوت. في اليوم التالي بدأت محطة مجهولة بالبث، وكان المذيع يتحدث بصوتك.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_loop",
+      "index": 4,
+      "name": "الحلقة",
+      "tagline": "عشت التسجيل قبل أن تعرف أنك تسجله.",
+      "description": "وجدت تسجيلًا يعرض دخولك وخروجك من الغرفة B قبل حدوثهما. عندما خرجت، عدت إلى اللحظة التي بدأت فيها المهمة.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_wrong_person",
+      "index": 5,
+      "name": "الشخص الخطأ",
+      "tagline": "لم تكن أنت الهدف.",
+      "description": "وثقت بالشخص الذي أرشدك إلى الغرفة السفلية. أغلق الباب وقال: «كنت فقط الشخص الذي سيستمع بدلًا عنه.»",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_silence",
+      "index": 6,
+      "name": "الصمت",
+      "tagline": "أوقفت الإشارة.",
+      "description": "دمرت جهاز الإرسال وغادرت. لم يعد هناك تشويش أو صوت، حتى بدأ الراديو في يدك بالعمل من جديد.",
+      "kind": "normal",
+      "mood": "calm"
+    },
+    {
+      "id": "e_last_recording",
+      "index": 7,
+      "name": "التسجيل الأخير",
+      "tagline": "كل التسجيلات كانت تنتظر وصولك.",
+      "description": "اكتشفت أن التسجيلات تأتي من المستقبل. آخر ملف يحمل اسمك وينتهي بجملة: «أنا آسف.»",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_source",
+      "index": 8,
+      "name": "النهاية السرية — المصدر",
+      "tagline": "الإشارة لم تأتِ من المحطة.",
+      "description": "اكتشفت أن مصدر الإشارة هو المستمع نفسه. الصوت الذي كنت تسمعه كان صوتك من دورة سابقة.",
+      "kind": "secret",
+      "mood": "dark"
+    },
+    {
+      "id": "e_signal",
+      "index": 9,
+      "name": "النهاية الحقيقية — الإشارة",
+      "tagline": "لم تكن تراقب الإشارة. الإشارة كانت تراقبك.",
+      "description": "جمعت الأدلة الاثني عشر ووصلت إلى الحقيقة: SIGNAL-13 لم يكن مشروعًا لتسجيل الإشارات، بل نظامًا يحول المستمع إلى جزء من البث. يظهر على الشاشة: «تم العثور على المستمع. هل تريد أن تبدأ البث؟»",
+      "kind": "true",
+      "mood": "warm"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_arrival",
+      "act": "act1",
+      "location": "apartment",
+      "onEnter": {
+        "addItems": [
+          "phone",
+          "radio"
+        ],
+        "addClues": [
+          "clue_47_seconds",
+          "clue_dead_frequency"
+        ]
+      },
+      "lines": [
+        "الساعة 02:13.",
+        "كنت على وشك إطفاء الضوء حين بدأ الراديو القديم بالعمل وحده.",
+        "لا موسيقى. لا محطة. فقط تشويش كثيف.",
+        "ثم صوت رجل: «إذا كنت تسمعني، فلا ترد.»"
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "text": "استمع حتى النهاية.",
+          "next": "n_first_signal",
+          "effects": {
+            "stats": {
+              "fear": 5
+            }
+          }
+        },
+        {
+          "id": "turnoff",
+          "text": "أطفئ الراديو فورًا.",
+          "next": "n_turnoff"
+        },
+        {
+          "id": "record",
+          "text": "شغّل تسجيل الهاتف.",
+          "next": "n_record_signal",
+          "effects": {
+            "stats": {
+              "suspicion": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_first_signal",
+      "act": "act1",
+      "location": "apartment",
+      "onEnter": {
+        "addClues": [
+          "clue_47_seconds"
+        ]
+      },
+      "lines": [
+        "يصمت الرجل لثلاث ثوانٍ.",
+        "«أنا في محطة البث القديمة.»",
+        "صمت.",
+        "«لكن لا تأتي إليها.»",
+        "ينقطع البث عند الثانية 02:14 بالضبط."
+      ],
+      "choices": [
+        {
+          "id": "go",
+          "text": "تتبع عنوان المحطة.",
+          "next": "n_address"
+        },
+        {
+          "id": "ignore",
+          "text": "تقرر تجاهل الأمر.",
+          "next": "n_ignore_signal"
+        }
+      ]
+    },
+    {
+      "id": "n_record_signal",
+      "act": "act1",
+      "location": "apartment",
+      "onEnter": {
+        "addClues": [
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "recorded_first_signal"
+        ]
+      },
+      "lines": [
+        "وجهت هاتفك نحو الراديو وبدأت التسجيل.",
+        "قبل أن ينتهي الصوت، قال الرجل: «أنت ستذهب.»",
+        "توقفت عن التسجيل.",
+        "بعدها بثوانٍ قال الهاتف شيئًا لم تسمعه أثناء البث: «ولا تثق بالحارس.»"
+      ],
+      "choices": [
+        {
+          "id": "go",
+          "text": "اكتب عنوان المحطة وغادر.",
+          "next": "n_address"
+        },
+        {
+          "id": "replay",
+          "text": "أعد تشغيل التسجيل.",
+          "next": "n_replay"
+        }
+      ]
+    },
+    {
+      "id": "n_replay",
+      "act": "act1",
+      "location": "apartment",
+      "onEnter": {
+        "addClues": [
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "heard_future_voice"
+        ]
+      },
+      "lines": [
+        "تعيد التسجيل.",
+        "هذه المرة تسمع صوتك بوضوح.",
+        "«أنا ذاهب إلى المحطة.»",
+        "تتجمد.",
+        "أنت لم تقل هذه الجملة."
+      ],
+      "choices": [
+        {
+          "id": "go",
+          "text": "اذهب إلى المحطة.",
+          "next": "n_address",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "destroy",
+          "text": "احذف التسجيل.",
+          "next": "n_ignore_signal"
+        }
+      ]
+    },
+    {
+      "id": "n_turnoff",
+      "act": "act1",
+      "location": "apartment",
+      "onEnter": {
+        "addClues": [
+          "clue_dead_frequency"
+        ]
+      },
+      "lines": [
+        "ينطفئ الراديو.",
+        "تتنفس بارتياح.",
+        "بعد عشر ثوانٍ، يأتي نفس الصوت من هاتفك رغم أن الهاتف لم يكن يسجل.",
+        "«لا بأس. سنبدأ عندما تصل.»"
+      ],
+      "choices": [
+        {
+          "id": "go",
+          "text": "خذ هاتفك واتجه إلى المحطة.",
+          "next": "n_address",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        },
+        {
+          "id": "stay",
+          "text": "لا تذهب.",
+          "next": "n_end_survivor"
+        }
+      ]
+    },
+    {
+      "id": "n_ignore_signal",
+      "act": "act1",
+      "location": "street",
+      "lines": [
+        "خرجت إلى الشارع فقط لتبتعد عن الغرفة.",
+        "الراديو في جيبك ما زال يعمل.",
+        "التشويش يزداد كلما ابتعدت عن المنزل.",
+        "ثم تسمع: «أنت تسير في الاتجاه الصحيح.»"
+      ],
+      "choices": [
+        {
+          "id": "go",
+          "text": "تتبع الإشارة.",
+          "next": "n_address"
+        },
+        {
+          "id": "leave",
+          "text": "استمر في الابتعاد.",
+          "next": "n_end_survivor"
+        }
+      ]
+    },
+    {
+      "id": "n_address",
+      "act": "act1",
+      "location": "street",
+      "lines": [
+        "العنوان يقودك إلى طرف المدينة.",
+        "خلف سور إسمنتي تظهر محطة بث مهجورة.",
+        "لا توجد كهرباء في المنطقة.",
+        "ومع ذلك، فوق الباب الرئيسي، مصباح أحمر يعمل."
+      ],
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل من البوابة.",
+          "next": "n_gate"
+        },
+        {
+          "id": "observe",
+          "text": "راقب المكان من الخارج أولًا.",
+          "next": "n_observe_station"
+        },
+        {
+          "id": "leave",
+          "text": "ارجع.",
+          "next": "n_end_survivor"
+        }
+      ]
+    },
+    {
+      "id": "n_observe_station",
+      "act": "act1",
+      "location": "outside_station",
+      "onEnter": {
+        "addClues": [
+          "clue_number_47"
+        ],
+        "setFlags": [
+          "observed_signal"
+        ]
+      },
+      "lines": [
+        "لا حركة خلف النوافذ.",
+        "لكن المصباح الأحمر يومض خمس مرات، بفاصل متساوٍ.",
+        "تلتقطه بعينك.",
+        "الراديو يلتقط نفس الإيقاع."
+      ],
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل الآن.",
+          "next": "n_gate"
+        },
+        {
+          "id": "record",
+          "text": "سجل الومضات.",
+          "next": "n_gate",
+          "effects": {
+            "stats": {
+              "suspicion": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_gate",
+      "act": "act2",
+      "location": "station_gate",
+      "lines": [
+        "البوابة مفتوحة.",
+        "تدفعها فتصدر صريرًا طويلًا.",
+        "من داخل المبنى يأتي صوت جهاز إرسال يعمل.",
+        "ثم يتوقف فجأة."
+      ],
+      "choices": [
+        {
+          "id": "hall",
+          "text": "ادخل إلى الممر.",
+          "next": "n_hall"
+        },
+        {
+          "id": "radio",
+          "text": "افحص الراديو.",
+          "next": "n_gate_radio"
+        }
+      ]
+    },
+    {
+      "id": "n_gate_radio",
+      "act": "act2",
+      "location": "station_gate",
+      "onEnter": {
+        "addClues": [
+          "clue_listener"
+        ],
+        "setFlags": [
+          "listener_detected"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "lines": [
+        "تضع الراديو على الأرض.",
+        "التشويش يختفي.",
+        "تظهر عبارة قصيرة على شاشة الجهاز:",
+        "«المستمع وصل.»"
+      ],
+      "choices": [
+        {
+          "id": "hall",
+          "text": "ادخل المحطة.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_hall",
+      "act": "act2",
+      "location": "station_hall",
+      "onEnter": {
+        "addClues": [
+          "clue_room_b"
+        ]
+      },
+      "lines": [
+        "الممر مظلم.",
+        "على الجدار لوحة قديمة للمحطة.",
+        "غرفة البث، الأرشيف، الأمن، ثم غرفة الإرسال.",
+        "لكن بين الأرشيف وغرفة الإرسال توجد مساحة فارغة في المخطط."
+      ],
+      "choices": [
+        {
+          "id": "broadcast",
+          "text": "اذهب إلى غرفة البث.",
+          "next": "n_broadcast_room"
+        },
+        {
+          "id": "archive",
+          "text": "ابحث في الأرشيف.",
+          "next": "n_archive"
+        },
+        {
+          "id": "security",
+          "text": "ادخل غرفة المراقبة.",
+          "next": "n_security"
+        },
+        {
+          "id": "back",
+          "text": "اخرج من المحطة.",
+          "next": "n_end_survivor"
+        }
+      ]
+    },
+    {
+      "id": "n_broadcast_room",
+      "act": "act2",
+      "location": "broadcast_room",
+      "onEnter": {
+        "addItems": [
+          "receiver"
+        ],
+        "addClues": [
+          "clue_dead_frequency",
+          "clue_live_transmitter"
+        ]
+      },
+      "lines": [
+        "الجهاز الرئيسي يعمل.",
+        "مؤشر التردد يتحرك وحده.",
+        "ثم يتوقف عند تردد لا يحمل أي رقم في الجدول.",
+        "تسمع من السماعة: «لا تغيّر التردد.»"
+      ],
+      "choices": [
+        {
+          "id": "touch",
+          "text": "المس لوحة التحكم.",
+          "next": "n_transmitter"
+        },
+        {
+          "id": "listen",
+          "text": "استمع فقط.",
+          "next": "n_broadcast_listen"
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_broadcast_listen",
+      "act": "act2",
+      "location": "broadcast_room",
+      "onEnter": {
+        "addClues": [
+          "clue_listener"
+        ],
+        "setFlags": [
+          "obeyed_voice"
+        ]
+      },
+      "lines": [
+        "تضع أذنك قرب السماعة.",
+        "«أنت واقف أمام الجهاز.»",
+        "تنظر حولك.",
+        "لا أحد.",
+        "«الآن سترفع يدك.»",
+        "ترفع يدك دون أن تشعر."
+      ],
+      "choices": [
+        {
+          "id": "touch",
+          "text": "المس الجهاز.",
+          "next": "n_transmitter",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد فورًا.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_transmitter",
+      "act": "act2",
+      "location": "broadcast_room",
+      "onEnter": {
+        "addClues": [
+          "clue_number_47"
+        ],
+        "setFlags": [
+          "started_countdown"
+        ]
+      },
+      "lines": [
+        "عندما تلمس لوحة التحكم، يظهر رقم 47.",
+        "ثم يبدأ العد التنازلي.",
+        "47… 46… 45…",
+        "قبل أن يصل إلى 44، ينطفئ الجهاز."
+      ],
+      "choices": [
+        {
+          "id": "archive",
+          "text": "اذهب إلى الأرشيف وابحث عن 47.",
+          "next": "n_archive"
+        },
+        {
+          "id": "security",
+          "text": "ابحث عن مصدر الكاميرات.",
+          "next": "n_security"
+        },
+        {
+          "id": "stay",
+          "text": "انتظر عودة الجهاز.",
+          "next": "n_wait_transmitter"
+        }
+      ]
+    },
+    {
+      "id": "n_wait_transmitter",
+      "act": "act2",
+      "location": "broadcast_room",
+      "onEnter": {
+        "addClues": [
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "heard_self_inside"
+        ]
+      },
+      "lines": [
+        "انتظرت.",
+        "لم يعمل الجهاز.",
+        "لكن من خلفك جاء صوتك:",
+        "«كنت أعرف أنك ستنتظر.»"
+      ],
+      "choices": [
+        {
+          "id": "turn",
+          "text": "التفت.",
+          "next": "n_hall",
+          "effects": {
+            "stats": {
+              "fear": 12
+            }
+          }
+        },
+        {
+          "id": "run",
+          "text": "اركض إلى الأرشيف.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_archive",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addClues": [
+          "clue_signal13"
+        ]
+      },
+      "lines": [
+        "الأرشيف مليء بأشرطة كاسيت.",
+        "كل صندوق يحمل سنة مختلفة.",
+        "في الرف الأخير صندوق وحيد بلا سنة.",
+        "عليه: SIGNAL-13."
+      ],
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الصندوق.",
+          "next": "n_signal13"
+        },
+        {
+          "id": "logs",
+          "text": "ابحث عن سجل المشروع.",
+          "next": "n_logs"
+        },
+        {
+          "id": "leave",
+          "text": "عد إلى الممر.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_signal13",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addItems": [
+          "tape_47",
+          "cassette_player"
+        ],
+        "addClues": [
+          "clue_signal13"
+        ]
+      },
+      "lines": [
+        "داخل الصندوق ثلاثة أشرطة.",
+        "الأول بعنوان: البداية.",
+        "الثاني: الحادثة.",
+        "الثالث: المستمع.",
+        "الشريط الثالث مكتوب عليه اسمك."
+      ],
+      "choices": [
+        {
+          "id": "play",
+          "text": "شغّل الشريط.",
+          "next": "n_future_tape"
+        },
+        {
+          "id": "take",
+          "text": "خذ الأشرطة.",
+          "next": "n_logs"
+        }
+      ]
+    },
+    {
+      "id": "n_future_tape",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addClues": [
+          "clue_future_tape",
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "heard_future_tape"
+        ]
+      },
+      "lines": [
+        "يبدأ التسجيل بتشويش.",
+        "ثم تسمع خطواتك.",
+        "صوت باب.",
+        "ثم صوتك: «أنا وجدت الشريط.»",
+        "تسقط السماعة من يدك.",
+        "على الغلاف تاريخ الغد."
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "استمع للنهاية.",
+          "next": "n_tape_end"
+        },
+        {
+          "id": "stop",
+          "text": "أوقف التسجيل.",
+          "next": "n_logs"
+        }
+      ]
+    },
+    {
+      "id": "n_tape_end",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addClues": [
+          "clue_repeated_events"
+        ],
+        "setFlags": [
+          "heard_last_recording"
+        ]
+      },
+      "lines": [
+        "الصوت يكمل:",
+        "«إذا وصلت إلى هنا، فهذا يعني أنك لم تستمع إلى التحذير.»",
+        "صمت.",
+        "ثم: «أنا آسف.»"
+      ],
+      "choices": [
+        {
+          "id": "search",
+          "text": "ابحث عن صاحب التسجيل.",
+          "next": "n_engineer_file"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج من الأرشيف.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_logs",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addItems": [
+          "logbook"
+        ],
+        "addClues": [
+          "clue_repeated_events",
+          "clue_listener"
+        ]
+      },
+      "lines": [
+        "في سجل التشغيل تجد شيئًا مستحيلًا.",
+        "المحطة توقفت رسميًا قبل عشر سنوات.",
+        "لكن السجل يحتوي على إدخالات من الأسبوع الحالي.",
+        "آخر إدخال: «02:13 — المستمع يدخل.»"
+      ],
+      "choices": [
+        {
+          "id": "report",
+          "text": "صوّر الصفحة.",
+          "next": "n_security"
+        },
+        {
+          "id": "search",
+          "text": "ابحث عن اسم مهندس المشروع.",
+          "next": "n_engineer_file"
+        },
+        {
+          "id": "back",
+          "text": "أعد السجل مكانه.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_engineer_file",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addClues": [
+          "clue_erased_report"
+        ],
+        "setFlags": [
+          "found_engineer_file"
+        ]
+      },
+      "lines": [
+        "تجد ملف مهندس البث.",
+        "آخر صفحة تحمل ملاحظة بخط يده:",
+        "«الإشارة لا تنقل صوتًا.»",
+        "ثم جملة مشطوبة.",
+        "تحت الحبر تستطيع قراءة: «الإشارة تنقل حدثًا.»"
+      ],
+      "choices": [
+        {
+          "id": "read",
+          "text": "اقرأ ما تبقى من التقرير.",
+          "next": "n_report"
+        },
+        {
+          "id": "take",
+          "text": "خذ الصفحة.",
+          "next": "n_report"
+        }
+      ]
+    },
+    {
+      "id": "n_report",
+      "act": "act3",
+      "location": "archive",
+      "onEnter": {
+        "addClues": [
+          "clue_room_b"
+        ],
+        "setFlags": [
+          "found_b_hint"
+        ]
+      },
+      "lines": [
+        "في أسفل الصفحة رمز صغير: 13.",
+        "وبجانبه حرف B.",
+        "أسفل الحرف سهم يشير إلى الجدار بين الأرشيف وغرفة الإرسال.",
+        "هناك شيء خلفه."
+      ],
+      "choices": [
+        {
+          "id": "wall",
+          "text": "افحص الجدار.",
+          "next": "n_hidden_door"
+        },
+        {
+          "id": "security",
+          "text": "اذهب إلى غرفة المراقبة أولًا.",
+          "next": "n_security"
+        }
+      ]
+    },
+    {
+      "id": "n_security",
+      "act": "act4",
+      "location": "security_room",
+      "onEnter": {
+        "addClues": [
+          "clue_repeated_events"
+        ]
+      },
+      "lines": [
+        "شاشات المراقبة مطفأة.",
+        "لكن واحدة منها تعمل.",
+        "تعرض بوابة المحطة من الخارج.",
+        "ترى نفسك تدخل المبنى.",
+        "ثم ترى نفسك تدخل مرة ثانية."
+      ],
+      "choices": [
+        {
+          "id": "watch",
+          "text": "استمر في المشاهدة.",
+          "next": "n_footage"
+        },
+        {
+          "id": "disk",
+          "text": "ابحث عن التسجيل.",
+          "next": "n_security_disk"
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_footage",
+      "act": "act4",
+      "location": "security_room",
+      "onEnter": {
+        "addClues": [
+          "clue_repeated_events"
+        ],
+        "setFlags": [
+          "saw_operator_shadow"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "lines": [
+        "المشهد يعيد نفسه.",
+        "لكن في كل مرة يتغير شيء صغير.",
+        "في المرة الثالثة، شخص يقف خلفك.",
+        "في المرة الرابعة، لا يظهر الشخص… لكن ظله يظهر."
+      ],
+      "choices": [
+        {
+          "id": "zoom",
+          "text": "كبّر الصورة.",
+          "next": "n_operator"
+        },
+        {
+          "id": "stop",
+          "text": "أوقف الشاشة.",
+          "next": "n_security"
+        }
+      ]
+    },
+    {
+      "id": "n_security_disk",
+      "act": "act4",
+      "location": "security_room",
+      "onEnter": {
+        "addItems": [
+          "camera_disk"
+        ],
+        "addClues": [
+          "clue_listener"
+        ]
+      },
+      "lines": [
+        "تجد قرص التسجيل.",
+        "ملف واحد فقط يمكن فتحه.",
+        "اسم الملف: LISTENER_47.",
+        "حجمه يتغير أثناء النظر إليه."
+      ],
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الملف.",
+          "next": "n_listener_file"
+        },
+        {
+          "id": "take",
+          "text": "خذ القرص.",
+          "next": "n_hidden_door"
+        }
+      ]
+    },
+    {
+      "id": "n_listener_file",
+      "act": "act4",
+      "location": "security_room",
+      "onEnter": {
+        "addClues": [
+          "clue_listener",
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "saw_self_recording"
+        ]
+      },
+      "lines": [
+        "تظهر غرفة فارغة.",
+        "كرسي واحد.",
+        "شخص يجلس عليه.",
+        "كلما تقدمت في التسجيل، يصبح الشخص أوضح.",
+        "إنه أنت."
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "تابع التسجيل.",
+          "next": "n_listener_reveal"
+        },
+        {
+          "id": "close",
+          "text": "أغلق الملف.",
+          "next": "n_hidden_door"
+        }
+      ]
+    },
+    {
+      "id": "n_listener_reveal",
+      "act": "act4",
+      "location": "security_room",
+      "onEnter": {
+        "setFlags": [
+          "heard_warning_from_self"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "lines": [
+        "الصورة تتغير.",
+        "أنت تجلس على الكرسي وتضع السماعة.",
+        "ثم ترفع رأسك نحو الكاميرا.",
+        "وتقول: «لا تدخل الغرفة B.»",
+        "التسجيل ينتهي."
+      ],
+      "choices": [
+        {
+          "id": "go_b",
+          "text": "اذهب إلى الغرفة B.",
+          "next": "n_hidden_door"
+        },
+        {
+          "id": "obey",
+          "text": "لا تدخل الغرفة B.",
+          "next": "n_end_survivor"
+        }
+      ]
+    },
+    {
+      "id": "n_hidden_door",
+      "act": "act4",
+      "location": "back_corridor",
+      "onEnter": {
+        "addItems": [
+          "archive_key"
+        ],
+        "addClues": [
+          "clue_room_b"
+        ],
+        "setFlags": [
+          "found_room_b"
+        ]
+      },
+      "lines": [
+        "الجدار يبدو عاديًا.",
+        "لكن حرف B محفور في الطلاء.",
+        "تضغط عليه.",
+        "ينفتح جزء من الجدار بصمت.",
+        "خلفه ممر ضيق."
+      ],
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل الممر.",
+          "next": "n_room_b"
+        },
+        {
+          "id": "leave",
+          "text": "أغلقه وعد.",
+          "next": "n_hall"
+        }
+      ]
+    },
+    {
+      "id": "n_room_b",
+      "act": "act4",
+      "location": "room_b",
+      "onEnter": {
+        "addItems": [
+          "headphones"
+        ],
+        "addClues": [
+          "clue_listener"
+        ]
+      },
+      "lines": [
+        "الغرفة B فارغة.",
+        "لا أجهزة. لا أثاث.",
+        "فقط سماعة معلقة من السقف.",
+        "تقترب.",
+        "السماعة تقول: «وصلت أبكر هذه المرة.»"
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "text": "ضع السماعة على أذنك.",
+          "next": "n_headphones"
+        },
+        {
+          "id": "search",
+          "text": "افحص الأرض.",
+          "next": "n_signal_key"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج.",
+          "next": "n_hidden_door"
+        }
+      ]
+    },
+    {
+      "id": "n_headphones",
+      "act": "act4",
+      "location": "room_b",
+      "onEnter": {
+        "addClues": [
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "accepted_signal"
+        ]
+      },
+      "lines": [
+        "تضع السماعة.",
+        "تسمع صوت خطواتك قبل أن تتحرك.",
+        "ثم صوتك:",
+        "«بعد ثلاث ثوانٍ ستنظر إلى الباب.»",
+        "ثلاث.",
+        "ثانيتان.",
+        "واحدة.",
+        "تنظر."
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "ابقَ مستمعًا.",
+          "next": "n_event_recording",
+          "effects": {
+            "stats": {
+              "fear": 12
+            }
+          }
+        },
+        {
+          "id": "remove",
+          "text": "انزع السماعة.",
+          "next": "n_room_b"
+        }
+      ]
+    },
+    {
+      "id": "n_signal_key",
+      "act": "act4",
+      "location": "room_b",
+      "onEnter": {
+        "addItems": [
+          "signal_key"
+        ],
+        "addClues": [
+          "clue_signal13"
+        ]
+      },
+      "lines": [
+        "تجد قطعة معدنية تحت البلاط.",
+        "عليها الرقم 13.",
+        "وعندما تمسكها، يعمل جهاز لم تره من قبل داخل الجدار."
+      ],
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ القطعة.",
+          "next": "n_room_b_device"
+        },
+        {
+          "id": "leave",
+          "text": "اتركها.",
+          "next": "n_room_b"
+        }
+      ]
+    },
+    {
+      "id": "n_room_b_device",
+      "act": "act4",
+      "location": "room_b",
+      "onEnter": {
+        "addClues": [
+          "clue_third_device",
+          "clue_number_47"
+        ],
+        "setFlags": [
+          "third_device_found"
+        ]
+      },
+      "lines": [
+        "الشاشة تضيء.",
+        "47.",
+        "ثم 46.",
+        "ثم يظهر: «المستمع متصل.»"
+      ],
+      "choices": [
+        {
+          "id": "wait",
+          "text": "انتظر حتى الصفر.",
+          "next": "n_countdown"
+        },
+        {
+          "id": "break",
+          "text": "حطم الجهاز.",
+          "next": "n_destroy"
+        }
+      ]
+    },
+    {
+      "id": "n_event_recording",
+      "act": "act4",
+      "location": "room_b",
+      "onEnter": {
+        "addClues": [
+          "clue_repeated_events"
+        ],
+        "setFlags": [
+          "loop_detected"
+        ]
+      },
+      "lines": [
+        "السماعة لا تبث كلامًا هذه المرة.",
+        "إنها تسجل الغرفة.",
+        "تسمع صوت الباب وهو يفتح.",
+        "ثم صوتك وأنت تقول جملة لم تقلها بعد:",
+        "«أنا سأخرج الآن.»"
+      ],
+      "choices": [
+        {
+          "id": "stay",
+          "text": "ابقَ وانتظر.",
+          "next": "n_countdown"
+        },
+        {
+          "id": "exit",
+          "text": "اخرج الآن.",
+          "next": "n_end_loop"
+        }
+      ]
+    },
+    {
+      "id": "n_countdown",
+      "act": "act5",
+      "location": "main_transmitter",
+      "onEnter": {
+        "addClues": [
+          "clue_third_device",
+          "clue_number_47"
+        ],
+        "setFlags": [
+          "countdown_started"
+        ]
+      },
+      "lines": [
+        "تصل إلى غرفة الإرسال الرئيسية.",
+        "الجهاز الثالث يعمل بلا كابل.",
+        "على الشاشة: 47.",
+        "تبدأ الأرقام بالهبوط.",
+        "كلما انخفض الرقم، يصبح صوتك أوضح."
+      ],
+      "choices": [
+        {
+          "id": "listen",
+          "text": "استمع حتى الصفر.",
+          "next": "n_zero"
+        },
+        {
+          "id": "reply",
+          "text": "تحدث إلى الجهاز.",
+          "next": "n_reply_broadcast"
+        },
+        {
+          "id": "destroy",
+          "text": "حطم الجهاز.",
+          "next": "n_destroy"
+        }
+      ]
+    },
+    {
+      "id": "n_zero",
+      "act": "act5",
+      "location": "main_transmitter",
+      "onEnter": {
+        "setFlags": [
+          "reached_zero"
+        ],
+        "stats": {
+          "fear": 15
+        }
+      },
+      "lines": [
+        "46… 20… 10…",
+        "في الرقم 3، تسمع صوتك يقول:",
+        "«لا ترد.»",
+        "في الرقم 2:",
+        "«لا تثق بأحد.»",
+        "في الرقم 1:",
+        "«لا تتنفس.»",
+        "يصل العداد إلى صفر."
+      ],
+      "choices": [
+        {
+          "id": "wait",
+          "text": "انتظر.",
+          "next": "n_listener_final"
+        },
+        {
+          "id": "speak",
+          "text": "قل أي شيء.",
+          "next": "n_reply_broadcast"
+        }
+      ]
+    },
+    {
+      "id": "n_reply_broadcast",
+      "act": "act5",
+      "location": "main_transmitter",
+      "onEnter": {
+        "setFlags": [
+          "answered_signal"
+        ],
+        "addClues": [
+          "clue_voice_match"
+        ],
+        "stats": {
+          "suspicion": 15
+        }
+      },
+      "lines": [
+        "تقول: «من أنت؟»",
+        "لأول مرة لا يأتي التشويش.",
+        "يرد الصوت فورًا:",
+        "«أخيرًا.»",
+        "ثم تسمع صوتك من الطرف الآخر:",
+        "«أنا من بقي بعدك.»"
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "اسأل: «بعدي ماذا؟»",
+          "next": "n_broadcast_truth"
+        },
+        {
+          "id": "stop",
+          "text": "أوقف الإرسال.",
+          "next": "n_destroy"
+        }
+      ]
+    },
+    {
+      "id": "n_broadcast_truth",
+      "act": "act5",
+      "location": "main_transmitter",
+      "onEnter": {
+        "addClues": [
+          "clue_listener"
+        ],
+        "setFlags": [
+          "became_signal_candidate"
+        ]
+      },
+      "lines": [
+        "«بعدك؟»",
+        "يصمت الصوت.",
+        "ثم: «بعد أن تصبح أنت الإشارة.»",
+        "تشتعل كل الشاشات.",
+        "تظهر عبارة واحدة: «المستمع متصل.»"
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "أكمل الاستماع.",
+          "next": "n_listener_final"
+        },
+        {
+          "id": "run",
+          "text": "اهرب من الغرفة.",
+          "next": "n_end_broadcast"
+        }
+      ]
+    },
+    {
+      "id": "n_destroy",
+      "act": "act5",
+      "location": "main_transmitter",
+      "onEnter": {
+        "setFlags": [
+          "destroyed_device"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "lines": [
+        "تضرب الجهاز.",
+        "يتشقق الغطاء.",
+        "ينقطع الصوت.",
+        "ثم يعود من الراديو المحمول:",
+        "«لم يكن الجهاز هو المصدر.»"
+      ],
+      "choices": [
+        {
+          "id": "leave",
+          "text": "غادر المحطة.",
+          "next": "n_end_silence"
+        },
+        {
+          "id": "investigate",
+          "text": "ابحث عن المصدر الحقيقي.",
+          "next": "n_source"
+        }
+      ]
+    },
+    {
+      "id": "n_listener_final",
+      "act": "act5",
+      "location": "underground_room",
+      "onEnter": {
+        "addClues": [
+          "clue_listener"
+        ],
+        "setFlags": [
+          "found_listener_room"
+        ]
+      },
+      "lines": [
+        "تفتح بابًا لم يكن موجودًا قبل لحظات.",
+        "في الداخل كرسي وسماعة وجهاز تسجيل.",
+        "الشاشة تعرض جميع خطواتك منذ بداية المهمة.",
+        "ثم تظهر كلمة: «المستمع.»"
+      ],
+      "choices": [
+        {
+          "id": "sit",
+          "text": "اجلس على الكرسي.",
+          "next": "n_source"
+        },
+        {
+          "id": "run",
+          "text": "لا تجلس. اخرج.",
+          "next": "n_end_listener"
+        }
+      ]
+    },
+    {
+      "id": "n_source",
+      "act": "act5",
+      "location": "underground_room",
+      "onEnter": {
+        "addClues": [
+          "clue_voice_match",
+          "clue_listener"
+        ],
+        "setFlags": [
+          "source_found"
+        ]
+      },
+      "lines": [
+        "تجلس أمام الجهاز.",
+        "يبدأ التسجيل.",
+        "تسمع أول جملة في المهمة:",
+        "«إذا كنت تسمعني، فلا ترد.»",
+        "لكن هذه المرة تعرف الصوت.",
+        "إنه صوتك."
+      ],
+      "choices": [
+        {
+          "id": "accept",
+          "text": "استمع إلى التسجيل كاملًا.",
+          "next": "n_true_check"
+        },
+        {
+          "id": "deny",
+          "text": "انزع السماعة وارفض ما تسمعه.",
+          "next": "n_end_last_recording"
+        }
+      ]
+    },
+    {
+      "id": "n_true_check",
+      "act": "act5",
+      "location": "underground_room",
+      "lines": [
+        "تظهر التسجيلات الاثنا عشر على الشاشة.",
+        "كل دليل جمعته يظهر أمامك.",
+        "ثم تظهر ملفات لم ترها من قبل.",
+        "المصدر.",
+        "المستمع.",
+        "البث.",
+        "وتحتها ملف واحد: SIGNAL-13."
+      ],
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح SIGNAL-13.",
+          "next": "n_true_signal",
+          "required": {
+            "clues": [
+              "clue_47_seconds",
+              "clue_dead_frequency",
+              "clue_live_transmitter",
+              "clue_future_tape",
+              "clue_voice_match",
+              "clue_signal13",
+              "clue_erased_report",
+              "clue_room_b",
+              "clue_repeated_events",
+              "clue_number_47",
+              "clue_third_device",
+              "clue_listener"
+            ]
+          },
+          "lockedText": "هناك أجزاء ناقصة من الإشارة."
+        },
+        {
+          "id": "leave",
+          "text": "اخرج بما عرفته.",
+          "next": "n_end_witness"
+        }
+      ]
+    },
+    {
+      "id": "n_true_signal",
+      "act": "act5",
+      "location": "underground_room",
+      "onEnter": {
+        "setFlags": [
+          "all_clues_found"
+        ],
+        "addClues": [
+          "clue_third_device",
+          "clue_listener"
+        ]
+      },
+      "lines": [
+        "يفتح الملف.",
+        "لا توجد كلمات.",
+        "فقط صورة لك وأنت تجلس أمام الجهاز.",
+        "ثم يظهر تاريخ التسجيل.",
+        "إنه تاريخ اليوم.",
+        "لكن الصورة التُقطت قبل أن تدخل المحطة."
+      ],
+      "choices": [
+        {
+          "id": "continue",
+          "text": "تابع.",
+          "next": "n_true_end"
+        },
+        {
+          "id": "close",
+          "text": "أغلق الملف.",
+          "next": "n_end_last_recording"
+        }
+      ]
+    },
+    {
+      "id": "n_true_end",
+      "act": "act6",
+      "location": "underground_room",
+      "lines": [
+        "الصوت يقول:",
+        "«SIGNAL-13 لم يكن مشروعًا لدراسة الإشارات.»",
+        "صمت.",
+        "«كان مشروعًا لصناعة مستمع.»",
+        "ثم تظهر عبارة:",
+        "«تم العثور على المستمع.»",
+        "«هل تريد أن تبدأ البث؟»"
+      ],
+      "choices": [
+        {
+          "id": "broadcast",
+          "text": "ابدأ البث.",
+          "next": "n_end_signal"
+        },
+        {
+          "id": "refuse",
+          "text": "ارفض.",
+          "next": "n_end_source"
+        }
+      ]
+    },
+    {
+      "id": "n_end_survivor",
+      "act": "act6",
+      "location": "outside_station",
+      "lines": [
+        "خرجت من المحطة قبل أن يصبح الاستماع ردًا."
+      ],
+      "ending": "e_survivor"
+    },
+    {
+      "id": "n_end_listener",
+      "act": "act6",
+      "location": "underground_room",
+      "lines": [
+        "يصل العداد إلى صفر.",
+        "تظهر عبارة: «المستمع: غير موجود.»"
+      ],
+      "ending": "e_listener"
+    },
+    {
+      "id": "n_end_broadcast",
+      "act": "act6",
+      "location": "main_transmitter",
+      "lines": [
+        "يستجيب الجهاز لصوتك.",
+        "في اليوم التالي يبدأ بث مجهول باسمك."
+      ],
+      "ending": "e_broadcast"
+    },
+    {
+      "id": "n_end_loop",
+      "act": "act6",
+      "location": "room_b",
+      "lines": [
+        "تفتح الباب.",
+        "الممر الذي أمامك هو نفس الممر الذي دخلت منه في بداية المهمة."
+      ],
+      "ending": "e_loop"
+    },
+    {
+      "id": "n_end_wrong_person",
+      "act": "act6",
+      "location": "underground_room",
+      "lines": [
+        "يغلق الباب خلفك.",
+        "يأتي صوت رجل من السماعة:",
+        "«كنت فقط الشخص الذي سيستمع بدلًا عنه.»"
+      ],
+      "ending": "e_wrong_person"
+    },
+    {
+      "id": "n_end_silence",
+      "act": "act6",
+      "location": "outside_station",
+      "lines": [
+        "غادرت المحطة.",
+        "لأول مرة لا يوجد تشويش.",
+        "ثم يعمل الراديو في يدك من جديد."
+      ],
+      "ending": "e_silence"
+    },
+    {
+      "id": "n_end_last_recording",
+      "act": "act6",
+      "location": "archive",
+      "lines": [
+        "تفتح آخر ملف.",
+        "تسمع صوتك يقول:",
+        "«إذا وصلت إلى هنا، فهذا يعني أنك لم تستمع إلى التحذير.»",
+        "ثم: «أنا آسف.»"
+      ],
+      "ending": "e_last_recording"
+    },
+    {
+      "id": "n_end_source",
+      "act": "act6",
+      "location": "underground_room",
+      "lines": [
+        "تدرك أن الإشارة لم تأتِ من المحطة.",
+        "مصدرها هو المستمع نفسه.",
+        "الصوت الذي كنت تسمعه كان صوتك من دورة سابقة."
+      ],
+      "ending": "e_source"
+    },
+    {
+      "id": "n_end_signal",
+      "act": "act6",
+      "location": "main_transmitter",
+      "lines": [
+        "تضع السماعة.",
+        "تضغط الزر.",
+        "تبدأ الإشارة.",
+        "وفي اللحظة نفسها، يبدأ راديو آخر في مكان بعيد بالعمل.",
+        "يقول صوتك:",
+        "«إذا كنت تسمعني، فلا ترد.»"
+      ],
+      "ending": "e_signal"
+    },
+    {
+      "id": "n_operator",
+      "act": "act4",
+      "location": "security_room",
+      "onEnter": {
+        "addClues": [
+          "clue_repeated_events",
+          "clue_voice_match"
+        ],
+        "setFlags": [
+          "saw_operator"
+        ]
+      },
+      "lines": [
+        "تكبّر الصورة.",
+        "الشخص خلفك ليس شخصًا.",
+        "إنه ظل واقف في المكان الذي كنت تقف فيه قبل دخول الغرفة.",
+        "ثم يرفع رأسه نحو الكاميرا.",
+        "ويقول بصوتك: «لا تدخل الغرفة B.»"
+      ],
+      "choices": [
+        {
+          "id": "obey",
+          "text": "تعود إلى الممر.",
+          "next": "n_hall"
+        },
+        {
+          "id": "ignore",
+          "text": "تذهب إلى الغرفة B رغم التحذير.",
+          "next": "n_hidden_door"
+        }
+      ]
+    },
+    {
+      "id": "n_end_witness",
+      "act": "act6",
+      "location": "outside_station",
+      "lines": [
+        "تخرج من المحطة ومعك نسخ من الملفات.",
+        "في الشارع، يتوقف رجل لا تعرفه.",
+        "ينظر إلى القرص في يدك ويقول:",
+        "«إذًا عرفت.»",
+        "ثم يبتسم ويكمل طريقه."
+      ],
+      "ending": "e_last_recording"
+    }
+  ]
+}

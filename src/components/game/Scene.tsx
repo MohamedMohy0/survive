@@ -16,8 +16,28 @@ import tunnelImg from "@/assets/scene-tunnel.jpg";
 import trainImg from "@/assets/scene-train.jpg";
 import lostStation from "@/assets/scene-lost-station.jpg";
 import signalImg from "@/assets/scene-signal.jpg";
+import apartmentImg from "@/assets/scene-apartment.jpg";
+import streetImg from "@/assets/scene-street.jpg";
+import stationGateImg from "@/assets/scene-station-gate.jpg";
+import stationHallImg from "@/assets/scene-station-hall.jpg";
+import broadcastRoomImg from "@/assets/scene-broadcast-room.jpg";
+import archiveImg from "@/assets/scene-archive.jpg";
+import securityRoomImg from "@/assets/scene-security-room.jpg";
+import backCorridorImg from "@/assets/scene-back-corridor.jpg";
+import roomBImg from "@/assets/scene-room-b.jpg";
+import mainTransmitterImg from "@/assets/scene-main-transmitter.jpg";
+import undergroundRoomImg from "@/assets/scene-underground-room.jpg";
+import outsideStationImg from "@/assets/scene-outside-station.jpg";
 
 const imageByLocation: Record<string, string> = {
+  apartment: apartmentImg,
+  station_gate: stationGateImg,
+  station_hall: stationHallImg,
+  broadcast_room: broadcastRoomImg,
+  room_b: roomBImg,
+  main_transmitter: mainTransmitterImg,
+  underground_room: undergroundRoomImg,
+  outside_station: outsideStationImg,
   menu: menu,
   missions: missionsImg,
   settings: settingsImg,
@@ -58,6 +78,14 @@ const imageByLocation: Record<string, string> = {
 };
 
 const moodByLocation: Record<string, string> = {
+  apartment: "from-[oklch(0.28_0.03_70)] to-[oklch(0.16_0.02_80)]",
+  station_gate: "from-[oklch(0.25_0.03_180)] to-[oklch(0.14_0.02_200)]",
+  station_hall: "from-[oklch(0.23_0.02_220)] to-[oklch(0.13_0.01_230)]",
+  broadcast_room: "from-[oklch(0.25_0.03_220)] to-[oklch(0.15_0.02_240)]",
+  room_b: "from-[oklch(0.24_0.02_60)] to-[oklch(0.14_0.01_70)]",
+  main_transmitter: "from-[oklch(0.28_0.05_40)] to-[oklch(0.16_0.03_50)]",
+  underground_room: "from-[oklch(0.18_0.01_20)] to-[oklch(0.08_0.01_30)]",
+  outside_station: "from-[oklch(0.18_0.02_260)] to-[oklch(0.10_0.01_260)]",
   menu: "from-[oklch(0.26_0.03_245)] to-[oklch(0.15_0.02_255)]",
   missions: "from-[oklch(0.28_0.035_72)] to-[oklch(0.16_0.02_255)]",
   settings: "from-[oklch(0.28_0.04_70)] to-[oklch(0.16_0.02_255)]",
