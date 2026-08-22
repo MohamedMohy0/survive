@@ -1165,7 +1165,7 @@
         {
           "id": "follow",
           "text": "اتبع الماء.",
-          "next": "n_water_path"
+          "next": "n_pump"
         },
         {
           "id": "back",
@@ -1451,7 +1451,7 @@
         {
           "id": "use",
           "text": "ضع القطعة في الفتحة.",
-          "next": "n_red_lock"
+          "next": "n_deep_gate"
         },
         {
           "id": "keep",
@@ -1578,7 +1578,7 @@
         {
           "id": "talk",
           "text": "تحدث إليه.",
-          "next": "n_supervisor"
+          "next": "n_supervisor_room"
         },
         {
           "id": "run",
@@ -2832,7 +2832,8 @@
         "تلمس هاتفك. الشاشة سوداء.",
         "ثم تظهر جملة واحدة: «هذه المرة صعدت.»"
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_exit"
     },
     {
       "id": "n_wrong_return",
@@ -2870,7 +2871,8 @@
         "الخريطة تقول إن موقعك داخل القبو.",
         "لا يوجد طريق للعودة."
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_wrong_door"
     },
     {
       "id": "n_end_replace",
@@ -2884,7 +2886,8 @@
         "وجهك موجود.",
         "لكن اسمك اختفى من الشاشة تمامًا."
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_replace"
     },
     {
       "id": "n_end_record",
@@ -2898,7 +2901,8 @@
         "بعد دقائق، يصلك تسجيل صوتي جديد.",
         "صوت المشرف: «شكرًا لأنك أغلقت الباب.»"
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_record"
     },
     {
       "id": "n_end_true",
@@ -2915,7 +2919,8 @@
         "تفهم أخيرًا: لم تعد أنت البديل.",
         "أنت الشخص الذي أغلق القبو."
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_true"
     },
     {
       "id": "n_ending_stay",
@@ -2931,7 +2936,8 @@
         "اسمك.",
         "وتحت الاسم: «حارس القبو.»"
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_stay"
     },
     {
       "id": "n_ending_below",
@@ -2946,7 +2952,8 @@
         "ولا توجد فيه أسماء.",
         "فقط خطوات شخص ينزل إليك."
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_below"
     },
     {
       "id": "n_end_record_alt",
@@ -2960,7 +2967,8 @@
         "لكن وقت النزول تغير إلى 03:17.",
         "وتحتها خانة العودة أصبحت: «قيد الانتظار»."
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_record"
     },
     {
       "id": "n_end_witness",
@@ -2992,7 +3000,8 @@
         "فقط يرفع يده ثلاث مرات.",
         "ثم يختفي بين السيارات."
       ],
-      "choices": []
+      "choices": [],
+      "ending": "e_witness"
     },
     {
       "id": "n_true_gate",
