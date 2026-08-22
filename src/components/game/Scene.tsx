@@ -17,17 +17,19 @@ import trainImg from "@/assets/scene-train.jpg";
 import lostStation from "@/assets/scene-lost-station.jpg";
 import signalImg from "@/assets/scene-signal.jpg";
 import apartmentImg from "@/assets/scene-apartment.jpg";
-import streetImg from "@/assets/scene-street.jpg";
 import stationGateImg from "@/assets/scene-station-gate.jpg";
 import stationHallImg from "@/assets/scene-station-hall.jpg";
 import broadcastRoomImg from "@/assets/scene-broadcast-room.jpg";
-import archiveImg from "@/assets/scene-archive.jpg";
-import securityRoomImg from "@/assets/scene-security-room.jpg";
-import backCorridorImg from "@/assets/scene-back-corridor.jpg";
 import roomBImg from "@/assets/scene-room-b.jpg";
 import mainTransmitterImg from "@/assets/scene-main-transmitter.jpg";
 import undergroundRoomImg from "@/assets/scene-underground-room.jpg";
 import outsideStationImg from "@/assets/scene-outside-station.jpg";
+import floorZeroImg from "@/assets/scene-floor-zero.jpg";
+import threeDoorsImg from "@/assets/scene-three-doors.jpg";
+import deepCorridorImg from "@/assets/scene-deep-corridor.jpg";
+import watchRoomImg from "@/assets/scene-watch-room.jpg";
+import oldElevatorImg from "@/assets/scene-old-elevator.jpg";
+import returnGateImg from "@/assets/scene-return-gate.jpg";
 
 const imageByLocation: Record<string, string> = {
   apartment: apartmentImg,
@@ -75,6 +77,12 @@ const imageByLocation: Record<string, string> = {
   train: trainImg,
   last_car: trainImg,
   lost_station: lostStation,
+  floor_zero: floorZeroImg,
+  three_doors: threeDoorsImg,
+  deep_corridor: deepCorridorImg,
+  watch_room: watchRoomImg,
+  old_elevator: oldElevatorImg,
+  return_gate: returnGateImg,
 };
 
 const moodByLocation: Record<string, string> = {
@@ -123,6 +131,12 @@ const moodByLocation: Record<string, string> = {
   train: "from-[oklch(0.26_0.04_150)] to-[oklch(0.15_0.02_250)]",
   last_car: "from-[oklch(0.22_0.04_150)] to-[oklch(0.13_0.02_250)]",
   lost_station: "from-[oklch(0.3_0.03_230)] to-[oklch(0.16_0.02_255)]",
+  floor_zero: "from-[oklch(0.25_0.02_220)] to-[oklch(0.15_0.02_250)]",
+  three_doors: "from-[oklch(0.24_0.03_60)] to-[oklch(0.14_0.02_250)]",
+  deep_corridor: "from-[oklch(0.21_0.02_200)] to-[oklch(0.12_0.02_250)]",
+  watch_room: "from-[oklch(0.27_0.05_150)] to-[oklch(0.16_0.02_250)]",
+  old_elevator: "from-[oklch(0.26_0.04_80)] to-[oklch(0.15_0.02_250)]",
+  return_gate: "from-[oklch(0.28_0.06_300)] to-[oklch(0.16_0.03_260)]",
 };
 
 export function Scene({

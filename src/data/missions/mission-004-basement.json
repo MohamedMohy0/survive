@@ -1,0 +1,3063 @@
+{
+  "id": "mission-004-basement",
+  "index": 4,
+  "code": "04",
+  "title": "القبو",
+  "subtitle": "ما نزل لم يصعد.",
+  "preview": "مصعد يتوقف تحت الأرض. باب بلا رقم. وسجلّ قديم يحمل أسماء أشخاص لم يعودوا.",
+  "loadingLine": "جاري فتح الملف...",
+  "unlockAfter": null,
+  "acts": [
+    {
+      "id": "act1",
+      "name": "الفصل الأول — النزول"
+    },
+    {
+      "id": "act2",
+      "name": "الفصل الثاني — الطابق الذي لا يظهر"
+    },
+    {
+      "id": "act3",
+      "name": "الفصل الثالث — من في الأسفل"
+    },
+    {
+      "id": "act4",
+      "name": "الفصل الرابع — السجل"
+    },
+    {
+      "id": "act5",
+      "name": "الفصل الخامس — ما نزل لم يصعد"
+    },
+    {
+      "id": "act6",
+      "name": "الفصل السادس — الاختيار الأخير"
+    }
+  ],
+  "start": "n_arrival",
+  "initialStats": {
+    "health": 100,
+    "fear": 18,
+    "trust": 0,
+    "suspicion": 0
+  },
+  "items": [
+    {
+      "id": "phone",
+      "name": "هاتف",
+      "description": "بطارية 68%. لا توجد شبكة، لكن الساعة تعمل."
+    },
+    {
+      "id": "basement_note",
+      "name": "ورقة مطوية",
+      "description": "«إذا سمعت الجرس ثلاث مرات، لا تصعد.»"
+    },
+    {
+      "id": "old_key",
+      "name": "مفتاح نحاسي",
+      "description": "مفتاح ثقيل بلا رقم، وعلى رأسه حرف B."
+    },
+    {
+      "id": "flashlight",
+      "name": "مصباح يدوي",
+      "description": "ضوء أبيض قوي، لكن بطاريته غير مضمونة."
+    },
+    {
+      "id": "maintenance_card",
+      "name": "بطاقة صيانة",
+      "description": "بطاقة قديمة باسم عامل اختفى من سجلات الشركة."
+    },
+    {
+      "id": "red_token",
+      "name": "قطعة حمراء",
+      "description": "قرص زجاجي أحمر عليه الرقم 0."
+    },
+    {
+      "id": "cassette",
+      "name": "شريط كاسيت",
+      "description": "ملصق عليه: «النوبة الأخيرة — 03:17»."
+    },
+    {
+      "id": "basement_map",
+      "name": "مخطط القبو",
+      "description": "مخطط ناقص. الممرات تتكرر في الرسم كأن المبنى أُضيف إليه أكثر من مرة."
+    },
+    {
+      "id": "ledger_page",
+      "name": "صفحة من السجل",
+      "description": "قائمة أسماء، وبجوار كل اسم وقت نزول ووقت عودة فارغ."
+    },
+    {
+      "id": "iron_tag",
+      "name": "بطاقة حديدية",
+      "description": "مستطيل معدني منقوش عليه: «العودة ليست حقًا.»"
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_no_signal",
+      "name": "لا توجد شبكة",
+      "description": "الهاتف فقد الشبكة لحظة دخول المصعد، رغم أن المبنى في منطقة مزدحمة."
+    },
+    {
+      "id": "clue_bell",
+      "name": "الجرس الثالث",
+      "description": "الورقة تحذر من الجرس ثلاث مرات، ولا تشرح السبب."
+    },
+    {
+      "id": "clue_floor_zero",
+      "name": "الطابق صفر",
+      "description": "المصعد يمر برقم 0 لا يظهر في لوحة الأزرار."
+    },
+    {
+      "id": "clue_wet_steps",
+      "name": "درجات مبللة",
+      "description": "الماء يصعد على الدرج بعكس اتجاه الجاذبية."
+    },
+    {
+      "id": "clue_three_doors",
+      "name": "ثلاثة أبواب",
+      "description": "ثلاثة أبواب متطابقة تؤدي إلى الممر نفسه، لكن كل واحد يحمل وقتًا مختلفًا."
+    },
+    {
+      "id": "clue_names",
+      "name": "الأسماء الناقصة",
+      "description": "كل من نزل قبل سنوات لديه وقت نزول ولا يوجد وقت عودة."
+    },
+    {
+      "id": "clue_voice",
+      "name": "الصوت المسجل",
+      "description": "الصوت في الشريط يذكر اسمك قبل أن تقول اسمك لأحد."
+    },
+    {
+      "id": "clue_clock",
+      "name": "ساعة 03:17",
+      "description": "كل الساعات في القبو متوقفة عند 03:17، حتى ساعة هاتفك تتوقف هناك."
+    },
+    {
+      "id": "clue_red_zero",
+      "name": "الصفر الأحمر",
+      "description": "القطعة الحمراء تفتح قفلًا لا يشبه أقفال الفندق."
+    },
+    {
+      "id": "clue_return_rule",
+      "name": "قاعدة العودة",
+      "description": "على الجدار: «من عاد، يترك شيئًا مكانه.»"
+    }
+  ],
+  "locations": [
+    {
+      "id": "building_exterior",
+      "name": "أمام المبنى"
+    },
+    {
+      "id": "lobby",
+      "name": "الردهة"
+    },
+    {
+      "id": "elevator",
+      "name": "المصعد"
+    },
+    {
+      "id": "service_stairs",
+      "name": "سلم الخدمة"
+    },
+    {
+      "id": "floor_zero",
+      "name": "الطابق صفر"
+    },
+    {
+      "id": "basement_hall",
+      "name": "ممر القبو"
+    },
+    {
+      "id": "three_doors",
+      "name": "الممر ذو الأبواب الثلاثة"
+    },
+    {
+      "id": "maintenance_room",
+      "name": "غرفة الصيانة"
+    },
+    {
+      "id": "archive",
+      "name": "أرشيف القبو"
+    },
+    {
+      "id": "water_room",
+      "name": "غرفة المضخات"
+    },
+    {
+      "id": "watch_room",
+      "name": "غرفة المراقبة"
+    },
+    {
+      "id": "deep_corridor",
+      "name": "الممر العميق"
+    },
+    {
+      "id": "old_elevator",
+      "name": "المصعد القديم"
+    },
+    {
+      "id": "lower_chamber",
+      "name": "الغرفة السفلية"
+    },
+    {
+      "id": "return_gate",
+      "name": "بوابة العودة"
+    },
+    {
+      "id": "street",
+      "name": "الشارع"
+    }
+  ],
+  "characters": [
+    {
+      "id": "caretaker",
+      "name": "عامل الصيانة",
+      "description": "رجل هادئ يحمل سلسلة مفاتيح، ويتصرف كأن القبو مكان عادي."
+    },
+    {
+      "id": "girl",
+      "name": "الفتاة في الأسفل",
+      "description": "تجلس قرب أنبوب ماء وتعرف اسمك قبل أن تراك."
+    },
+    {
+      "id": "supervisor",
+      "name": "مشرف النوبة",
+      "description": "يظهر في تسجيلات قديمة وحديثة دون أن يتغير وجهه."
+    },
+    {
+      "id": "voice",
+      "name": "الصوت من السماعة",
+      "description": "صوت لا تعرف إن كان لشخص حي أو لتسجيل يعاد تشغيله."
+    },
+    {
+      "id": "shadow",
+      "name": "الرجل عند الباب",
+      "description": "يقف بعيدًا. كلما اقتربت منه، وجدت أنه أقرب إلى الخلف."
+    }
+  ],
+  "endings": [
+    {
+      "id": "e_exit",
+      "index": 1,
+      "name": "الصعود",
+      "tagline": "عرفت القاعدة الوحيدة التي يجب ألا تكسرها.",
+      "description": "لم تبحث عن كل شيء. اتبعت العلامات وصعدت قبل الجرس الثالث. عندما وصلت إلى الردهة، كان هاتفك يعمل من جديد. لكن في سجل المكالمات مكالمة واردة من رقمك أنت، في الساعة 03:17.",
+      "kind": "normal",
+      "mood": "calm"
+    },
+    {
+      "id": "e_stay",
+      "index": 2,
+      "name": "المقيم",
+      "tagline": "اخترت أن تبقى حيث لا ينتظرك أحد.",
+      "description": "جلست في الغرفة السفلية حتى انطفأ آخر ضوء. في الصباح وجد العامل بابًا مفتوحًا، ووجد على الكرسي بطاقة صيانة باسم جديد: اسمك.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_wrong_door",
+      "index": 3,
+      "name": "الباب الخطأ",
+      "tagline": "الأبواب الثلاثة لم تكن متساوية.",
+      "description": "اخترت الباب الذي يحمل الوقت الأقرب إلى الحاضر. كان يقود إلى ممر يعود إلى نفسه. بعد ساعات، خرجت إلى الردهة… لكن المبنى كان فارغًا، والشارع في الخارج لا يحمل أي مبنى تعرفه.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_record",
+      "index": 4,
+      "name": "الصوت",
+      "tagline": "استمعت إلى التحذير حتى النهاية.",
+      "description": "شغلت الشريط ولم تقطعه. في آخر التسجيل سمعت صوتك يطلب من شخص آخر ألا ينزل. ثم فهمت أن التسجيل لم يكن من الماضي.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_replace",
+      "index": 5,
+      "name": "البديل",
+      "tagline": "دفعت ثمن العودة.",
+      "description": "اتبعت قاعدة الجدار ووضعت شيئًا مكانك. عدت إلى الأعلى، لكن صورتك اختفت من هاتفك وكل الصور القديمة. الجميع يتذكرك، لكن لا توجد صورة واحدة تثبت أنك كنت موجودًا.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_witness",
+      "index": 6,
+      "name": "الشاهد",
+      "tagline": "أخرجت السجل معك.",
+      "description": "صعدت ومعك صفحة الأسماء. في اليوم التالي حاولت إبلاغ الشرطة، لكن كل اسم في الصفحة كان حيًا… إلا اسمك، فقد كُتب بجواره وقت نزول لم يحدث بعد.",
+      "kind": "normal",
+      "mood": "danger"
+    },
+    {
+      "id": "e_below",
+      "index": 7,
+      "name": "ما تحت القبو",
+      "tagline": "واصلت النزول بعد أن انتهت الدرجات.",
+      "description": "فتحت بابًا لم يكن على الخريطة. لم تجد غرفة، بل مساحة واسعة تحت المبنى. وحين التفت، لم يكن هناك درج ولا باب ولا طريق للعودة.",
+      "kind": "normal",
+      "mood": "dark"
+    },
+    {
+      "id": "e_true",
+      "index": 8,
+      "name": "النهاية الحقيقية — الصعود لم يكن هو النجاة",
+      "tagline": "فهمت لماذا كُتبت القاعدة.",
+      "description": "جمعت الأجزاء العشرة وفهمت الحقيقة: القبو ليس مكانًا تحت المبنى، بل مكان يحتفظ بمن حاولوا العودة دون أن يتركوا شيئًا خلفهم. الفتاة لم تكن سجينة؛ كانت آخر شخص يحرس بوابة العودة. وعندما أخذت مكانها، ظهر طريق واحد فقط إلى الأعلى. صعدت، وفي يدك قطعة حمراء لم تعد تحمل الرقم 0… بل 1.",
+      "kind": "true",
+      "mood": "warm"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n_arrival",
+      "act": "act1",
+      "location": "building_exterior",
+      "lines": [
+        "الليل هادئ أكثر مما ينبغي.",
+        "أمامك مبنى إداري قديم لا تظهر عليه أي لافتة.",
+        "أرسلت لك رسالة قبل دقائق: «انزل إلى القبو. لا تأخذ أحدًا معك.»",
+        "تفتح الرسالة المرفقة. ورقة واحدة: «إذا سمعت الجرس ثلاث مرات، لا تصعد.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "phone",
+          "basement_note"
+        ],
+        "addClues": [
+          "clue_bell"
+        ]
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل المبنى.",
+          "next": "n_lobby"
+        },
+        {
+          "id": "call",
+          "text": "اتصل بالرقم الذي أرسل الرسالة.",
+          "next": "n_call"
+        },
+        {
+          "id": "leave",
+          "text": "غادر المكان.",
+          "next": "n_leave_early",
+          "effects": {
+            "stats": {
+              "fear": -5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_call",
+      "act": "act1",
+      "location": "building_exterior",
+      "lines": [
+        "تضغط اتصال.",
+        "يرن هاتفك أنت.",
+        "تنظر إلى الشاشة. المكالمة واردة من رقمك.",
+        "قبل أن تغلق، تسمع همسًا: «لا تصعد.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_no_signal"
+        ],
+        "stats": {
+          "fear": 6
+        }
+      },
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل فورًا.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        },
+        {
+          "id": "ignore",
+          "text": "أغلق الهاتف وانتظر.",
+          "next": "n_wait_outside"
+        }
+      ]
+    },
+    {
+      "id": "n_wait_outside",
+      "act": "act1",
+      "location": "building_exterior",
+      "lines": [
+        "تنتظر خمس دقائق.",
+        "كل شيء ثابت.",
+        "ثم ينطفئ مصباح الشارع فوقك، وتفتح أبواب المبنى وحدها.",
+        "من الداخل يأتي صوت مصعد يصعد إلى الردهة… رغم أنك لم تطلبه."
+      ],
+      "choices": [
+        {
+          "id": "enter",
+          "text": "ادخل.",
+          "next": "n_lobby"
+        },
+        {
+          "id": "leave",
+          "text": "اترك المكان نهائيًا.",
+          "next": "n_leave_early"
+        }
+      ]
+    },
+    {
+      "id": "n_leave_early",
+      "act": "act1",
+      "location": "street",
+      "lines": [
+        "تبتعد عن المبنى.",
+        "بعد عشرين خطوة يهتز هاتفك.",
+        "رسالة جديدة: «لم نطلب منك أن تنزل من أجلك. طلبنا منك أن تنزل لأنك الوحيد الذي يستطيع العودة.»",
+        "حين ترفع رأسك، ترى باب المبنى خلفك مفتوحًا."
+      ],
+      "choices": [
+        {
+          "id": "return",
+          "text": "عد إلى الداخل.",
+          "next": "n_lobby",
+          "effects": {
+            "stats": {
+              "fear": 10,
+              "suspicion": 5
+            }
+          }
+        },
+        {
+          "id": "keep",
+          "text": "واصل السير.",
+          "next": "n_end_exit"
+        }
+      ]
+    },
+    {
+      "id": "n_lobby",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "الردهة مضاءة بنصف مصباح.",
+        "خلف مكتب الاستقبال لا أحد.",
+        "على الحائط لوحة صغيرة: الطوابق 1، 2، 3… ثم لا شيء.",
+        "باب المصعد مفتوح، وبجانبه سلم خدمة يقود إلى الأسفل."
+      ],
+      "choices": [
+        {
+          "id": "desk",
+          "text": "افحص المكتب.",
+          "next": "n_desk"
+        },
+        {
+          "id": "elevator",
+          "text": "خذ المصعد.",
+          "next": "n_elevator"
+        },
+        {
+          "id": "stairs",
+          "text": "انزل من سلم الخدمة.",
+          "next": "n_stairs"
+        },
+        {
+          "id": "callout",
+          "text": "نادِ على أحد.",
+          "next": "n_caretaker"
+        }
+      ]
+    },
+    {
+      "id": "n_desk",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "تفتح الدرج الأول: أوراق صيانة.",
+        "الثاني: مفاتيح.",
+        "الثالث: بطاقة ممغنطة قديمة عليها حرف B.",
+        "تحتها جملة مكتوبة بقلم أحمر: «لا تستخدم البطاقة بعد سماع الجرس.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "maintenance_card"
+        ],
+        "addClues": [
+          "clue_bell"
+        ],
+        "setFlags": [
+          "found_card"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ البطاقة.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_caretaker",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "يظهر رجل من خلف باب جانبي.",
+        "«كنت أعرف أنك ستأتي.»",
+        "«من أرسلك؟»",
+        "«ليس السؤال الصحيح. السؤال: هل جئت لتصعد؟»"
+      ],
+      "character": "caretaker",
+      "onEnter": {
+        "setFlags": [
+          "met_caretaker"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "اسأله عن القبو.",
+          "next": "n_caretaker_basement"
+        },
+        {
+          "id": "trust",
+          "text": "قل إنك تحتاج مساعدته.",
+          "next": "n_caretaker_help",
+          "effects": {
+            "rel": {
+              "caretaker": {
+                "trust": 20
+              }
+            }
+          }
+        },
+        {
+          "id": "accuse",
+          "text": "اتهمه بأنه يعرف أكثر مما يقول.",
+          "next": "n_caretaker_lie",
+          "effects": {
+            "rel": {
+              "caretaker": {
+                "fear": 10
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_caretaker_basement",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "ينظر إلى باب السلم.",
+        "«القبو مفتوح منذ سنوات، لكن لا أحد يستخدمه.»",
+        "«ولماذا؟»",
+        "«لأن من نزل آخر مرة… لم يصعد.»"
+      ],
+      "character": "caretaker",
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "من كان؟",
+          "next": "n_caretaker_names"
+        },
+        {
+          "id": "go",
+          "text": "انزل الآن.",
+          "next": "n_stairs"
+        }
+      ]
+    },
+    {
+      "id": "n_caretaker_names",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "يخفض صوته.",
+        "«ثلاثة عمال. ثم مشرف. ثم فتاة كانت تبحث عن أبيها.»",
+        "«وأين هم؟»",
+        "«في السجل مكتوب: نزلوا. لا يوجد شيء في خانة العودة.»"
+      ],
+      "character": "caretaker",
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "stairs",
+          "text": "انزل.",
+          "next": "n_stairs"
+        },
+        {
+          "id": "record",
+          "text": "أرني السجل.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_caretaker_help",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "ينظر إلى يدك.",
+        "«إذا كنت مصممًا، خذ هذا.»",
+        "يضع مفتاحًا نحاسيًا على المكتب.",
+        "«لا يفتح بابًا. يفتح خيارًا.»"
+      ],
+      "character": "caretaker",
+      "onEnter": {
+        "addItems": [
+          "old_key"
+        ],
+        "setFlags": [
+          "caretaker_helped"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ المفتاح.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_caretaker_lie",
+      "act": "act1",
+      "location": "lobby",
+      "lines": [
+        "لا يغضب.",
+        "فقط يبتسم: «جيد. لا تثق بي.»",
+        "ثم يضع يده على أذنه.",
+        "«حين تسمع الجرس… لا تنظر إلى السلم.»"
+      ],
+      "character": "caretaker",
+      "onEnter": {
+        "addClues": [
+          "clue_bell"
+        ]
+      },
+      "choices": [
+        {
+          "id": "stairs",
+          "text": "انزل رغم تحذيره.",
+          "next": "n_stairs",
+          "effects": {
+            "stats": {
+              "suspicion": 10
+            }
+          }
+        },
+        {
+          "id": "elevator",
+          "text": "استخدم المصعد بدلًا من السلم.",
+          "next": "n_elevator"
+        }
+      ]
+    },
+    {
+      "id": "n_stairs",
+      "act": "act2",
+      "location": "service_stairs",
+      "lines": [
+        "السلم ضيق ومغبر.",
+        "بعد الدرجة العاشرة، يصبح الهواء أبرد.",
+        "بعد الدرجة العشرين، ترى الماء على الدرج.",
+        "الغريب أن الماء يتحرك إلى الأعلى."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_wet_steps"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "continue",
+          "text": "تابع النزول.",
+          "next": "n_floor_zero"
+        },
+        {
+          "id": "inspect",
+          "text": "افحص الماء.",
+          "next": "n_wet_steps"
+        },
+        {
+          "id": "back",
+          "text": "عد إلى الردهة.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_wet_steps",
+      "act": "act2",
+      "location": "service_stairs",
+      "lines": [
+        "تلمس الماء.",
+        "إنه بارد، لكنه ليس ماءً عاديًا.",
+        "توجد رائحة معدن.",
+        "على إحدى الدرجات أثر حذاء حديث… متجه إلى الأسفل."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_wet_steps"
+        ]
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "text": "اتبع الأثر.",
+          "next": "n_floor_zero"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_lobby"
+        }
+      ]
+    },
+    {
+      "id": "n_elevator",
+      "act": "act2",
+      "location": "elevator",
+      "lines": [
+        "تدخل المصعد.",
+        "الأزرار: 1، 2، 3، ثم زر صغير بلا رقم.",
+        "قبل أن تضغط شيئًا، ينزل المصعد وحده.",
+        "1… 0… ثم يتوقف المؤشر للحظة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_floor_zero",
+          "clue_no_signal"
+        ]
+      },
+      "choices": [
+        {
+          "id": "exit",
+          "text": "اخرج عند توقفه.",
+          "next": "n_floor_zero",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        },
+        {
+          "id": "press0",
+          "text": "اضغط الزر بلا رقم.",
+          "next": "n_elevator_secret",
+          "effects": {
+            "stats": {
+              "fear": 10
+            }
+          }
+        },
+        {
+          "id": "stop",
+          "text": "اضغط زر الطوارئ.",
+          "next": "n_elevator_stop"
+        }
+      ]
+    },
+    {
+      "id": "n_elevator_stop",
+      "act": "act2",
+      "location": "elevator",
+      "lines": [
+        "لا يعمل زر الطوارئ.",
+        "السماعة تشتغل وحدها.",
+        "صوت رجل: «الطوارئ فوقكم.»",
+        "ثم يغلق المصعد أبوابه."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "text": "انتظر.",
+          "next": "n_floor_zero"
+        },
+        {
+          "id": "force",
+          "text": "حاول فتح الباب.",
+          "next": "n_elevator_secret",
+          "effects": {
+            "stats": {
+              "health": -5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_elevator_secret",
+      "act": "act2",
+      "location": "elevator",
+      "lines": [
+        "المصعد ينزل.",
+        "لا تشعر بالحركة، لكن الأرقام تتغير.",
+        "3… 2… 1… 0.",
+        "ثم تظهر لحظة واحدة فقط: «-1».",
+        "حين يفتح الباب، لا ترى مبنى. ترى ممرًا."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "used_secret_elevator"
+        ],
+        "addClues": [
+          "clue_floor_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "exit",
+          "text": "اخرج.",
+          "next": "n_floor_zero"
+        },
+        {
+          "id": "back",
+          "text": "اضغط زر الصعود.",
+          "next": "n_elevator_back"
+        }
+      ]
+    },
+    {
+      "id": "n_elevator_back",
+      "act": "act2",
+      "location": "elevator",
+      "lines": [
+        "تضغط زر الصعود.",
+        "المصعد لا يتحرك.",
+        "ثم تسمع الجرس مرة واحدة.",
+        "باب المصعد يفتح على الردهة نفسها… لكن الساعة فوق المكتب تشير إلى 03:17."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_clock"
+        ]
+      },
+      "choices": [
+        {
+          "id": "enter_hall",
+          "text": "ادخل الردهة.",
+          "next": "n_lobby"
+        },
+        {
+          "id": "return",
+          "text": "لا تثق بما ترى. اضغط الزر مرة أخرى.",
+          "next": "n_floor_zero",
+          "effects": {
+            "stats": {
+              "fear": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_floor_zero",
+      "act": "act2",
+      "location": "floor_zero",
+      "lines": [
+        "لا يوجد رقم على الجدار.",
+        "فقط دائرة مطلية بالأسود.",
+        "على الأرض، خط أحمر يقود إلى ثلاثة أبواب.",
+        "كل باب متطابق تمامًا مع الآخر."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_floor_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "doors",
+          "text": "اقترب من الأبواب.",
+          "next": "n_three_doors"
+        },
+        {
+          "id": "room",
+          "text": "افحص غرفة جانبية.",
+          "next": "n_maintenance"
+        },
+        {
+          "id": "map",
+          "text": "ابحث عن مخطط.",
+          "next": "n_find_map"
+        }
+      ]
+    },
+    {
+      "id": "n_find_map",
+      "act": "act2",
+      "location": "floor_zero",
+      "lines": [
+        "خلف صندوق معدني تجد مخططًا مطويًا.",
+        "الممر الذي تقف فيه مرسوم مرتين.",
+        "وفي كل نسخة، اتجاه الأبواب مختلف.",
+        "أسفل المخطط عبارة: «إذا تشابه المكانان، فأنت في المكان الخطأ.»"
+      ],
+      "onEnter": {
+        "addItems": [
+          "basement_map"
+        ],
+        "addClues": [
+          "clue_three_doors"
+        ],
+        "setFlags": [
+          "found_map"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ المخطط.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_maintenance",
+      "act": "act2",
+      "location": "maintenance_room",
+      "lines": [
+        "الغرفة مليئة بأدوات قديمة.",
+        "على الحائط بطاقات أسماء لعمال الصيانة.",
+        "واحدة منها تحمل اسمًا، ثم شُطبت.",
+        "خلفها فتحة صغيرة فيها شريط كاسيت."
+      ],
+      "onEnter": {
+        "addItems": [
+          "cassette"
+        ],
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ الشريط.",
+          "next": "n_three_doors"
+        },
+        {
+          "id": "listen",
+          "text": "شغّل الشريط الآن.",
+          "next": "n_tape_early"
+        }
+      ]
+    },
+    {
+      "id": "n_tape_early",
+      "act": "act2",
+      "location": "maintenance_room",
+      "lines": [
+        "الصوت مشوش.",
+        "«النوبة الأخيرة… الساعة 03:17.»",
+        "ثم صمت.",
+        "ثم صوت واضح: «لا تجعلوه يصعد.»",
+        "بعدها مباشرة تسمع صوتك يقول: «أنا هنا.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice",
+          "clue_clock"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "continue",
+          "text": "أكمل الاستماع.",
+          "next": "n_tape_name"
+        },
+        {
+          "id": "stop",
+          "text": "أوقف الشريط.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_tape_name",
+      "act": "act2",
+      "location": "maintenance_room",
+      "lines": [
+        "تسمع اسمك كاملًا.",
+        "ثم صوتًا آخر يضحك.",
+        "«هو لم ينزل بعد.»",
+        "الشريط ينتهي."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice"
+        ],
+        "setFlags": [
+          "heard_name_tape"
+        ]
+      },
+      "choices": [
+        {
+          "id": "doors",
+          "text": "اخرج.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_three_doors",
+      "act": "act3",
+      "location": "three_doors",
+      "lines": [
+        "الأبواب الثلاثة تحمل نفس اللون.",
+        "الأول مكتوب فوقه 02:41.",
+        "الثاني 03:17.",
+        "الثالث 03:42.",
+        "من خلف الباب الثاني تسمع قطرة ماء."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_three_doors"
+        ]
+      },
+      "choices": [
+        {
+          "id": "one",
+          "text": "افتح الأول.",
+          "next": "n_door_one"
+        },
+        {
+          "id": "two",
+          "text": "افتح الثاني.",
+          "next": "n_door_two"
+        },
+        {
+          "id": "three",
+          "text": "افتح الثالث.",
+          "next": "n_door_three"
+        },
+        {
+          "id": "listen",
+          "text": "استمع للأبواب قبل الاختيار.",
+          "next": "n_listen_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_listen_doors",
+      "act": "act3",
+      "location": "three_doors",
+      "lines": [
+        "الباب الأول: لا شيء.",
+        "الباب الثاني: قطرة ماء كل سبع ثوان.",
+        "الباب الثالث: صوت تنفس.",
+        "ثم، من خلف الباب الثالث، يأتي صوت الفتاة: «لا تفتح هذا.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_voice"
+        ]
+      },
+      "choices": [
+        {
+          "id": "two",
+          "text": "افتح الباب الثاني.",
+          "next": "n_door_two"
+        },
+        {
+          "id": "one",
+          "text": "افتح الأول.",
+          "next": "n_door_one"
+        },
+        {
+          "id": "three",
+          "text": "افتح الثالث رغم التحذير.",
+          "next": "n_door_three",
+          "effects": {
+            "stats": {
+              "fear": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_door_one",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "الباب يفتح على الممر نفسه.",
+        "لكن الأبواب الثلاثة خلفك لم تعد موجودة.",
+        "في نهاية الممر فتاة جالسة قرب أنبوب.",
+        "«أخيرًا»، تقول."
+      ],
+      "character": "girl",
+      "onEnter": {
+        "setFlags": [
+          "entered_door_one"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "talk",
+          "text": "تحدث معها.",
+          "next": "n_girl"
+        },
+        {
+          "id": "leave",
+          "text": "عد من الباب.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_door_two",
+      "act": "act3",
+      "location": "water_room",
+      "lines": [
+        "تدخل غرفة مضخات.",
+        "الماء يصل إلى الكاحل.",
+        "كل المضخات متوقفة.",
+        "ومع ذلك، الماء يرتفع."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_wet_steps"
+        ],
+        "stats": {
+          "fear": 8
+        }
+      },
+      "choices": [
+        {
+          "id": "pump",
+          "text": "افحص لوحة المضخات.",
+          "next": "n_pump"
+        },
+        {
+          "id": "follow",
+          "text": "اتبع الماء.",
+          "next": "n_water_path"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_door_three",
+      "act": "act3",
+      "location": "deep_corridor",
+      "lines": [
+        "الباب الثالث يقود إلى ممر طويل.",
+        "كلما مشيت، بقي الباب خلفك في المكان نفسه.",
+        "في النهاية رجل يقف أمام باب معدني.",
+        "«تأخرت»، يقول."
+      ],
+      "character": "shadow",
+      "onEnter": {
+        "setFlags": [
+          "met_shadow"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "من أنت؟",
+          "next": "n_shadow"
+        },
+        {
+          "id": "door",
+          "text": "افتح الباب المعدني.",
+          "next": "n_deep_gate"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_girl",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "تبتسم الفتاة.",
+        "«أنت لست أول شخص يأتي.»",
+        "«من أنت؟»",
+        "«الشخص الذي ينتظر من سيأتي بعدي.»",
+        "تنظر إلى يدك: «أين القطعة الحمراء؟»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "setFlags": [
+          "met_girl"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "اسألها عن القطعة.",
+          "next": "n_girl_token"
+        },
+        {
+          "id": "record",
+          "text": "اسألها عن الأسماء.",
+          "next": "n_girl_names"
+        },
+        {
+          "id": "trust",
+          "text": "قل لها إنك تريد إخراجها.",
+          "next": "n_girl_help"
+        },
+        {
+          "id": "accuse",
+          "text": "اتهمها بأنها السبب.",
+          "next": "n_girl_accuse"
+        }
+      ]
+    },
+    {
+      "id": "n_girl_token",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "«القطعة لا تُعطى. تُوجد.»",
+        "«وأين؟»",
+        "تشير إلى جيب معطفك.",
+        "تفتش جيبك، فتجد القرص الأحمر رغم أنك متأكد أنك لم تأخذه."
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addItems": [
+          "red_token"
+        ],
+        "addClues": [
+          "clue_red_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "أخرج القطعة.",
+          "next": "n_token_found"
+        }
+      ]
+    },
+    {
+      "id": "n_girl_names",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "تقول: «الأسماء ليست للذين ماتوا.»",
+        "«إذن لمن؟»",
+        "«للذين حاولوا العودة.»",
+        "ثم تشير إلى باب الأرشيف."
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "اذهب إلى الأرشيف.",
+          "next": "n_archive"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ واسألها أكثر.",
+          "next": "n_girl_more"
+        }
+      ]
+    },
+    {
+      "id": "n_girl_more",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "«أنا كنت آخر اسم.»",
+        "«هل خرجتِ؟»",
+        "تضحك بخفة.",
+        "«أنا خرجت مرة. لذلك عدت إلى هنا.»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "why",
+          "text": "لماذا عدتِ؟",
+          "next": "n_girl_rule"
+        },
+        {
+          "id": "archive",
+          "text": "أين الأرشيف؟",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_girl_rule",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "«هناك قاعدة.»",
+        "«ما هي؟»",
+        "«من عاد، يترك شيئًا مكانه.»",
+        "«وماذا تركتِ أنتِ؟»",
+        "تنظر إليك: «لم أترك شيئًا.»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "help",
+          "text": "ساعديني على الخروج.",
+          "next": "n_girl_help"
+        },
+        {
+          "id": "leave",
+          "text": "اتركها واذهب.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_girl_help",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "تقف.",
+        "«لن أخرج قبلك.»",
+        "«لماذا؟»",
+        "«لأن القبو يحتاج شخصًا يعرف الطريق.»",
+        "تضع يدها على الباب: «لكن لا تثق بالجرس.»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "rel": {
+          "girl": {
+            "trust": 30
+          }
+        },
+        "addClues": [
+          "clue_bell"
+        ]
+      },
+      "choices": [
+        {
+          "id": "archive",
+          "text": "اذهب إلى الأرشيف معها.",
+          "next": "n_archive"
+        },
+        {
+          "id": "deep",
+          "text": "اتبع الممر العميق.",
+          "next": "n_deep_gate"
+        }
+      ]
+    },
+    {
+      "id": "n_girl_accuse",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "لا تتغير ملامحها.",
+        "«لو كنت السبب، لما كنت أبحث عن باب الخروج منذ سبع سنوات.»",
+        "«سبع سنوات؟»",
+        "«هنا، نعم. في الأعلى مر يومان فقط.»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addClues": [
+          "clue_clock"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "believe",
+          "text": "صدقها.",
+          "next": "n_girl_help"
+        },
+        {
+          "id": "leave",
+          "text": "لا تصدقها.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_token_found",
+      "act": "act3",
+      "location": "basement_hall",
+      "lines": [
+        "القرص الأحمر بارد.",
+        "في وسطه الرقم 0.",
+        "عندما تقترب به من الجدار الأسود، تسمع صوت قفل."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_red_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "use",
+          "text": "ضع القطعة في الفتحة.",
+          "next": "n_red_lock"
+        },
+        {
+          "id": "keep",
+          "text": "احتفظ بها.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_pump",
+      "act": "act3",
+      "location": "water_room",
+      "lines": [
+        "لوحة المضخات تحمل ثلاثة مفاتيح.",
+        "كل مفتاح يحمل وقتًا.",
+        "02:41، 03:17، 03:42.",
+        "المفتاح الأوسط عليه خدش حديث."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_clock"
+        ]
+      },
+      "choices": [
+        {
+          "id": "middle",
+          "text": "شغّل 03:17.",
+          "next": "n_pump_middle"
+        },
+        {
+          "id": "first",
+          "text": "شغّل 02:41.",
+          "next": "n_pump_first"
+        },
+        {
+          "id": "third",
+          "text": "شغّل 03:42.",
+          "next": "n_pump_third"
+        }
+      ]
+    },
+    {
+      "id": "n_pump_middle",
+      "act": "act3",
+      "location": "water_room",
+      "lines": [
+        "المضخة تبدأ.",
+        "الماء يتوقف عن الارتفاع.",
+        "ثم يبدأ بالنزول، كاشفًا درجات تحت الأرض.",
+        "وعلى أول درجة: اسم شخص مكتوب بالطبشور."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "pump_0317"
+        ],
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "down",
+          "text": "انزل.",
+          "next": "n_lower_steps"
+        },
+        {
+          "id": "back",
+          "text": "اتركها.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_pump_first",
+      "act": "act3",
+      "location": "water_room",
+      "lines": [
+        "تدور المضخة.",
+        "الماء ينخفض لحظات، ثم يعود أسرع.",
+        "تسمع طرقًا من داخل الأنبوب.",
+        "ثلاث طرقات."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_bell"
+        ]
+      },
+      "choices": [
+        {
+          "id": "stop",
+          "text": "أوقفها.",
+          "next": "n_archive"
+        },
+        {
+          "id": "continue",
+          "text": "اتركها تعمل.",
+          "next": "n_lower_steps",
+          "effects": {
+            "stats": {
+              "health": -8,
+              "fear": 12
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_pump_third",
+      "act": "act3",
+      "location": "water_room",
+      "lines": [
+        "المضخة تعمل بصوت مرتفع.",
+        "كل المصابيح تنطفئ.",
+        "عندما تعود الإضاءة، يقف رجل في الماء أمامك.",
+        "وجهه هو وجه المشرف في صورة الصيانة."
+      ],
+      "character": "supervisor",
+      "onEnter": {
+        "stats": {
+          "fear": 18
+        }
+      },
+      "choices": [
+        {
+          "id": "talk",
+          "text": "تحدث إليه.",
+          "next": "n_supervisor"
+        },
+        {
+          "id": "run",
+          "text": "اهرب.",
+          "next": "n_archive"
+        }
+      ]
+    },
+    {
+      "id": "n_shadow",
+      "act": "act3",
+      "location": "deep_corridor",
+      "lines": [
+        "الرجل لا يجيب.",
+        "يشير إلى الباب.",
+        "«كل من دخل من هنا سأل السؤال نفسه.»",
+        "«أي سؤال؟»",
+        "«كيف أعود؟»"
+      ],
+      "character": "shadow",
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "وكيف يعودون؟",
+          "next": "n_shadow_rule"
+        },
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_deep_gate"
+        },
+        {
+          "id": "leave",
+          "text": "عد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_shadow_rule",
+      "act": "act3",
+      "location": "deep_corridor",
+      "lines": [
+        "«لا يعودون.»",
+        "«لماذا؟»",
+        "«لأنهم يتركون شيئًا خلفهم، ثم ينسون أنهم تركوه.»",
+        "يختفي من أمامك دون صوت."
+      ],
+      "character": "shadow",
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "gate",
+          "text": "افتح الباب.",
+          "next": "n_deep_gate"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_deep_gate",
+      "act": "act3",
+      "location": "deep_corridor",
+      "lines": [
+        "الباب المعدني عليه فتحة دائرية.",
+        "حجمها يطابق القطعة الحمراء.",
+        "فوقها: «0 ليس رقمًا. 0 هو البداية.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_red_zero"
+        ]
+      },
+      "choices": [
+        {
+          "id": "use",
+          "text": "استخدم القطعة الحمراء.",
+          "next": "n_lower_steps",
+          "required": {
+            "items": [
+              "red_token"
+            ]
+          },
+          "lockedText": "تحتاج إلى القطعة الحمراء."
+        },
+        {
+          "id": "force",
+          "text": "حاول فتحه بالقوة.",
+          "next": "n_force_gate",
+          "effects": {
+            "health": -10
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_force_gate",
+      "act": "act3",
+      "location": "deep_corridor",
+      "lines": [
+        "لا يتحرك الباب.",
+        "من خلفه يأتي صوت فتاة: «لا تكسر الباب.»",
+        "ثم صوت آخر: «دعه يكسر نفسه.»"
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "text": "انتظر.",
+          "next": "n_lower_steps"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_archive",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الأرشيف أضيق من المتوقع.",
+        "رفوف كاملة من السجلات.",
+        "كلها تحمل نفس العمود: وقت النزول، وقت العودة.",
+        "عمود العودة فارغ في كل صفحة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ledger",
+          "text": "ابحث عن أحدث اسم.",
+          "next": "n_ledger"
+        },
+        {
+          "id": "old",
+          "text": "ابحث عن أول اسم.",
+          "next": "n_old_ledger"
+        },
+        {
+          "id": "map",
+          "text": "افتح المخطط.",
+          "next": "n_archive_map"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_ledger",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "آخر صفحة تحمل تاريخ اليوم.",
+        "الاسم الأول مكتوب بخط واضح.",
+        "إنه اسمك.",
+        "وقت النزول: 02:41.",
+        "وقت العودة: ______."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ],
+        "stats": {
+          "fear": 14
+        }
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "اقتلع الصفحة.",
+          "next": "n_ledger_take"
+        },
+        {
+          "id": "continue",
+          "text": "قلب الصفحة التالية.",
+          "next": "n_archive_next"
+        }
+      ]
+    },
+    {
+      "id": "n_ledger_take",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "تنزع الصفحة.",
+        "تحتها صفحة أخرى تحمل اسم الفتاة.",
+        "ثم صفحة أخرى تحمل اسم عامل الصيانة.",
+        "ثم اسم المشرف.",
+        "كلهم لديهم شيء مشترك: وقت العودة فارغ."
+      ],
+      "onEnter": {
+        "addItems": [
+          "ledger_page"
+        ],
+        "setFlags": [
+          "has_ledger_page"
+        ],
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "takeall",
+          "text": "خذ الصفحة.",
+          "next": "n_end_witness"
+        },
+        {
+          "id": "leave",
+          "text": "اتركها.",
+          "next": "n_archive_next"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_next",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "في آخر الرف تجد جملة محفورة على الخشب:",
+        "«إذا وجدت اسمك، لا تبحث عن اسم آخر.»",
+        "ثم تسمع جرسًا بعيدًا.",
+        "مرة واحدة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_bell"
+        ],
+        "stats": {
+          "fear": 6
+        }
+      },
+      "choices": [
+        {
+          "id": "continue",
+          "text": "تابع.",
+          "next": "n_watch_room"
+        },
+        {
+          "id": "leave",
+          "text": "عد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_old_ledger",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "أول سجل يعود إلى سبع سنوات.",
+        "اسم واحد فقط.",
+        "وقت النزول 03:17.",
+        "وفي خانة العودة كلمة واحدة: «استبدال»."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "read",
+          "text": "اقرأ الملاحظات.",
+          "next": "n_old_note"
+        },
+        {
+          "id": "close",
+          "text": "أغلق السجل.",
+          "next": "n_watch_room"
+        }
+      ]
+    },
+    {
+      "id": "n_old_note",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "الملاحظة تقول:",
+        "«العودة لا تعني الرجوع. العودة تعني أن شيئًا صعد بدلًا منك.»",
+        "أسفلها توقيع المشرف.",
+        "التاريخ: اليوم."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule",
+          "clue_clock"
+        ]
+      },
+      "choices": [
+        {
+          "id": "watch",
+          "text": "اذهب إلى غرفة المراقبة.",
+          "next": "n_watch_room"
+        },
+        {
+          "id": "deep",
+          "text": "ابحث عن الطريق السفلي.",
+          "next": "n_lower_steps"
+        }
+      ]
+    },
+    {
+      "id": "n_archive_map",
+      "act": "act4",
+      "location": "archive",
+      "lines": [
+        "المخطط يوضح شيئًا لم تره من قبل.",
+        "القبو ليس طابقًا واحدًا.",
+        "هناك مستوى تحت مستوى.",
+        "وفي أعمق نقطة دائرة حمراء تحمل الرقم 1."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_red_zero"
+        ],
+        "setFlags": [
+          "saw_deep_map"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ المعلومة والمخطط.",
+          "next": "n_watch_room"
+        },
+        {
+          "id": "deep",
+          "text": "اذهب إلى المستوى الأعمق.",
+          "next": "n_lower_steps"
+        }
+      ]
+    },
+    {
+      "id": "n_watch_room",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "شاشات قديمة تعمل دون كهرباء واضحة.",
+        "تظهر الردهة.",
+        "ثم المصعد.",
+        "ثم تظهر أنت وأنت تدخل المبنى… قبل عشر دقائق من وصولك فعليًا."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_clock",
+          "clue_voice"
+        ]
+      },
+      "choices": [
+        {
+          "id": "watch",
+          "text": "شاهد التسجيل حتى النهاية.",
+          "next": "n_watch_record"
+        },
+        {
+          "id": "turnoff",
+          "text": "أطفئ الشاشة.",
+          "next": "n_supervisor_room"
+        },
+        {
+          "id": "call",
+          "text": "نادِ المشرف.",
+          "next": "n_supervisor_room"
+        }
+      ]
+    },
+    {
+      "id": "n_watch_record",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "تتغير الكاميرا.",
+        "تظهر الفتاة في الممر.",
+        "ثم يظهر عامل الصيانة.",
+        "ثم تظهر أنت.",
+        "لكن في التسجيل، أنت تحمل القطعة الحمراء قبل أن تجدها."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_red_zero",
+          "clue_voice"
+        ]
+      },
+      "choices": [
+        {
+          "id": "continue",
+          "text": "شاهد آخر جزء.",
+          "next": "n_watch_last"
+        },
+        {
+          "id": "leave",
+          "text": "اخرج.",
+          "next": "n_supervisor_room"
+        }
+      ]
+    },
+    {
+      "id": "n_watch_last",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "النسخة الأخيرة من التسجيل تُظهر باب العودة.",
+        "الفتاة تفتح الباب.",
+        "عامل الصيانة يدخل.",
+        "المشرف يدخل.",
+        "ثم أنت.",
+        "بعدها الشاشة تسود."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "saw_return_record"
+        ],
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "اذهب إلى باب العودة.",
+          "next": "n_end_record"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ هنا.",
+          "next": "n_watch_wait"
+        }
+      ]
+    },
+    {
+      "id": "n_watch_wait",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "تنتظر.",
+        "الساعة على الشاشة تتحرك من 03:17 إلى 03:18.",
+        "في اللحظة نفسها، هاتفك يهتز.",
+        "رسالة واحدة: «الآن حان دورك.»"
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "go",
+          "text": "اخرج.",
+          "next": "n_return_hint"
+        }
+      ]
+    },
+    {
+      "id": "n_supervisor_room",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "الرجل الذي رأيته في الماء يقف عند الباب.",
+        "«لا تخف.»",
+        "«من أنت؟»",
+        "«أنا آخر شخص حاول أن يعود بالطريقة الصحيحة.»"
+      ],
+      "character": "supervisor",
+      "choices": [
+        {
+          "id": "ask",
+          "text": "ما الطريقة الصحيحة؟",
+          "next": "n_supervisor_rule"
+        },
+        {
+          "id": "accuse",
+          "text": "أنت المشرف.",
+          "next": "n_supervisor_confess"
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد.",
+          "next": "n_return_hint"
+        }
+      ]
+    },
+    {
+      "id": "n_supervisor_rule",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "«اجمع ما يكفي لتعرف من أنت هنا.»",
+        "«وماذا يعني ذلك؟»",
+        "«أن القبو لم يخترك لأنك شجاع. اختارك لأنك كنت مكتوبًا.»"
+      ],
+      "character": "supervisor",
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "مكتوبًا أين؟",
+          "next": "n_supervisor_confess"
+        },
+        {
+          "id": "go",
+          "text": "اتبعني.",
+          "next": "n_return_hint"
+        }
+      ]
+    },
+    {
+      "id": "n_supervisor_confess",
+      "act": "act4",
+      "location": "watch_room",
+      "lines": [
+        "«أنا أول اسم في السجل.»",
+        "«لكن هذا مستحيل.»",
+        "«لهذا السبب لا تتعامل مع السجل كأنه ماضٍ.»",
+        "يقترب.",
+        "«إنه قائمة انتظار.»"
+      ],
+      "character": "supervisor",
+      "onEnter": {
+        "addClues": [
+          "clue_names",
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "record",
+          "text": "أين صفحة اسمك؟",
+          "next": "n_ledger"
+        },
+        {
+          "id": "gate",
+          "text": "أين باب العودة؟",
+          "next": "n_return_hint"
+        }
+      ]
+    },
+    {
+      "id": "n_lower_steps",
+      "act": "act5",
+      "location": "deep_corridor",
+      "lines": [
+        "تنزل.",
+        "لا تعرف عدد الدرجات.",
+        "كل عشر درجات يتغير صوت المبنى.",
+        "ثم تختفي الدرجات تمامًا.",
+        "أمامك باب قديم يشبه باب المصعد."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 14
+        },
+        "setFlags": [
+          "reached_deep"
+        ]
+      },
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتحه.",
+          "next": "n_old_elevator"
+        },
+        {
+          "id": "wait",
+          "text": "انتظر.",
+          "next": "n_lower_wait"
+        }
+      ]
+    },
+    {
+      "id": "n_lower_wait",
+      "act": "act5",
+      "location": "deep_corridor",
+      "lines": [
+        "تنتظر.",
+        "الجرس يرن مرتين.",
+        "ثم تسمع خطوات خلفك.",
+        "حين تلتفت، لا يوجد أحد."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_bell"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_old_elevator"
+        },
+        {
+          "id": "run",
+          "text": "اركض للأعلى.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_old_elevator",
+      "act": "act5",
+      "location": "old_elevator",
+      "lines": [
+        "المصعد القديم بلا أزرار.",
+        "فقط فتحة للقطعة الحمراء.",
+        "في الداخل لوحة معدنية: «واحد يصعد، واحد يبقى.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "insert",
+          "text": "ضع القطعة الحمراء.",
+          "next": "n_old_elevator_open",
+          "required": {
+            "items": [
+              "red_token"
+            ]
+          },
+          "lockedText": "تحتاج إلى القطعة الحمراء."
+        },
+        {
+          "id": "leave",
+          "text": "ابتعد.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_old_elevator_open",
+      "act": "act5",
+      "location": "old_elevator",
+      "lines": [
+        "تضع القطعة.",
+        "يضيء رقم 1.",
+        "المصعد لا يتحرك.",
+        "بدلًا من ذلك، يفتح باب خلفك لم يكن موجودًا.",
+        "الفتاة تقف هناك."
+      ],
+      "character": "girl",
+      "onEnter": {
+        "setFlags": [
+          "opened_old_elevator"
+        ]
+      },
+      "choices": [
+        {
+          "id": "girl",
+          "text": "استمع إليها.",
+          "next": "n_final_girl"
+        },
+        {
+          "id": "enter",
+          "text": "ادخل المصعد.",
+          "next": "n_lower_chamber"
+        },
+        {
+          "id": "close",
+          "text": "أغلق الباب.",
+          "next": "n_three_doors"
+        }
+      ]
+    },
+    {
+      "id": "n_final_girl",
+      "act": "act5",
+      "location": "old_elevator",
+      "lines": [
+        "«وصلت إلى آخر مكان.»",
+        "«كيف أخرج؟»",
+        "«هناك ثمانية طرق للخروج. سبعة منها تعيدك إلى البداية.»",
+        "«والثامنة؟»",
+        "«تحتاج أن تفهم القاعدة.»"
+      ],
+      "character": "girl",
+      "choices": [
+        {
+          "id": "rule",
+          "text": "ما القاعدة؟",
+          "next": "n_final_rule"
+        },
+        {
+          "id": "truth",
+          "text": "أخبريني الحقيقة.",
+          "next": "n_final_truth"
+        },
+        {
+          "id": "leave",
+          "text": "لن أصدقك.",
+          "next": "n_lower_chamber"
+        }
+      ]
+    },
+    {
+      "id": "n_final_rule",
+      "act": "act5",
+      "location": "old_elevator",
+      "lines": [
+        "تشير إلى الجدار.",
+        "«من عاد، يترك شيئًا مكانه.»",
+        "«يمكنني ترك أي شيء؟»",
+        "«لا. القبو لا يقبل الأشياء. يقبل الأدوار.»",
+        "ثم تقول: «أنا حارسة. هو مشرف. وأنت…»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ask",
+          "text": "وأنا ماذا؟",
+          "next": "n_final_truth"
+        },
+        {
+          "id": "ignore",
+          "text": "ادخل المصعد.",
+          "next": "n_lower_chamber"
+        }
+      ]
+    },
+    {
+      "id": "n_final_truth",
+      "act": "act5",
+      "location": "old_elevator",
+      "lines": [
+        "«أنت البديل.»",
+        "«بديل من؟»",
+        "تنظر إلى المشرف.",
+        "«كل شخص ينزل يحتاج شخصًا ليحرس الباب بعده.»",
+        "ثم ينطفئ الضوء."
+      ],
+      "character": "girl",
+      "onEnter": {
+        "addClues": [
+          "clue_names",
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "chamber",
+          "text": "ادخل الغرفة السفلية.",
+          "next": "n_lower_chamber"
+        },
+        {
+          "id": "girl",
+          "text": "ارفض أن تتركها.",
+          "next": "n_final_choice_girl"
+        }
+      ]
+    },
+    {
+      "id": "n_final_choice_girl",
+      "act": "act5",
+      "location": "lower_chamber",
+      "lines": [
+        "تقول لها: «لن أتركك هنا.»",
+        "تبتسم.",
+        "«إذن فهمت أخيرًا.»",
+        "تضع القطعة الحمراء في يدك.",
+        "«الباب لا يحتاج حارسًا. يحتاج شخصًا يختار.»"
+      ],
+      "character": "girl",
+      "choices": [
+        {
+          "id": "stay",
+          "text": "ابقَ معها.",
+          "next": "n_ending_stay"
+        },
+        {
+          "id": "exit",
+          "text": "ابحث عن طريق للخروج.",
+          "next": "n_return_gate"
+        }
+      ]
+    },
+    {
+      "id": "n_lower_chamber",
+      "act": "act5",
+      "location": "lower_chamber",
+      "lines": [
+        "الغرفة السفلية دائرية.",
+        "في المنتصف كرسي واحد.",
+        "حول الكرسي عشرة أسماء محفورة في الأرض.",
+        "آخر اسم هو اسمك.",
+        "وعلى الجدار: «ما نزل لم يصعد.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_names",
+          "clue_return_rule"
+        ],
+        "stats": {
+          "fear": 12
+        }
+      },
+      "choices": [
+        {
+          "id": "inspect",
+          "text": "افحص الأسماء.",
+          "next": "n_chamber_names"
+        },
+        {
+          "id": "chair",
+          "text": "اجلس على الكرسي.",
+          "next": "n_chair"
+        },
+        {
+          "id": "door",
+          "text": "ابحث عن باب.",
+          "next": "n_return_gate"
+        },
+        {
+          "id": "truth",
+          "text": "اجمع الأدلة وفكر في القاعدة.",
+          "next": "n_truth_path"
+        }
+      ]
+    },
+    {
+      "id": "n_chamber_names",
+      "act": "act5",
+      "location": "lower_chamber",
+      "lines": [
+        "الأسماء التسعة الأولى مشطوبة.",
+        "الاسم العاشر لم يُكتب بالكامل.",
+        "الحروف الأخيرة تتوقف عند حرف من اسمك.",
+        "تحت كل اسم وقت.",
+        "03:17 يتكرر أكثر من مرة."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_clock",
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "ledger",
+          "text": "قارنها بالسجل.",
+          "next": "n_truth_path",
+          "required": {
+            "items": [
+              "ledger_page"
+            ]
+          },
+          "lockedText": "تحتاج إلى صفحة السجل."
+        },
+        {
+          "id": "chair",
+          "text": "اجلس.",
+          "next": "n_chair"
+        },
+        {
+          "id": "gate",
+          "text": "اذهب للباب.",
+          "next": "n_return_gate"
+        }
+      ]
+    },
+    {
+      "id": "n_chair",
+      "act": "act5",
+      "location": "lower_chamber",
+      "lines": [
+        "تجلس.",
+        "كل الأصوات تتوقف.",
+        "الجرس يرن مرة.",
+        "ثم مرة ثانية.",
+        "ثم تسمع صوتًا فوقك: «إذا رن الثالثة، لا تصعد.»"
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_bell"
+        ]
+      },
+      "choices": [
+        {
+          "id": "stand",
+          "text": "انهض قبل الثالثة.",
+          "next": "n_return_gate"
+        },
+        {
+          "id": "wait",
+          "text": "انتظر الجرس الثالث.",
+          "next": "n_bell_three",
+          "effects": {
+            "stats": {
+              "fear": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_bell_three",
+      "act": "act5",
+      "location": "lower_chamber",
+      "lines": [
+        "يرن الجرس الثالث.",
+        "لا يحدث شيء.",
+        "ثم تفتح كل الأبواب دفعة واحدة.",
+        "من كل باب ترى الردهة.",
+        "لكن في كل ردهة نسخة مختلفة منك."
+      ],
+      "onEnter": {
+        "stats": {
+          "fear": 18
+        }
+      },
+      "choices": [
+        {
+          "id": "choose",
+          "text": "اختر أقرب باب.",
+          "next": "n_wrong_return"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ في الغرفة.",
+          "next": "n_ending_below"
+        }
+      ]
+    },
+    {
+      "id": "n_truth_path",
+      "act": "act5",
+      "location": "lower_chamber",
+      "lines": [
+        "تضع الأدلة أمامك.",
+        "الشريط يعرف اسمك.",
+        "السجل كتب نزولك قبل أن تنزل.",
+        "القطعة الحمراء تحمل الصفر.",
+        "والجدار يقول إن من يعود يترك شيئًا.",
+        "الحقيقة ليست أن القبو يمنع الخروج. الحقيقة أنه يحدد من سيخرج."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "understood_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "complete",
+          "text": "أكمل جمع الأدلة.",
+          "next": "n_true_check"
+        },
+        {
+          "id": "gate",
+          "text": "اذهب للباب.",
+          "next": "n_return_gate"
+        }
+      ]
+    },
+    {
+      "id": "n_return_hint",
+      "act": "act5",
+      "location": "return_gate",
+      "lines": [
+        "تصل إلى باب معدني.",
+        "فوقه دائرة حمراء.",
+        "تحتها عبارة: «العودة ليست حقًا.»",
+        "في الباب فتحة للقطعة الحمراء."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "use",
+          "text": "ضع القطعة.",
+          "next": "n_return_gate_open",
+          "required": {
+            "items": [
+              "red_token"
+            ]
+          },
+          "lockedText": "تحتاج إلى القطعة الحمراء."
+        },
+        {
+          "id": "wait",
+          "text": "انتظر الفتاة.",
+          "next": "n_final_girl"
+        }
+      ]
+    },
+    {
+      "id": "n_return_gate",
+      "act": "act5",
+      "location": "return_gate",
+      "lines": [
+        "الباب المعدني موجود في نهاية ممر قصير.",
+        "على جانبه عشرة خدوش.",
+        "كل خدش بجانب اسم.",
+        "الخدش العاشر جديد."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_names"
+        ]
+      },
+      "choices": [
+        {
+          "id": "open",
+          "text": "حاول فتحه.",
+          "next": "n_return_gate_open"
+        },
+        {
+          "id": "inspect",
+          "text": "افحص الخدوش.",
+          "next": "n_gate_inspect"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_lower_chamber"
+        }
+      ]
+    },
+    {
+      "id": "n_gate_inspect",
+      "act": "act5",
+      "location": "return_gate",
+      "lines": [
+        "كل خدش أعمق من السابق.",
+        "الأول خفيف.",
+        "العاشر ما زال يحمل غبارًا حوله.",
+        "كأن الاسم لم يُستخدم بعد."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "open",
+          "text": "افتح الباب.",
+          "next": "n_return_gate_open"
+        },
+        {
+          "id": "back",
+          "text": "عد.",
+          "next": "n_lower_chamber"
+        }
+      ]
+    },
+    {
+      "id": "n_return_gate_open",
+      "act": "act5",
+      "location": "return_gate",
+      "lines": [
+        "تضع القطعة الحمراء.",
+        "تختفي الدائرة.",
+        "الباب يفتح على سلم يصعد.",
+        "في أعلى السلم ضوء النهار.",
+        "لكن خلفك يأتي صوت الجرس."
+      ],
+      "onEnter": {
+        "setFlags": [
+          "gate_open"
+        ],
+        "stats": {
+          "fear": 10
+        }
+      },
+      "choices": [
+        {
+          "id": "climb",
+          "text": "اصعد الآن.",
+          "next": "n_end_exit"
+        },
+        {
+          "id": "lookback",
+          "text": "التفت إلى القبو مرة أخيرة.",
+          "next": "n_final_choice"
+        },
+        {
+          "id": "leave_token",
+          "text": "اترك القطعة على الأرض ثم اصعد.",
+          "next": "n_end_replace"
+        }
+      ]
+    },
+    {
+      "id": "n_final_choice",
+      "act": "act6",
+      "location": "return_gate",
+      "lines": [
+        "تلتفت.",
+        "الفتاة واقفة عند بداية الممر.",
+        "المشرف خلفها.",
+        "وعلى الأرض صفحة السجل.",
+        "اسمك لم يعد في آخر القائمة. أصبح أول اسم."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_names",
+          "clue_return_rule"
+        ]
+      },
+      "choices": [
+        {
+          "id": "girl",
+          "text": "اختر الفتاة.",
+          "next": "n_end_true_prepare"
+        },
+        {
+          "id": "supervisor",
+          "text": "اختر المشرف.",
+          "next": "n_end_record"
+        },
+        {
+          "id": "alone",
+          "text": "اختر نفسك.",
+          "next": "n_end_exit"
+        }
+      ]
+    },
+    {
+      "id": "n_true_check",
+      "act": "act6",
+      "location": "lower_chamber",
+      "lines": [
+        "تعيد ترتيب كل ما عرفته.",
+        "لا توجد مصادفة: الرقم 0، الساعة 03:17، الأسماء، والقطعة الحمراء.",
+        "القبو لا يسجن الأشخاص.",
+        "إنه ينقل الأدوار.",
+        "والشخص الذي يصعد دون أن يترك دوره يعود إليه القبو من مكان آخر."
+      ],
+      "onEnter": {
+        "addClues": [
+          "clue_return_rule",
+          "clue_red_zero"
+        ],
+        "setFlags": [
+          "truth_ready"
+        ]
+      },
+      "choices": [
+        {
+          "id": "accept",
+          "text": "اقبل أن عليك اختيار من يبقى.",
+          "next": "n_end_true_prepare"
+        },
+        {
+          "id": "refuse",
+          "text": "ارفض القاعدة واخرج بأي طريقة.",
+          "next": "n_return_gate"
+        }
+      ]
+    },
+    {
+      "id": "n_end_true_prepare",
+      "act": "act6",
+      "location": "return_gate",
+      "lines": [
+        "الفتاة تمد يدها.",
+        "«خذ القطعة.»",
+        "«وماذا عنك؟»",
+        "«أنا انتهى دوري.»",
+        "لأول مرة يبدو عليها الخوف.",
+        "ثم تقول: «لكن لا تجعل دورك يبدأ قبل أن تصعد.»"
+      ],
+      "character": "girl",
+      "onEnter": {
+        "setFlags": [
+          "true_path"
+        ]
+      },
+      "choices": [
+        {
+          "id": "take",
+          "text": "خذ القطعة واصعد.",
+          "next": "n_end_true"
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ بدلًا منها.",
+          "next": "n_ending_stay"
+        }
+      ]
+    },
+    {
+      "id": "n_end_exit",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تصعد.",
+        "الهواء في الأعلى دافئ.",
+        "الردهة كما تركتها.",
+        "تفتح الباب الخارجي.",
+        "الشمس لم تشرق بعد، لكن هاتفك يستعيد الشبكة.",
+        "تظهر مكالمة واردة من رقمك… بتاريخ الغد."
+      ],
+      "choices": [
+        {
+          "id": "finish",
+          "text": "تابع.",
+          "next": "n_finish_exit"
+        }
+      ]
+    },
+    {
+      "id": "n_finish_exit",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تمشي بعيدًا.",
+        "لا تلتفت.",
+        "لكن حين تصل إلى أول شارع، تسمع جرسًا ثلاث مرات.",
+        "تلمس هاتفك. الشاشة سوداء.",
+        "ثم تظهر جملة واحدة: «هذه المرة صعدت.»"
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_wrong_return",
+      "act": "act6",
+      "location": "lobby",
+      "lines": [
+        "تفتح أقرب باب.",
+        "تخرج إلى الردهة.",
+        "كل شيء طبيعي.",
+        "تسأل عن الوقت.",
+        "لا أحد يجيب.",
+        "حين تقترب من الباب الخارجي، تجد نفسك أمام المبنى نفسه مرة أخرى."
+      ],
+      "choices": [
+        {
+          "id": "try",
+          "text": "حاول الخروج مرة أخرى.",
+          "next": "n_end_wrong_door"
+        },
+        {
+          "id": "down",
+          "text": "عد إلى القبو.",
+          "next": "n_return_gate"
+        }
+      ]
+    },
+    {
+      "id": "n_end_wrong_door",
+      "act": "act6",
+      "location": "building_exterior",
+      "lines": [
+        "خرجت.",
+        "لكن المبنى أمامك لا يحمل اسمًا.",
+        "تلتفت إلى هاتفك.",
+        "الخريطة تقول إن موقعك داخل القبو.",
+        "لا يوجد طريق للعودة."
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_end_replace",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تترك القطعة على الأرض.",
+        "عندما تصعد، لا تشعر بأي شيء.",
+        "تصل إلى الشارع.",
+        "تفتح الكاميرا الأمامية.",
+        "وجهك موجود.",
+        "لكن اسمك اختفى من الشاشة تمامًا."
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_end_record",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تختار المشرف.",
+        "يأخذ الصفحة منك.",
+        "«كنت أعرف أنك ستفعل ذلك.»",
+        "تصعد وحدك.",
+        "بعد دقائق، يصلك تسجيل صوتي جديد.",
+        "صوت المشرف: «شكرًا لأنك أغلقت الباب.»"
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_end_true",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تصعد.",
+        "الفتاة لا تأتي خلفك.",
+        "تضع القطعة الحمراء في جيبك.",
+        "في منتصف الطريق تتوقف.",
+        "الرقم 0 على القطعة تغيّر.",
+        "أصبح 1.",
+        "ثم تسمع الجرس من مكان بعيد… مرة واحدة فقط.",
+        "تفهم أخيرًا: لم تعد أنت البديل.",
+        "أنت الشخص الذي أغلق القبو."
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_ending_stay",
+      "act": "act6",
+      "location": "lower_chamber",
+      "lines": [
+        "تبقى.",
+        "الفتاة تصعد.",
+        "المشرف يختفي.",
+        "الأبواب تُغلق واحدًا تلو الآخر.",
+        "تجلس على الكرسي.",
+        "على الجدار يظهر اسم جديد.",
+        "اسمك.",
+        "وتحت الاسم: «حارس القبو.»"
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_ending_below",
+      "act": "act6",
+      "location": "lower_chamber",
+      "lines": [
+        "تختار ألا تصعد.",
+        "تنتظر حتى يختفي الضوء.",
+        "ثم يظهر باب جديد تحت الأرض.",
+        "وراءه مكان أعمق.",
+        "لا يوجد فيه جرس.",
+        "ولا توجد فيه أسماء.",
+        "فقط خطوات شخص ينزل إليك."
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_end_record_alt",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تخرج ومعك صفحة السجل.",
+        "في الخارج لا أحد يصدقك.",
+        "تفتح الصفحة لتريهم اسمك.",
+        "الاسم ما زال هناك.",
+        "لكن وقت النزول تغير إلى 03:17.",
+        "وتحتها خانة العودة أصبحت: «قيد الانتظار»."
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_end_witness",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "تخرج ومعك صفحة السجل.",
+        "في الشارع تتنفس بحرية لأول مرة.",
+        "ثم تفتح الصفحة.",
+        "اسمك مكتوب في آخرها، ووقت النزول 03:17.",
+        "في خانة العودة كلمة واحدة: «شاهد»."
+      ],
+      "choices": [
+        {
+          "id": "finish",
+          "text": "أغلق الصفحة.",
+          "next": "n_finish_witness"
+        }
+      ]
+    },
+    {
+      "id": "n_finish_witness",
+      "act": "act6",
+      "location": "street",
+      "lines": [
+        "ترفع رأسك.",
+        "عامل الصيانة يقف في الجهة المقابلة.",
+        "لا يقترب.",
+        "فقط يرفع يده ثلاث مرات.",
+        "ثم يختفي بين السيارات."
+      ],
+      "choices": []
+    },
+    {
+      "id": "n_true_gate",
+      "act": "act6",
+      "location": "return_gate",
+      "lines": [
+        "تنظر إلى القطعة الحمراء.",
+        "الصفر لم يعد يعني البداية فقط.",
+        "إنه يعني أنك لم تدفع الثمن بعد.",
+        "أمامك خياران: تصعد وحدك، أو تنهي دورة القبو."
+      ],
+      "choices": [
+        {
+          "id": "true",
+          "text": "أنهِ دورة القبو.",
+          "next": "n_end_true",
+          "required": {
+            "minClues": 10,
+            "flags": [
+              "understood_rule",
+              "true_path"
+            ]
+          },
+          "lockedText": "لم تجمع الحقيقة كاملة بعد."
+        },
+        {
+          "id": "exit",
+          "text": "اصعد وحدك.",
+          "next": "n_end_exit"
+        }
+      ]
+    },
+    {
+      "id": "n_final_selector",
+      "act": "act6",
+      "location": "return_gate",
+      "lines": [
+        "جمعت الأدلة كلها.",
+        "لم تعد المشكلة كيف تخرج.",
+        "المشكلة: من سيبقى خلفك؟"
+      ],
+      "choices": [
+        {
+          "id": "true",
+          "text": "أنهِ الدورة.",
+          "next": "n_end_true",
+          "required": {
+            "minClues": 10,
+            "flags": [
+              "understood_rule"
+            ]
+          },
+          "lockedText": "تحتاج إلى فهم القاعدة كاملة."
+        },
+        {
+          "id": "stay",
+          "text": "ابقَ.",
+          "next": "n_ending_stay"
+        },
+        {
+          "id": "exit",
+          "text": "اصعد.",
+          "next": "n_end_exit"
+        }
+      ]
+    }
+  ]
+}
